@@ -2,41 +2,24 @@ import FaqAccordion from '../components/FaqAccordion'
 
 export default function Home() {
   return (
-    <>
-      {/* ===== NAV ===== */}
-      <nav aria-label="Main navigation">
-        <div className="container nav-inner">
-          <a href="#" className="nav-logo">
-            Construction<span>SEO</span>.sf
-          </a>
-          <ul className="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#benefits">Why Us</a></li>
-            <li><a href="#testimonials">Results</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-          <a href="#cta-band" className="btn btn-primary nav-cta">
-            Get a Free Audit
-          </a>
-        </div>
-      </nav>
+    <main>
 
       {/* ===== HERO ===== */}
       <section id="hero" aria-labelledby="hero-heading">
         <div className="container hero-grid">
 
           <div className="hero-text">
-            <div className="hero-eyebrow">Bay Area Construction SEO Specialists</div>
+            <span className="section-label">Bay Area Construction SEO</span>
             <h1 id="hero-heading">
               Rank <em>#1 on Google</em> and Fill Your Pipeline With Bay Area Jobs
             </h1>
             <p>
-              We help San Francisco contractors, GCs, and specialty trade companies dominate
-              local search — more calls, more bids, more revenue. No bloated retainers. No guessing.
+              We help San Francisco contractors, GCs, and specialty trades dominate local
+              search — more calls, more bids, more booked work. No bloated retainers. No guessing.
             </p>
             <div className="hero-actions">
-              <a href="#cta-band" className="btn btn-primary">Get Your Free SEO Audit</a>
-              <a href="#services" className="btn btn-outline">See How It Works</a>
+              <a href="#contact" className="btn btn-primary">Get Your Free SEO Audit</a>
+              <a href="#services" className="btn btn-outline-dark">See How It Works</a>
             </div>
             <div className="hero-trust">
               <div className="hero-trust-icons">
@@ -50,7 +33,7 @@ export default function Home() {
           </div>
 
           <div className="hero-card" aria-hidden="true">
-            <div className="hero-card-title">Live Ranking Results — SF Bay Area</div>
+            <div className="hero-card-title">Live Ranking Snapshot — SF Bay Area</div>
             <div className="stat-row">
               <div className="stat-box">
                 <span className="num">+312%</span>
@@ -98,8 +81,7 @@ export default function Home() {
               <h3>Local SEO for Construction Companies</h3>
               <p>
                 Capture homeowners and project managers who are searching &ldquo;contractor near me&rdquo; right now.
-                We optimize every local signal so your business appears at the top of San Francisco and
-                Bay Area search results.
+                We optimize every local signal so your business appears at the top of San Francisco and Bay Area search results.
               </p>
               <ul className="service-features">
                 <li>Hyper-local keyword research (SF neighborhoods, cities, zip codes)</li>
@@ -109,7 +91,7 @@ export default function Home() {
                 <li>Schema markup for contractors (LocalBusiness, Service, Review)</li>
                 <li>Monthly ranking reports with plain-English explanations</li>
               </ul>
-              <a href="#cta-band" className="service-card-cta">Start ranking locally →</a>
+              <a href="/services/local-seo/" className="service-card-cta">Learn more about Local SEO →</a>
             </article>
 
             <article className="service-card">
@@ -117,8 +99,7 @@ export default function Home() {
               <h3>Google Business Profile (GBP) Optimization</h3>
               <p>
                 The Google Maps &ldquo;3-Pack&rdquo; gets 44% of all clicks for local searches. We fully optimize
-                and actively manage your GBP so you own that prime real estate for every high-value
-                construction keyword.
+                and actively manage your GBP so you own that prime real estate for every high-value construction keyword.
               </p>
               <ul className="service-features">
                 <li>Complete GBP setup, verification &amp; category optimization</li>
@@ -128,8 +109,47 @@ export default function Home() {
                 <li>Review acquisition system + response management</li>
                 <li>GBP insights reporting — calls, directions, website clicks</li>
               </ul>
-              <a href="#cta-band" className="service-card-cta">Dominate Google Maps →</a>
+              <a href="/services/gbp/" className="service-card-cta">Learn more about GBP →</a>
             </article>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PROCESS ===== */}
+      <section id="process" aria-labelledby="process-heading">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">How It Works</span>
+            <h2 id="process-heading">Simple Process. <em>Real Results.</em></h2>
+            <p>No jargon, no mystery. Three steps from zero visibility to ranking at the top of Google for Bay Area construction searches.</p>
+          </div>
+
+          <div className="process-grid">
+
+            <div className="process-card">
+              <div className="process-num">01</div>
+              <h3>Free Audit &amp; Strategy Call</h3>
+              <p>
+                We analyze your current Google presence, map out your top competitors, and identify exactly which keywords are driving jobs in your service area. You get a clear picture before spending a dollar.
+              </p>
+            </div>
+
+            <div className="process-card">
+              <div className="process-num">02</div>
+              <h3>We Build Your SEO Foundation</h3>
+              <p>
+                On-page optimization, GBP setup, local citations, content, and schema — all built to Google&apos;s guidelines. We do the work so you can focus on running jobs.
+              </p>
+            </div>
+
+            <div className="process-card">
+              <div className="process-num">03</div>
+              <h3>You Rank, Get Calls, Win Work</h3>
+              <p>
+                Rankings climb, inbound calls increase, and your pipeline fills with qualified Bay Area leads. Monthly reports keep you informed, with plain-English explanations — no fluff.
+              </p>
+            </div>
 
           </div>
         </div>
@@ -139,10 +159,8 @@ export default function Home() {
       <section id="benefits" aria-labelledby="benefits-heading">
         <div className="container">
           <div className="section-header">
-            <span className="section-label">Why Construction SEO SF</span>
-            <h2 id="benefits-heading">
-              We Only Work With Contractors.<br />That Makes All the Difference.
-            </h2>
+            <span className="section-label">Why Choose Us</span>
+            <h2 id="benefits-heading">We Only Work With Contractors. <em>That Makes All the Difference.</em></h2>
             <p>
               Generic SEO agencies don&apos;t understand construction. We&apos;ve spent years studying how
               Bay Area homeowners and project managers search for contractors.
@@ -151,52 +169,45 @@ export default function Home() {
 
           <div className="benefits-grid">
             <div className="benefit-card">
-              <span className="benefit-num">01</span>
-              <h3>Industry-Specific Keywords</h3>
+              <span className="benefit-num">Industry Keywords</span>
+              <h3>We Know How Buyers Search</h3>
               <p>
-                We know the difference between &ldquo;general contractor,&rdquo; &ldquo;GC,&rdquo; &ldquo;remodeling contractor,&rdquo;
-                and &ldquo;design-build firm&rdquo; — and exactly which terms Bay Area buyers use at each stage
-                of their search.
+                We know the difference between &ldquo;GC,&rdquo; &ldquo;remodeling contractor,&rdquo; and &ldquo;design-build firm&rdquo; — and exactly which terms Bay Area buyers use at each stage of their search.
               </p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-num">02</span>
-              <h3>SF Bay Area Market Knowledge</h3>
+              <span className="benefit-num">Bay Area Market</span>
+              <h3>One of the Most Competitive Markets in the US</h3>
               <p>
-                The Bay Area is one of the most competitive local markets in the country. We know which
-                neighborhoods, cities, and zip codes drive the highest-value projects — and we target them.
+                We know which SF neighborhoods, East Bay cities, and Peninsula zip codes drive the highest-value projects — and we target them precisely.
               </p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-num">03</span>
-              <h3>Lead Quality Over Vanity Metrics</h3>
+              <span className="benefit-num">Lead Quality</span>
+              <h3>We Optimize for Calls, Not Just Clicks</h3>
               <p>
-                We don&apos;t brag about clicks. We optimize for phone calls, contact form submissions, and
-                Google Maps direction requests — the signals that actually mean new business for you.
+                We track phone calls, contact form submissions, and Google Maps direction requests — the signals that actually mean new business, not vanity metrics.
               </p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-num">04</span>
-              <h3>No Long-Term Lock-In</h3>
+              <span className="benefit-num">No Lock-In</span>
+              <h3>Month-to-Month Engagements</h3>
               <p>
-                Results earn our continued business — not contracts. Month-to-month engagements mean we
-                stay accountable to performance, not paperwork.
+                Results earn our continued business — not contracts. We stay accountable to performance, not paperwork.
               </p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-num">05</span>
-              <h3>Transparent Monthly Reporting</h3>
+              <span className="benefit-num">Reporting</span>
+              <h3>Clear Monthly Reports</h3>
               <p>
-                Every month you get a clear report: rankings moved, traffic gained, leads generated.
-                We connect Google Analytics, Search Console, and GBP Insights into one clean dashboard.
+                Rankings moved, traffic gained, leads generated. Google Analytics, Search Console, and GBP Insights in one clean dashboard every month.
               </p>
             </div>
             <div className="benefit-card">
-              <span className="benefit-num">06</span>
-              <h3>Built on Google&apos;s Own Guidelines</h3>
+              <span className="benefit-num">White-Hat Only</span>
+              <h3>Built to Last Through Algorithm Updates</h3>
               <p>
-                No shady link schemes. No keyword stuffing. 100% white-hat strategies that build rankings
-                that last — not ones that vanish the next time Google updates its algorithm.
+                No shady link schemes. No keyword stuffing. 100% Google-compliant strategies that compound over time instead of collapsing on the next update.
               </p>
             </div>
           </div>
@@ -217,9 +228,7 @@ export default function Home() {
             <article className="testi-card">
               <div className="stars">★★★★★</div>
               <p className="testi-body">
-                &ldquo;Within 4 months we went from page 3 to the #1 spot for &lsquo;general contractor San
-                Francisco.&rsquo; Our inbound calls doubled. The team knows construction — they actually
-                talk our language.&rdquo;
+                &ldquo;Within 4 months we went from page 3 to the #1 spot for &lsquo;general contractor San Francisco.&rsquo; Our inbound calls doubled. The team knows construction — they actually talk our language.&rdquo;
               </p>
               <div className="testi-author">
                 <div className="testi-avatar">JM</div>
@@ -233,8 +242,7 @@ export default function Home() {
             <article className="testi-card">
               <div className="stars">★★★★★</div>
               <p className="testi-body">
-                &ldquo;We had zero Google presence before. Now we&apos;re in the Maps 3-Pack for &lsquo;kitchen remodel
-                Oakland&rsquo; and &lsquo;bathroom remodel East Bay.&rsquo; We&apos;re booked out 3 months ahead.&rdquo;
+                &ldquo;We had zero Google presence before. Now we&apos;re in the Maps 3-Pack for &lsquo;kitchen remodel Oakland&rsquo; and &lsquo;bathroom remodel East Bay.&rsquo; Booked out 3 months ahead.&rdquo;
               </p>
               <div className="testi-author">
                 <div className="testi-avatar">RT</div>
@@ -248,9 +256,7 @@ export default function Home() {
             <article className="testi-card">
               <div className="stars">★★★★★</div>
               <p className="testi-body">
-                &ldquo;As a specialty roofing company in a market full of Angi and HomeAdvisor ads, I was
-                skeptical. Six months later our GBP gets 200+ monthly calls and our cost per lead
-                dropped by 60%.&rdquo;
+                &ldquo;As a specialty roofing company competing with Angi and HomeAdvisor, I was skeptical. Six months later our GBP gets 200+ monthly calls and our cost per lead dropped 60%.&rdquo;
               </p>
               <div className="testi-author">
                 <div className="testi-avatar">SK</div>
@@ -271,48 +277,30 @@ export default function Home() {
           <div className="section-header">
             <span className="section-label">Common Questions</span>
             <h2 id="faq-heading">FAQ for Bay Area Contractors</h2>
-            <p>Straight answers to the questions we get most often from construction business owners.</p>
+            <p>Straight answers to the questions we get most from construction business owners.</p>
           </div>
           <FaqAccordion />
         </div>
       </section>
 
-      {/* ===== CTA BAND ===== */}
-      <section id="cta-band" aria-labelledby="cta-heading">
-        <div className="container" style={{ textAlign: 'center' }}>
-          <span className="section-label" style={{ color: 'var(--navy-mid)' }}>
-            Limited Spots Available
-          </span>
-          <h2 id="cta-heading">
-            Ready to Own Page 1 for Bay Area Construction Searches?
+      {/* ===== CONTACT / CTA ===== */}
+      <section id="contact" aria-labelledby="contact-heading">
+        <div className="container">
+          <span className="section-label">Limited Spots Available</span>
+          <h2 id="contact-heading">
+            Ready to Own Page 1 for <em>Bay Area Construction</em> Searches?
           </h2>
           <p>
             Get a free, no-obligation SEO audit of your current online presence. We&apos;ll show you
             exactly where you stand, who&apos;s outranking you, and what it takes to get to #1.
           </p>
-          <a
-            href="mailto:hello@constructionseo.sf"
-            className="btn btn-dark"
-          >
+          <a href="mailto:hello@constructionseo.sf" className="btn btn-primary" style={{ fontSize: '1rem', padding: '16px 36px' }}>
             Get My Free SEO Audit →
           </a>
-          <p style={{ marginTop: '16px', fontSize: '.85rem', color: 'rgba(13,27,42,.55)' }}>
-            No commitment. No spam. Just honest answers about your Google rankings.
-          </p>
+          <p className="contact-sub">No commitment. No spam. Just honest answers about your Google rankings.</p>
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
-      <footer>
-        <div className="container">
-          <p>
-            &copy; 2026 Construction SEO San Francisco &nbsp;|&nbsp;
-            Serving: SF, Oakland, San Jose, Marin, Peninsula, East Bay, South Bay
-            &nbsp;|&nbsp;
-            <a href="mailto:hello@constructionseo.sf">hello@constructionseo.sf</a>
-          </p>
-        </div>
-      </footer>
-    </>
+    </main>
   )
 }

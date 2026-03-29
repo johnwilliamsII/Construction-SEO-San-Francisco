@@ -1,4 +1,5 @@
 import { Inter, Manrope } from 'next/font/google'
+import Nav from '../components/Nav'
 import './globals.css'
 
 const inter = Inter({
@@ -10,7 +11,7 @@ const inter = Inter({
 
 const manrope = Manrope({
   subsets: ['latin'],
-  weight: ['700', '800'],
+  weight: ['600', '700', '800'],
   variable: '--font-manrope',
   display: 'swap',
 })
@@ -24,7 +25,8 @@ export const metadata = {
   robots: 'index, follow',
   openGraph: {
     title: 'Construction SEO San Francisco | Rank #1 & Get More Contractor Leads',
-    description: 'SEO built exclusively for Bay Area construction companies. More Google rankings, more calls, more jobs.',
+    description:
+      'SEO built exclusively for Bay Area construction companies. More Google rankings, more calls, more jobs.',
     type: 'website',
   },
 }
@@ -62,7 +64,47 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <footer className="site-footer">
+          <div className="container">
+            <div className="footer-grid">
+              <div className="footer-brand">
+                <div className="footer-logo">Construction<span>SEO</span><em>.sf</em></div>
+                <p>SEO built exclusively for Bay Area construction companies and contractors.</p>
+              </div>
+              <div className="footer-col">
+                <h4>Services</h4>
+                <ul>
+                  <li><a href="/services/local-seo/">Local SEO</a></li>
+                  <li><a href="/services/gbp/">Google Business Profile</a></li>
+                </ul>
+              </div>
+              <div className="footer-col">
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="/about/">About</a></li>
+                  <li><a href="/blog/">Blog</a></li>
+                  <li><a href="/#process">Process</a></li>
+                </ul>
+              </div>
+              <div className="footer-col">
+                <h4>Service Area</h4>
+                <ul>
+                  <li>San Francisco</li>
+                  <li>Oakland &amp; East Bay</li>
+                  <li>San Jose &amp; South Bay</li>
+                  <li>Marin &amp; Peninsula</li>
+                </ul>
+              </div>
+            </div>
+            <div className="footer-bottom">
+              <p>&copy; 2026 Construction SEO San Francisco &nbsp;|&nbsp; <a href="mailto:hello@constructionseo.sf">hello@constructionseo.sf</a></p>
+            </div>
+          </div>
+        </footer>
+      </body>
     </html>
   )
 }
