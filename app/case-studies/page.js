@@ -166,8 +166,8 @@ export default function CaseStudiesPage() {
         label="Your Turn"
         heading={<>Ready to Be Our Next <em>Success Story</em>?</>}
         body="Start with a free audit. We'll show you exactly what's possible for your construction business in the Bay Area market."
-        primaryCta={{ label: 'Get My Free SEO Audit', href: '/contact/' }}
-        secondaryCta={{ label: 'See Our Services', href: '/services/' }}
+        primaryCta={{ label: 'Get My Free SEO Audit', href: '/free-seo-audit/' }}
+        secondaryCta={{ label: 'View Packages', href: '/seo-packages-for-contractors/' }}
       />
     </>
   )

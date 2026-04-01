@@ -5,7 +5,7 @@ import TestimonialCard from '../../components/sections/TestimonialCard'
 import CtaBanner from '../../components/sections/CtaBanner'
 
 export const metadata = {
-  title: 'Bay Area SEO Company for Contractors | contractorseobayarea.com',
+  title: 'Bay Area SEO Company for Contractors | contractorseosanfrancisco.com',
   description:
     'We are the Bay Area SEO company built exclusively for contractors. Not a generic agency — a focused team that only works with construction companies, trades, and home service businesses.',
 }

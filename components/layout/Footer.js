@@ -1,16 +1,18 @@
 import Link from 'next/link'
 
 const SERVICES = [
-  { label: 'Local SEO for Contractors',     href: '/services/local-seo/' },
-  { label: 'Google Business Profile',       href: '/services/gbp/' },
-  { label: 'All Services',                  href: '/services/' },
+  { label: 'SEO Packages',      href: '/seo-packages-for-contractors/' },
+  { label: 'Local SEO',         href: '/local-seo-for-contractors/' },
+  { label: 'Link Building',     href: '/link-building-for-contractors/' },
+  { label: 'Keyword Research',  href: '/keyword-research-for-contractors/' },
+  { label: 'AI Receptionist',   href: '/ai-receptionist-service/' },
 ]
 
 const COMPANY = [
-  { label: 'About Us',      href: '/about/' },
+  { label: 'About',         href: '/bay-area-seo-company/' },
   { label: 'Case Studies',  href: '/case-studies/' },
   { label: 'Blog',          href: '/blog/' },
-  { label: 'Our Process',   href: '/#process' },
+  { label: 'Free SEO Audit', href: '/free-seo-audit/' },
   { label: 'Resources',     href: '/resources/' },
 ]
 
@@ -34,7 +36,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <div className="footer-logo">
-              Construction<span>SEO</span><em>.sf</em>
+              contractor<span>seo</span>sanfrancisco<em>.com</em>
             </div>
             <p>
               SEO built exclusively for Bay Area construction companies and contractors.
@@ -76,9 +78,9 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>
-            &copy; {year} Construction SEO San Francisco
+            &copy; {year} contractorseosanfrancisco.com
             &nbsp;|&nbsp;
-            <Link href="mailto:hello@constructionseo.sf">hello@constructionseo.sf</Link>
+            <Link href="mailto:hello@contractorseosanfrancisco.com">hello@contractorseosanfrancisco.com</Link>
             &nbsp;|&nbsp;
             <Link href="/sources/">Image Sources & Credits</Link>
           </p>

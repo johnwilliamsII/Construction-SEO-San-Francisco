@@ -6,7 +6,7 @@ import CtaBanner from '../components/sections/CtaBanner'
 import FaqAccordion from '../components/sections/FaqAccordion'
 
 export const metadata = {
-  title: 'SEO for Contractors in the Bay Area | contractorseobayarea.com',
+  title: 'SEO for Contractors in the Bay Area | contractorseosanfrancisco.com',
   description:
     'Dominate Bay Area local search and stop renting your leads from Angi, Yelp, and HomeAdvisor. SEO built exclusively for Bay Area construction companies and contractors.',
 }

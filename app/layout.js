@@ -1,6 +1,7 @@
 import { Inter, Manrope } from 'next/font/google'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
+import ScrollToTop from '../components/layout/ScrollToTop'
 import './globals.css'
 
 const inter = Inter({
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <ScrollToTop />
         <Header />
         <main id="main-content">
           {children}

@@ -4,7 +4,7 @@ import CtaBanner from '../../components/sections/CtaBanner'
 import StatCard from '../../components/sections/StatCard'
 
 export const metadata = {
-  title: 'SEO Packages for Contractors | contractorseobayarea.com',
+  title: 'SEO Packages for Contractors | contractorseosanfrancisco.com',
   description:
     'Transparent SEO packages built for Bay Area contractors. Local SEO map pack focus or full organic growth — both include dedicated strategy and no long-term contracts.',
 }
@@ -83,22 +83,53 @@ const FAQS = [
 export default function PricingPage() {
   return (
     <>
-      {/* ── Header ── */}
-      <section className="hero-section" aria-labelledby="pricing-hero-heading">
-        <div className="container" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-          <span className="section-label">Pricing & Packages</span>
-          <h1 id="pricing-hero-heading">
-            SEO Packages for <em>Bay Area Contractors</em>
+      {/* ── Dark Hero ── */}
+      <section
+        aria-labelledby="pricing-hero-heading"
+        style={{
+          background:  'linear-gradient(160deg, #16192A 0%, #1A2240 55%, #1C1F32 100%)',
+          position:    'relative',
+          overflow:    'hidden',
+          padding:     'clamp(4rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem)',
+          textAlign:   'center',
+        }}
+      >
+        <div aria-hidden="true" style={{ position: 'absolute', top: '-80px', right: '-80px', width: '450px', height: '450px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(232,97,26,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div aria-hidden="true" style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '760px', margin: '0 auto' }}>
+          <span style={{
+            display: 'inline-flex', alignItems: 'center',
+            padding: '5px 16px', borderRadius: '9999px',
+            background: 'rgba(232,97,26,0.15)', border: '1px solid rgba(232,97,26,0.30)',
+            color: '#F4875A', fontSize: '0.72rem', fontWeight: 700,
+            letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem',
+          }}>
+            Pricing & Packages
+          </span>
+
+          <h1 id="pricing-hero-heading" style={{
+            fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
+            color: '#FFFFFF',
+            fontFamily: 'var(--font-manrope)',
+            fontWeight: 800,
+            lineHeight: 1.15,
+            letterSpacing: '-0.02em',
+            marginBottom: '1rem',
+          }}>
+            SEO Packages for{' '}
+            <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Bay Area Contractors</em>
           </h1>
-          <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginTop: '1rem', marginBottom: '1.5rem' }}>
-            Pricing is scoped after your free audit — because your market, trade, and competition level all affect what it takes to win. Packages <strong>start at $900/month.</strong>
+
+          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.60)', lineHeight: 'var(--leading-relaxed)', maxWidth: '560px', margin: '0 auto 1.75rem' }}>
+            Pricing is scoped after your free audit — your market, trade, and competition level all affect what it takes to win. Packages <strong style={{ color: 'rgba(255,255,255,0.85)' }}>start at $900/month.</strong>
           </p>
 
           {/* Ads vs SEO comparison */}
-          <div style={{ display: 'inline-flex', gap: '1rem', background: 'var(--bg-glass-strong)', border: '1px solid var(--border-glass)', borderRadius: 'var(--radius-lg)', padding: '1rem 1.5rem', flexWrap: 'wrap', justifyContent: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-            <span style={{ color: 'var(--error)', fontWeight: 600 }}>✗ $900 in ads = 9 days of visibility, then gone</span>
-            <span style={{ color: 'var(--text-tertiary)' }}>vs.</span>
-            <span style={{ color: 'var(--accent)', fontWeight: 600 }}>✓ $900/mo with us = 30 days + full team + monthly deliverables</span>
+          <div style={{ display: 'inline-flex', gap: '1rem', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 'var(--radius-lg)', padding: '0.9rem 1.5rem', flexWrap: 'wrap', justifyContent: 'center', fontSize: '0.88rem' }}>
+            <span style={{ color: '#f87171', fontWeight: 600 }}>✗ $900 in ads = 9 days of visibility, then gone</span>
+            <span style={{ color: 'rgba(255,255,255,0.30)' }}>vs.</span>
+            <span style={{ color: '#6ee7b7', fontWeight: 600 }}>✓ $900/mo with us = 30 days + full team + monthly deliverables</span>
           </div>
         </div>
       </section>
