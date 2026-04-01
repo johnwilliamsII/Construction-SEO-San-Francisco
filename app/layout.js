@@ -75,6 +75,7 @@ export default function RootLayout({ children }) {
               <div className="footer-brand">
                 <div className="footer-logo">Construction<span>SEO</span>SanFrancisco<em>.com</em></div>
                 <p>SEO built exclusively for Bay Area construction companies and contractors.</p>
+                <p style={{ marginTop: '6px', fontSize: '0.85rem', color: 'var(--gray)' }}>Headquartered in San Francisco, CA</p>
               </div>
               <div className="footer-col">
                 <h4>Services</h4>
