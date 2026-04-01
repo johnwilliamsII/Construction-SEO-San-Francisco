@@ -51,22 +51,66 @@ const TESTIMONIALS = [
 export default function CaseStudiesPage() {
   return (
     <>
-      {/* ── Header ── */}
-      <Section variant="gradient" size="lg" aria-labelledby="cs-heading">
-        <SectionHeading
-          label="Client Results"
-          heading={<>Real Rankings. <em>Real Revenue.</em> Real Bay Area Contractors.</>}
-          body="We don't promise results. We show them. Here's what happens when construction companies invest in SEO that actually understands the industry."
-          id="cs-heading"
-        />
-      </Section>
+      {/* ── Dark Hero ── */}
+      <section
+        aria-labelledby="cs-heading"
+        style={{
+          background:   'linear-gradient(160deg, #16192A 0%, #1A2240 55%, #1C1F32 100%)',
+          position:     'relative',
+          overflow:     'hidden',
+          padding:      'clamp(4rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem)',
+          textAlign:    'center',
+        }}
+      >
+        <div aria-hidden="true" style={{ position: 'absolute', top: '-100px', right: '-80px', width: '480px', height: '480px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(232,97,26,0.14) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div aria-hidden="true" style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '320px', height: '320px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
-      {/* ── Summary stats ── */}
-      <Section variant="white">
-        <div className="grid-4">
-          {SUMMARY_STATS.map((s) => <StatCard key={s.label} {...s} />)}
+        <div className="container" style={{ maxWidth: '760px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <span style={{
+            display: 'inline-flex', alignItems: 'center',
+            padding: '5px 16px', borderRadius: '9999px',
+            background: 'rgba(232,97,26,0.15)', border: '1px solid rgba(232,97,26,0.30)',
+            color: '#F4875A', fontSize: '0.72rem', fontWeight: 700,
+            letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem',
+          }}>
+            Client Results
+          </span>
+
+          <h1 id="cs-heading" style={{
+            fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
+            color: '#FFFFFF',
+            fontFamily: 'var(--font-manrope)',
+            fontWeight: 800,
+            lineHeight: 1.15,
+            letterSpacing: '-0.02em',
+            marginBottom: '1.25rem',
+          }}>
+            Real Rankings.{' '}
+            <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Real Revenue.</em>{' '}
+            Real Bay Area Contractors.
+          </h1>
+
+          <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.55)', lineHeight: 'var(--leading-relaxed)', maxWidth: '560px', margin: '0 auto 2.5rem' }}>
+            We don&rsquo;t promise results. We show them. Here&rsquo;s what happens when construction companies invest in SEO that actually understands the industry.
+          </p>
+
+          {/* Inline stat strip */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2.5rem', flexWrap: 'wrap' }}>
+            {[
+              { num: '+312%', label: 'Avg. Traffic Growth' },
+              { num: '4.8×',  label: 'More Leads / Month' },
+              { num: '–60%', label: 'Lower Cost Per Lead' },
+              { num: '40+',   label: 'Contractors Ranking' },
+            ].map((s) => (
+              <div key={s.label} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-manrope)', lineHeight: 1.1 }}>{s.num}</div>
+                <div style={{ color: 'rgba(255,255,255,0.40)', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: '0.2rem' }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
+
 
       {/* ── Case studies grid ── */}
       <Section variant="subtle" aria-labelledby="cs-grid-heading">

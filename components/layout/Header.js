@@ -5,35 +5,35 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const NAV_LINKS = [
-  { label: 'Home',    href: '/' },
+  { label: 'Home', href: '/' },
   {
     label: 'Services', href: '/services/',
     children: [
-      { label: 'Local SEO',                href: '/services/local-seo/',  desc: 'Rank for Bay Area contractor searches' },
-      { label: 'Google Business Profile',  href: '/services/gbp/',        desc: 'Own the Maps 3-Pack' },
+      { label: 'SEO Packages',    href: '/seo-packages-for-contractors/', desc: 'Local SEO & Standard SEO plans' },
+      { label: 'KW Research',     href: '/keyword-research-for-contractors/', desc: 'Keyword mapping for your trade & market' },
+      { label: 'Link Building',   href: '/link-building-for-contractors/', desc: 'Authority backlinks for contractors' },
+      { label: 'AI Receptionist', href: '/ai-receptionist-service/', desc: '24/7 call answering & lead qualification' },
     ],
   },
   { label: 'Case Studies', href: '/case-studies/' },
   { label: 'Blog',         href: '/blog/' },
-  { label: 'About',        href: '/about/' },
+  { label: 'About',        href: '/bay-area-seo-company/' },
 ]
 
 export default function Header() {
-  const [scrolled,  setScrolled]  = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [ddOpen,    setDdOpen]    = useState(false)
+  const [scrolled,           setScrolled]           = useState(false)
+  const [mobileOpen,         setMobileOpen]         = useState(false)
+  const [ddOpen,             setDdOpen]             = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const pathname = usePathname()
   const ddRef    = useRef(null)
 
-  // Scroll detection
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handler = (e) => {
       if (ddRef.current && !ddRef.current.contains(e.target)) setDdOpen(false)
@@ -42,7 +42,6 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false)
     setDdOpen(false)
@@ -61,8 +60,8 @@ export default function Header() {
         <a href="#main-content" className="skip-link">Skip to content</a>
 
         {/* Logo */}
-        <Link href="/" className="nav-logo" aria-label="Construction SEO San Francisco — Home">
-          Construction<span>SEO</span><em>.sf</em>
+        <Link href="/" className="nav-logo" aria-label="Contractor SEO San Francisco — Home">
+          contractor<span>seo</span>sanfrancisco<em>.com</em>
         </Link>
 
         {/* Desktop nav */}
@@ -120,7 +119,7 @@ export default function Header() {
         </div>
 
         {/* Desktop CTA */}
-        <Link href="/#contact" className="btn btn-primary nav-cta">
+        <Link href="/free-seo-audit/" className="btn btn-primary nav-cta">
           Free SEO Audit
         </Link>
 
@@ -164,18 +163,20 @@ export default function Header() {
 
               {mobileServicesOpen && (
                 <div className="nav-mobile-sub">
-                  <Link href="/services/local-seo/"  className="nav-mobile-sub-link">Local SEO for Contractors</Link>
-                  <Link href="/services/gbp/"         className="nav-mobile-sub-link">Google Business Profile</Link>
+                  <Link href="/seo-packages-for-contractors/"      className="nav-mobile-sub-link">SEO Packages</Link>
+                  <Link href="/keyword-research-for-contractors/"  className="nav-mobile-sub-link">KW Research</Link>
+                  <Link href="/link-building-for-contractors/"     className="nav-mobile-sub-link">Link Building</Link>
+                  <Link href="/ai-receptionist-service/"           className="nav-mobile-sub-link">AI Receptionist</Link>
                 </div>
               )}
             </li>
 
-            <li><Link href="/case-studies/" className="nav-mobile-link">Case Studies</Link></li>
-            <li><Link href="/blog/"          className="nav-mobile-link">Blog</Link></li>
-            <li><Link href="/about/"         className="nav-mobile-link">About</Link></li>
+            <li><Link href="/case-studies/"         className="nav-mobile-link">Case Studies</Link></li>
+            <li><Link href="/blog/"                 className="nav-mobile-link">Blog</Link></li>
+            <li><Link href="/bay-area-seo-company/" className="nav-mobile-link">About</Link></li>
           </ul>
 
-          <Link href="/#contact" className="btn btn-primary nav-mobile-cta" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+          <Link href="/free-seo-audit/" className="btn btn-primary nav-mobile-cta" style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
             Get My Free SEO Audit
           </Link>
         </div>

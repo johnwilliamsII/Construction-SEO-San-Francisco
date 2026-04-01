@@ -84,23 +84,62 @@ const TESTIMONIALS = [
 export default function AboutPage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="hero-section" aria-labelledby="about-hero-heading">
-        <div className="container" style={{ padding: '5rem var(--space-6) 3rem' }}>
-          <div style={{ maxWidth: '760px' }}>
-            <span className="section-label">About Us</span>
-            <h1 id="about-hero-heading">
-              Your Bay Area SEO Company <em>for Contractors</em>
+      {/* ── Dark Hero ── */}
+      <section
+        aria-labelledby="about-hero-heading"
+        style={{
+          background:   'linear-gradient(160deg, #16192A 0%, #1A2240 55%, #1C1F32 100%)',
+          position:     'relative',
+          overflow:     'hidden',
+          padding:      'clamp(4rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem)',
+        }}
+      >
+        <div aria-hidden="true" style={{ position: 'absolute', top: '-100px', right: '-80px', width: '500px', height: '500px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(232,97,26,0.14) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div aria-hidden="true" style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '320px', height: '320px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ maxWidth: '700px' }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center',
+              padding: '5px 16px', borderRadius: '9999px',
+              background: 'rgba(232,97,26,0.15)', border: '1px solid rgba(232,97,26,0.30)',
+              color: '#F4875A', fontSize: '0.72rem', fontWeight: 700,
+              letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem',
+            }}>
+              About Us
+            </span>
+
+            <h1 id="about-hero-heading" style={{
+              fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
+              color: '#FFFFFF',
+              fontFamily: 'var(--font-manrope)',
+              fontWeight: 800,
+              lineHeight: 1.15,
+              letterSpacing: '-0.02em',
+              marginBottom: '1rem',
+            }}>
+              Your Bay Area SEO Company{' '}
+              <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>for Contractors</em>
             </h1>
-            <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginTop: '1rem', maxWidth: '640px' }}>
+
+            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.65)', lineHeight: 'var(--leading-relaxed)', marginBottom: '0.75rem', maxWidth: '580px' }}>
               Built for Trades. Not Generic Agencies.
             </p>
-            <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginTop: '1rem', maxWidth: '640px' }}>
-              We are a Bay Area SEO company with a single focus: helping construction companies, GCs, and specialty trades dominate Google search. Every strategy we build, every piece of content we write, and every link we earn is designed for one type of business — yours.
+            <p style={{ fontSize: '0.97rem', color: 'rgba(255,255,255,0.45)', lineHeight: 'var(--leading-relaxed)', maxWidth: '580px', marginBottom: '2rem' }}>
+              We are a Bay Area SEO company with a single focus: helping construction companies, GCs, and specialty trades dominate Google search. Every strategy, every piece of content, every link we earn — designed for one type of business. Yours.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a href="/free-seo-audit/" className="btn btn-primary">Get a Free SEO Audit</a>
-              <a href="/seo-packages-for-contractors/" className="btn btn-outline-dark">View Packages</a>
+              <a href="/seo-packages-for-contractors/" style={{
+                display: 'inline-flex', alignItems: 'center', padding: '13px 24px',
+                borderRadius: 'var(--radius-md)', border: '1.5px solid rgba(255,255,255,0.25)',
+                color: 'rgba(255,255,255,0.80)', fontSize: 'var(--text-sm)',
+                fontWeight: 600, textDecoration: 'none', transition: 'all 0.2s',
+                background: 'transparent',
+              }}>
+                View Packages
+              </a>
             </div>
           </div>
         </div>

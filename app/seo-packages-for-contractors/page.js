@@ -85,14 +85,21 @@ export default function PricingPage() {
     <>
       {/* ── Header ── */}
       <section className="hero-section" aria-labelledby="pricing-hero-heading">
-        <div className="container" style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto', padding: '5rem var(--space-6) 3rem' }}>
+        <div className="container" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
           <span className="section-label">Pricing & Packages</span>
           <h1 id="pricing-hero-heading">
             SEO Packages for <em>Bay Area Contractors</em>
           </h1>
-          <p style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginTop: '1rem' }}>
-            Two focused packages. One goal: your phone rings with qualified leads from people who searched for your trade and found you first.
+          <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginTop: '1rem', marginBottom: '1.5rem' }}>
+            Pricing is scoped after your free audit — because your market, trade, and competition level all affect what it takes to win. Packages <strong>start at $900/month.</strong>
           </p>
+
+          {/* Ads vs SEO comparison */}
+          <div style={{ display: 'inline-flex', gap: '1rem', background: 'var(--bg-glass-strong)', border: '1px solid var(--border-glass)', borderRadius: 'var(--radius-lg)', padding: '1rem 1.5rem', flexWrap: 'wrap', justifyContent: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+            <span style={{ color: 'var(--error)', fontWeight: 600 }}>✗ $900 in ads = 9 days of visibility, then gone</span>
+            <span style={{ color: 'var(--text-tertiary)' }}>vs.</span>
+            <span style={{ color: 'var(--accent)', fontWeight: 600 }}>✓ $900/mo with us = 30 days + full team + monthly deliverables</span>
+          </div>
         </div>
       </section>
 
@@ -123,12 +130,13 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.5rem', marginBottom: '1.5rem' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-manrope)' }}>
-                Custom Pricing
+            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.25rem', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem' }}>
+                <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-manrope)' }}>From $900</span>
+                <span style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)' }}>/month</span>
               </div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
-                Based on market, trade & service area — get your quote on the audit call
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
+                Exact quote after your free audit — scoped to your market & trade
               </div>
             </div>
 
@@ -159,12 +167,13 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.5rem', marginBottom: '1.5rem' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)', fontFamily: 'var(--font-manrope)' }}>
-                Custom Pricing
+            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.25rem', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem' }}>
+                <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)', fontFamily: 'var(--font-manrope)' }}>From $900</span>
+                <span style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)' }}>/month</span>
               </div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
-                Based on market size, competition & content scope
+              <div style={{ fontSize: '0.82rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
+                Exact quote after your free audit — based on market size & content scope
               </div>
             </div>
 
