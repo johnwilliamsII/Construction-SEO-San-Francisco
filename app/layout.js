@@ -1,5 +1,7 @@
 import { Inter, Manrope } from 'next/font/google'
-import Nav from '../components/Nav'
+import Header from '../components/layout/Header'
+import Footer from '../components/layout/Footer'
+import ScrollToTop from '../components/layout/ScrollToTop'
 import './globals.css'
 
 const inter = Inter({

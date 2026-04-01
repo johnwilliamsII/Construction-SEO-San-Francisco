@@ -1,119 +1,166 @@
+import Section from '../../components/layout/Section'
+import FormField from '../../components/forms/FormField'
+
 export const metadata = {
-  title: 'Free SEO Audit for Bay Area Contractors | Construction SEO San Francisco',
-  description: 'Get a free, no-obligation SEO audit for your construction company. See exactly where your Google rankings stand, who outranks you, and what it takes to reach #1.',
+  title: 'Free Contractor SEO Audit | contractorseosanfrancisco.com',
+  description:
+    'Get a free SEO audit for your Bay Area contracting business. See exactly why your competitors are ranking above you and what it takes to get to #1 on Google.',
 }
+
+const TRADES = [
+  'General Contractors', 'HVAC', 'Remodeling Contractors', 'Roofing', 'Plumbing',
+  'Electrical', 'Landscaping', 'Concrete & Foundation', 'Flooring', 'Painting',
+  'Deck & Fencing', 'ADU / Room Additions', 'Design-Build Firms', 'Other Trade',
+]
+
+const AUDIT_COVERS = [
+  { icon: '🔍', label: 'Keyword rankings for your top 20 terms' },
+  { icon: '🗺️', label: 'Google Business Profile gaps' },
+  { icon: '⚡', label: 'Website technical & Core Web Vitals' },
+  { icon: '🏆', label: 'Competitor gap analysis' },
+  { icon: '🔑', label: '30–50 keyword opportunities mapped' },
+  { icon: '📋', label: '90-day priority action list' },
+]
 
 export default function FreeAuditPage() {
   return (
-    <main>
+    <>
+      {/* ── Dark Hero + Form ── */}
+      <section
+        aria-labelledby="audit-hero-heading"
+        style={{
+          background: 'linear-gradient(160deg, #16192A 0%, #1A2240 55%, #1C1F32 100%)',
+          position:   'relative',
+          overflow:   'hidden',
+          padding:    'clamp(4rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem)',
+        }}
+      >
+        <div aria-hidden="true" style={{ position: 'absolute', top: '-80px', right: '-80px', width: '450px', height: '450px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(232,97,26,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div aria-hidden="true" style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '300px', height: '300px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
-      {/* ===== HERO ===== */}
-      <section style={{ background: 'var(--navy)', color: '#fff', padding: '80px 0 60px' }}>
-        <div className="container" style={{ maxWidth: '680px', textAlign: 'center' }}>
-          <span className="section-label">Free Offer</span>
-          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', margin: '12px 0 20px', color: '#fff' }}>
-            Your Free Bay Area Construction SEO Audit
-          </h1>
-          <p style={{ color: '#CBD5E1', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '32px' }}>
-            In 20 minutes, we&apos;ll show you exactly where your Google rankings stand, who&apos;s beating you and why,
-            and what a clear path to #1 looks like for your business. No fluff, no pitch — just honest data.
-          </p>
-          <a href="mailto:hello@constructionseo.sf?subject=Free SEO Audit Request" className="btn btn-primary" style={{ fontSize: '1rem', padding: '16px 36px' }}>
-            Request My Free Audit →
-          </a>
-          <p style={{ color: '#94A3B8', marginTop: '16px', fontSize: '0.9rem' }}>No commitment. No spam. Responses within 1 business day.</p>
-        </div>
-      </section>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
 
-      {/* ===== WHAT YOU GET ===== */}
-      <section style={{ padding: '72px 0' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-label">What&apos;s Included</span>
-            <h2>Four Things Your Free Audit Covers</h2>
-            <p>We don&apos;t run your domain through a generic tool and hand you a 40-page PDF. This is a manual audit by someone who knows Bay Area construction SEO.</p>
+            {/* Left — Copy */}
+            <div>
+              <span style={{
+                display: 'inline-flex', alignItems: 'center',
+                padding: '5px 16px', borderRadius: '9999px',
+                background: 'rgba(232,97,26,0.15)', border: '1px solid rgba(232,97,26,0.30)',
+                color: '#F4875A', fontSize: '0.72rem', fontWeight: 700,
+                letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem',
+              }}>
+                Free SEO Audit
+              </span>
+
+              <h1 id="audit-hero-heading" style={{
+                fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
+                color: '#FFFFFF',
+                fontFamily: 'var(--font-manrope)',
+                fontWeight: 800,
+                lineHeight: 1.15,
+                letterSpacing: '-0.02em',
+                marginBottom: '1rem',
+              }}>
+                See Exactly Why Competitors Are{' '}
+                <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Ranking Above You.</em>
+              </h1>
+
+              <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.60)', lineHeight: 'var(--leading-relaxed)', marginBottom: '2rem' }}>
+                Before you spend a dollar on SEO, know the truth: what&rsquo;s broken, who&rsquo;s beating you, and why. We research your specific business and market before the call. No templates, no guesswork.
+              </p>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', marginBottom: '2rem' }}>
+                {AUDIT_COVERS.map((item) => (
+                  <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>{item.icon}</span>
+                    <span style={{ fontSize: '0.92rem', color: 'rgba(255,255,255,0.75)' }}>{item.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ display: 'flex', gap: '2rem' }}>
+                {[
+                  { num: '40+', label: 'Audits done' },
+                  { num: '1 day', label: 'Turnaround' },
+                  { num: '$0', label: 'Always free' },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-manrope)' }}>{s.num}</div>
+                    <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.40)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right — Form */}
+            <div style={{
+              background: 'rgba(255,255,255,0.97)',
+              borderRadius: 'var(--radius-lg)',
+              padding: '2rem',
+              borderTop: '4px solid var(--accent)',
+              boxShadow: 'var(--shadow-lg)',
+            }}>
+              <h2 style={{ fontSize: '1.2rem', marginBottom: '0.4rem', color: 'var(--text-primary)' }}>Request Your Free Audit</h2>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                Takes 2 minutes. We&rsquo;ll follow up within 1 business day.
+              </p>
+
+              <form
+                name="free-seo-audit"
+                method="POST"
+                action="/free-seo-audit/thank-you/"
+                style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}
+              >
+                <input type="hidden" name="form-name" value="free-seo-audit" />
+
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.9rem' }}>
+                  <FormField label="First Name" name="first_name" required placeholder="James" />
+                  <FormField label="Last Name" name="last_name" required placeholder="Moreno" />
+                </div>
+
+                <FormField label="Business Name" name="business_name" required placeholder="Moreno Construction Co." />
+                <FormField label="Website URL" name="website_url" type="url" required placeholder="https://yoursite.com" />
+                <FormField label="Phone" name="phone" type="tel" required placeholder="(415) 555-0100" />
+                <FormField label="Email" name="email" type="email" required placeholder="james@morenoconstruction.com" />
+
+                <div>
+                  <label className="form-label form-label--required" htmlFor="trade_type">Trade / Service Type</label>
+                  <select id="trade_type" name="trade_type" className="form-input" required defaultValue="">
+                    <option value="" disabled>Select your trade...</option>
+                    {TRADES.map((t) => <option key={t} value={t}>{t}</option>)}
+                  </select>
+                </div>
+
+                <FormField
+                  label="Primary Service Area"
+                  name="service_area"
+                  required
+                  placeholder="e.g. San Francisco, Oakland, South Bay"
+                  hint="City or region where you want to rank"
+                />
+
+                <FormField
+                  label="Biggest SEO Challenge (optional)"
+                  name="challenge"
+                  as="textarea"
+                  rows={2}
+                  placeholder="e.g. Competitors always show above me on Google Maps..."
+                />
+
+                <button type="submit" className="btn btn-primary" style={{ marginTop: '0.25rem', width: '100%', justifyContent: 'center' }}>
+                  Send My Free Audit Request →
+                </button>
+
+                <p style={{ fontSize: '0.76rem', color: 'var(--text-tertiary)', textAlign: 'center', margin: 0 }}>
+                  No commitment. No spam. Honest data about your market.
+                </p>
+              </form>
+            </div>
+
           </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px', marginTop: '48px' }}>
-
-            <div className="process-card">
-              <div className="process-num">01</div>
-              <h3>Current Ranking Snapshot</h3>
-              <p>We check where you currently rank for your most important keywords — your trade + your cities. You&apos;ll see your exact position for 10–15 target terms right now.</p>
-            </div>
-
-            <div className="process-card">
-              <div className="process-num">02</div>
-              <h3>Competitor Analysis</h3>
-              <p>We identify the 3–5 contractors outranking you, show you why they rank (backlinks, content, GBP strength), and map the gap between where you are and where they are.</p>
-            </div>
-
-            <div className="process-card">
-              <div className="process-num">03</div>
-              <h3>GBP Health Check</h3>
-              <p>We audit your Google Business Profile against the top-ranking competitors in your area — categories, reviews, photo count, post frequency, and completeness score.</p>
-            </div>
-
-            <div className="process-card">
-              <div className="process-num">04</div>
-              <h3>Top 3 Priority Fixes</h3>
-              <p>We don&apos;t just show you problems — we tell you the 3 highest-impact actions you can take right now, whether you work with us or not. Honest, actionable, specific.</p>
-            </div>
-
-          </div>
         </div>
       </section>
-
-      {/* ===== WHO IT'S FOR ===== */}
-      <section style={{ background: '#F8FAFC', padding: '60px 0' }}>
-        <div className="container" style={{ maxWidth: '680px' }}>
-          <div className="section-header">
-            <span className="section-label">Who This Is For</span>
-            <h2>This Audit Is a Fit If You&apos;re a Bay Area Contractor Who:</h2>
-          </div>
-          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '32px' }}>
-            {[
-              "Isn't showing up on the first page of Google for your trade + city",
-              "Has a Google Business Profile that isn't generating calls",
-              "Is spending money on Angi or HomeAdvisor and wants to reduce that dependency",
-              "Recently launched a website and isn't sure how to get it ranking",
-              "Has done SEO before but didn't see results and wants to understand why",
-              "Wants to expand into new Bay Area cities and service areas",
-            ].map((item) => (
-              <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '1.05rem' }}>
-                <span style={{ color: 'var(--yellow)', fontWeight: 700, flexShrink: 0, marginTop: '2px' }}>✓</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* ===== CTA ===== */}
-      <section id="contact" style={{ background: 'var(--navy)', color: '#fff', padding: '80px 0', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '580px' }}>
-          <span className="section-label">Get Your Audit</span>
-          <h2 style={{ color: '#fff', margin: '12px 0 16px' }}>Ready to See Where You Stand?</h2>
-          <p style={{ color: '#CBD5E1', marginBottom: '12px' }}>
-            Email us with your business name, website (if you have one), and the city + trade you most want to rank for.
-            We&apos;ll send your audit within 1 business day.
-          </p>
-          <p style={{ color: '#94A3B8', marginBottom: '32px', fontSize: '0.95rem' }}>
-            Or if you&apos;d prefer to talk through it live, just say so — we&apos;re happy to walk through the audit on a quick call.
-          </p>
-          <a
-            href="mailto:hello@constructionseo.sf?subject=Free SEO Audit Request"
-            className="btn btn-primary"
-            style={{ fontSize: '1rem', padding: '16px 36px' }}
-          >
-            Email Us for Your Free Audit →
-          </a>
-          <p style={{ color: '#94A3B8', marginTop: '16px', fontSize: '0.85rem' }}>
-            hello@constructionseo.sf &nbsp;|&nbsp; No commitment. No spam.
-          </p>
-        </div>
-      </section>
-
-    </main>
+    </>
   )
 }

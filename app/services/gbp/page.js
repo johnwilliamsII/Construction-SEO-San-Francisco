@@ -1,7 +1,48 @@
+import SectionHeading from '../../../components/sections/SectionHeading'
+import StatCard from '../../../components/sections/StatCard'
+import FaqAccordion from '../../../components/sections/FaqAccordion'
+import CtaBanner from '../../../components/sections/CtaBanner'
+import Section from '../../../components/layout/Section'
+
 export const metadata = {
   title: 'Google Business Profile Optimization | Construction SEO San Francisco',
-  description: 'Get into the Google Maps 3-Pack for Bay Area construction searches. We fully optimize and manage your GBP to drive more calls and direction requests.',
+  description:
+    'Get into the Google Maps 3-Pack for Bay Area construction searches. We fully optimize and manage your GBP to drive more calls and direction requests.',
 }
+
+const FEATURES = [
+  { icon: '✅', title: 'Full GBP Setup & Verification',      body: 'Complete setup, category optimization, and verification — done right the first time.' },
+  { icon: '✍️', title: 'Keyword-Rich Descriptions',          body: 'Service descriptions and Q&A sections optimized with the terms Bay Area customers actually search.' },
+  { icon: '📅', title: 'Weekly Google Posts',                body: 'We publish regular posts (offers, project updates, news) to signal activity to Google.' },
+  { icon: '📸', title: 'Photo Strategy & Management',        body: 'Before/afters, job site photos, team images — a consistent photo cadence that builds trust.' },
+  { icon: '⭐', title: 'Review Acquisition System',          body: 'A systematic process to generate more genuine 5-star reviews and respond professionally.' },
+  { icon: '📈', title: 'GBP Insights Reporting',             body: 'Monthly reports on calls, direction requests, website clicks — the metrics that actually matter.' },
+]
+
+const STATS = [
+  { value: '44%',  label: 'of Local Clicks Go to the 3-Pack', detail: 'Google internal data' },
+  { value: '200+', label: 'Monthly Calls from GBP',            detail: 'Avg. client after 6 months' },
+  { value: '–60%', label: 'Cost Per Lead Reduction',           detail: 'Vs. paid directory listings' },
+  { value: '3×',   label: 'Faster Results vs. Organic SEO',    detail: 'For new GBP profiles' },
+]
+
+const FAQ = [
+  {
+    question: 'What is the Google Business Profile 3-Pack?',
+    answer:
+      'The 3-Pack is the block of three local business listings that appears at the top of Google for local searches (e.g., "general contractor San Francisco"). It includes a map, business name, rating, hours, and phone number. Getting into the 3-Pack is the single highest-ROI move for most local contractors.',
+  },
+  {
+    question: 'My GBP already exists. Can you optimize it?',
+    answer:
+      'Yes — most of our GBP clients already have a profile but it\'s under-optimized. We audit your existing profile, fix issues, fill in missing fields, rewrite descriptions, add photos, and start an active posting and review cadence.',
+  },
+  {
+    question: 'How does GBP optimization help me get more calls?',
+    answer:
+      'An optimized GBP appears higher in local map results, shows up for more relevant keywords, and has complete information that builds trust. Combined, these factors drive more clicks to call, direction requests, and website visits from high-intent local searchers.',
+  },
+]
 
 export default function GBPPage() {
   return (
