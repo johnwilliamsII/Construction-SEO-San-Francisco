@@ -93,7 +93,7 @@ const PAGE_STRUCTURES = [
     h2s: ['Trusted Heating & Cooling Services in the Bay Area', 'Our HVAC Services', 'SF Neighborhoods We Serve', 'Why Homeowners Choose Us'],
     supporting: ['hvac company san francisco', 'hvac services sf', 'heating cooling contractor sf'],
     firstSentence: 'If your heating or cooling system is acting up in San Francisco, our licensed HVAC technicians are ready to diagnose, repair, or replace it — with same-day availability across every neighborhood.',
-    intent: 'Transactional', priority: 'High',
+    intent: 'Transactional', priority: 'High', vol: '2,400/mo',
   },
   {
     url: '/emergency-hvac-san-francisco/',
@@ -101,7 +101,7 @@ const PAGE_STRUCTURES = [
     h2s: ['We Answer When You Call — Day or Night', 'Common HVAC Emergencies We Handle', 'Fast Response Across All SF Neighborhoods'],
     supporting: ['emergency hvac sf', '24 hour hvac san francisco', 'hvac emergency repair sf'],
     firstSentence: 'HVAC emergencies don\'t wait for business hours — and neither do we. Our emergency team serves all San Francisco neighborhoods with response times under two hours.',
-    intent: 'Transactional', priority: 'High',
+    intent: 'Transactional', priority: 'High', vol: '880/mo',
   },
   {
     url: '/ac-repair-san-francisco/',
@@ -109,7 +109,7 @@ const PAGE_STRUCTURES = [
     h2s: ['Signs Your AC Needs Repair', 'Our AC Repair Process', 'Flat-Rate Diagnostic — No Surprise Bills'],
     supporting: ['air conditioner repair sf', 'ac not cooling san francisco', 'ac technician sf'],
     firstSentence: 'When your air conditioner stops working in a San Francisco heat wave, you need a reliable AC repair team that shows up fast, diagnoses accurately, and fixes it right the first time.',
-    intent: 'Transactional', priority: 'High',
+    intent: 'Transactional', priority: 'High', vol: '1,200/mo',
   },
   {
     url: '/hvac-nob-hill-sf/',
@@ -117,7 +117,7 @@ const PAGE_STRUCTURES = [
     h2s: ['Local HVAC Service for Nob Hill Residents', 'Heating & Cooling in Historic Buildings', 'Schedule Same-Day Service'],
     supporting: ['hvac nob hill', 'heating repair nob hill sf', 'ac service nob hill'],
     firstSentence: 'Nob Hill homeowners trust us for HVAC service that works around the unique challenges of San Francisco\'s older buildings — from Victorian-era ductwork to modern mini-split installs.',
-    intent: 'Transactional', priority: 'High',
+    intent: 'Transactional', priority: 'High', vol: '170/mo',
   },
   {
     url: '/hvac-marina-district-sf/',
@@ -125,7 +125,7 @@ const PAGE_STRUCTURES = [
     h2s: ['HVAC Service in the Marina', 'Heating & Cooling for Marina Homes & Condos', 'Book a Same-Day Appointment'],
     supporting: ['hvac marina district', 'ac repair marina sf', 'furnace repair marina district'],
     firstSentence: 'From Marina District condos to single-family homes, our HVAC team provides fast, reliable heating and cooling service backed by a satisfaction guarantee.',
-    intent: 'Transactional', priority: 'High',
+    intent: 'Transactional', priority: 'High', vol: '210/mo',
   },
   {
     url: '/ac-installation-san-francisco/',
@@ -133,7 +133,7 @@ const PAGE_STRUCTURES = [
     h2s: ['Central AC vs. Mini-Split — Which is Right for Your Home?', 'Our Installation Process', 'Financing Available'],
     supporting: ['ac installation cost sf', 'mini split installation san francisco', 'central ac install sf'],
     firstSentence: 'Installing air conditioning in a San Francisco home requires understanding the city\'s mild climate, older building stock, and permit requirements — our team has done it hundreds of times.',
-    intent: 'Commercial', priority: 'High',
+    intent: 'Commercial', priority: 'High', vol: '590/mo',
   },
   {
     url: '/furnace-repair-san-francisco/',
@@ -141,7 +141,7 @@ const PAGE_STRUCTURES = [
     h2s: ['Signs Your Furnace Needs Repair', 'Common Furnace Problems We Fix', 'When to Repair vs. Replace'],
     supporting: ['furnace repair sf', 'gas furnace repair san francisco', 'heater repair sf'],
     firstSentence: 'A broken furnace on a cold San Francisco night is more than an inconvenience — our furnace repair team provides same-day diagnostics and most repairs completed in a single visit.',
-    intent: 'Transactional', priority: 'Medium',
+    intent: 'Transactional', priority: 'Medium', vol: '720/mo',
   },
   {
     url: '/hvac-maintenance-san-francisco/',
@@ -149,7 +149,7 @@ const PAGE_STRUCTURES = [
     h2s: ['What\'s Included in Our Maintenance Plan', 'How Regular Maintenance Saves You Money', 'Annual vs. Bi-Annual Service'],
     supporting: ['hvac tune up sf', 'hvac annual maintenance san francisco', 'ac maintenance plan sf'],
     firstSentence: 'San Francisco\'s damp winters and warm summers put real strain on HVAC systems — our maintenance plans keep your equipment running efficiently and catch problems before they become expensive.',
-    intent: 'Commercial', priority: 'Medium',
+    intent: 'Commercial', priority: 'Medium', vol: '320/mo',
   },
   {
     url: '/commercial-hvac-san-francisco/',
@@ -157,7 +157,7 @@ const PAGE_STRUCTURES = [
     h2s: ['HVAC Solutions for SF Businesses', 'Retail, Office & Restaurant HVAC', 'Preventive Maintenance for Commercial Systems'],
     supporting: ['commercial hvac company sf', 'office hvac san francisco', 'commercial ac repair sf'],
     firstSentence: 'San Francisco businesses rely on us for commercial HVAC installation, repair, and maintenance — with flexible scheduling designed to minimize disruption to your operations.',
-    intent: 'Commercial', priority: 'Medium',
+    intent: 'Commercial', priority: 'Medium', vol: '480/mo',
   },
   {
     url: '/how-much-does-hvac-cost-san-francisco/',
@@ -165,7 +165,7 @@ const PAGE_STRUCTURES = [
     h2s: ['Average HVAC Costs in SF', 'Factors That Affect Your Price', 'Getting an Accurate Quote', 'Financing Options'],
     supporting: ['hvac cost sf', 'hvac replacement cost san francisco', 'how much is a new ac unit sf'],
     firstSentence: 'HVAC costs in San Francisco typically run higher than national averages — this guide breaks down real pricing for repairs, replacements, and new installs so you know what to expect before you call.',
-    intent: 'Informational', priority: 'Medium',
+    intent: 'Informational', priority: 'Medium', vol: '1,100/mo',
   },
 ]
 
@@ -219,13 +219,21 @@ function PageCard({ page, index, isOpen, onToggle }) {
             H1: {page.h1}
           </span>
         </div>
-        <span style={{
-          fontSize: '0.65rem', fontWeight: 700, color: intentColor,
-          background: intentBg, padding: '3px 10px', borderRadius: '9999px',
-          whiteSpace: 'nowrap', flexShrink: 0,
-        }}>
-          {page.intent}
-        </span>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px', flexShrink: 0 }}>
+          <span style={{
+            fontSize: '0.65rem', fontWeight: 700, color: intentColor,
+            background: intentBg, padding: '3px 10px', borderRadius: '9999px',
+            whiteSpace: 'nowrap',
+          }}>
+            {page.intent}
+          </span>
+          <span style={{
+            fontSize: '0.65rem', fontWeight: 600, color: 'var(--gray)',
+            whiteSpace: 'nowrap',
+          }}>
+            ~{page.vol}
+          </span>
+        </div>
         <span style={{
           width: '24px', height: '24px', borderRadius: '50%', flexShrink: 0,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -1000,8 +1008,10 @@ export default function KeywordResearchClient() {
             ))}
           </div>
 
-          <p style={{ textAlign: 'center', fontSize: '0.8rem', color: 'rgba(255,255,255,0.40)', marginTop: '1.5rem' }}>
-            Example shown for HVAC contractor in San Francisco. Your report uses your actual trade, URL structure, and keyword data.
+          <p style={{ textAlign: 'center', fontSize: '0.78rem', color: 'rgba(255,255,255,0.35)', marginTop: '1rem', lineHeight: 1.6, maxWidth: '680px', margin: '1rem auto 0' }}>
+            <strong style={{ color: 'rgba(255,255,255,0.50)', fontWeight: 600 }}>Disclaimer:</strong>{' '}
+            All volume figures, keyword data, URLs, H1s, H2s, supporting keywords, and first sentences shown above are illustrative filler data only and do not represent real research or real search volumes.
+            Your actual report will contain live, verified data specific to your trade, market, and competitor set.
           </p>
         </div>
       </section>
