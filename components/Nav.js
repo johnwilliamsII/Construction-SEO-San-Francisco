@@ -3,21 +3,21 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-// ─── UPDATE THESE when you have final service names ───────────────────────────
 const SERVICES = [
   { label: 'Local SEO for Contractors',      href: '/services/local-seo/' },
   { label: 'Google Business Profile (GBP)',  href: '/services/gbp/' },
+  { label: 'Keyword Research',               href: '/services/keyword-research/' },
+  { label: 'Link Building',                  href: '/services/link-building/' },
+  { label: 'SEO Packages',                   href: '/services/seo-packages/' },
+  { label: 'AI Receptionist',                href: '/services/ai-receptionist/' },
 ]
-// ──────────────────────────────────────────────────────────────────────────────
 
 const NAV_LINKS = [
-  { label: 'Home',         href: '/' },
-  { label: 'Services',     href: null,              dropdown: SERVICES },
-  { label: 'Blog',         href: '/blog/' },
-  { label: 'About',        href: '/about/' },
-  { label: 'Process',      href: '/#process' },
-  { label: 'Testimonials', href: '/#testimonials' },
-  { label: 'Contact',      href: '/#contact' },
+  { label: 'Home',       href: '/' },
+  { label: 'Services',   href: null, dropdown: SERVICES },
+  { label: 'Free Audit', href: '/free-seo-audit/' },
+  { label: 'Blog',       href: '/blog/' },
+  { label: 'About',      href: '/about/' },
 ]
 
 export default function Nav() {
@@ -58,7 +58,7 @@ export default function Nav() {
 
         {/* Logo */}
         <Link href="/" className="nav-logo">
-          Construction<span>SEO</span><em>.sf</em>
+          Construction<span>SEO</span>SanFrancisco<em>.com</em>
         </Link>
 
         {/* Desktop nav */}

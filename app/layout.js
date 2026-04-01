@@ -34,7 +34,7 @@ export const metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Construction SEO San Francisco',
+  name: 'ConstructionSEOSanFrancisco.com',
   description:
     'SEO services exclusively for construction companies and contractors in the San Francisco Bay Area.',
   areaServed: [
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
           <div className="container">
             <div className="footer-grid">
               <div className="footer-brand">
-                <div className="footer-logo">Construction<span>SEO</span><em>.sf</em></div>
+                <div className="footer-logo">Construction<span>SEO</span>SanFrancisco<em>.com</em></div>
                 <p>SEO built exclusively for Bay Area construction companies and contractors.</p>
               </div>
               <div className="footer-col">
@@ -79,6 +79,10 @@ export default function RootLayout({ children }) {
                 <ul>
                   <li><a href="/services/local-seo/">Local SEO</a></li>
                   <li><a href="/services/gbp/">Google Business Profile</a></li>
+                  <li><a href="/services/keyword-research/">Keyword Research</a></li>
+                  <li><a href="/services/link-building/">Link Building</a></li>
+                  <li><a href="/services/seo-packages/">SEO Packages</a></li>
+                  <li><a href="/services/ai-receptionist/">AI Receptionist</a></li>
                 </ul>
               </div>
               <div className="footer-col">
@@ -86,7 +90,7 @@ export default function RootLayout({ children }) {
                 <ul>
                   <li><a href="/about/">About</a></li>
                   <li><a href="/blog/">Blog</a></li>
-                  <li><a href="/#process">Process</a></li>
+                  <li><a href="/free-seo-audit/">Free SEO Audit</a></li>
                 </ul>
               </div>
               <div className="footer-col">
@@ -100,7 +104,7 @@ export default function RootLayout({ children }) {
               </div>
             </div>
             <div className="footer-bottom">
-              <p>&copy; 2026 Construction SEO San Francisco &nbsp;|&nbsp; <a href="mailto:hello@constructionseo.sf">hello@constructionseo.sf</a></p>
+              <p>&copy; 2026 ConstructionSEOSanFrancisco.com &nbsp;|&nbsp; <a href="mailto:hello@constructionseosanfrancisco.com">hello@constructionseosanfrancisco.com</a></p>
             </div>
           </div>
         </footer>

@@ -70,46 +70,100 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <span className="section-label">What We Do</span>
-            <h2 id="services-heading">SEO Built for Bay Area Contractors</h2>
-            <p>Two focused services that move the needle — local map rankings and site-wide organic growth.</p>
+            <h2 id="services-heading">Every Service Bay Area Contractors Need to Win on Google</h2>
+            <p>From local rankings to AI-powered lead capture — our full suite is built exclusively for the construction industry.</p>
           </div>
 
-          <div className="services-grid">
+          <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
 
             <article className="service-card">
               <div className="service-icon">📍</div>
-              <h3>Local SEO for Construction Companies</h3>
+              <h3>Local SEO for Contractors</h3>
               <p>
-                Capture homeowners and project managers who are searching &ldquo;contractor near me&rdquo; right now.
-                We optimize every local signal so your business appears at the top of San Francisco and Bay Area search results.
+                Dominate &ldquo;contractor near me&rdquo; searches across SF neighborhoods, Oakland, the Peninsula, and every city you serve.
               </p>
               <ul className="service-features">
-                <li>Hyper-local keyword research (SF neighborhoods, cities, zip codes)</li>
-                <li>On-page SEO for city &amp; service landing pages</li>
-                <li>Local citation building &amp; NAP consistency across 80+ directories</li>
-                <li>Competitor gap analysis — see exactly who outranks you and why</li>
-                <li>Schema markup for contractors (LocalBusiness, Service, Review)</li>
-                <li>Monthly ranking reports with plain-English explanations</li>
+                <li>City &amp; neighborhood landing pages</li>
+                <li>Local citations across 80+ directories</li>
+                <li>Schema markup + competitor gap analysis</li>
+                <li>Monthly ranking reports</li>
               </ul>
-              <a href="/services/local-seo/" className="service-card-cta">Learn more about Local SEO →</a>
+              <a href="/services/local-seo/" className="service-card-cta">Local SEO details →</a>
             </article>
 
             <article className="service-card">
               <div className="service-icon">🗺️</div>
-              <h3>Google Business Profile (GBP) Optimization</h3>
+              <h3>Google Business Profile (GBP)</h3>
               <p>
-                The Google Maps &ldquo;3-Pack&rdquo; gets 44% of all clicks for local searches. We fully optimize
-                and actively manage your GBP so you own that prime real estate for every high-value construction keyword.
+                The Maps 3-Pack gets 44% of all local clicks. We optimize and actively manage your GBP to own that prime real estate.
               </p>
               <ul className="service-features">
-                <li>Complete GBP setup, verification &amp; category optimization</li>
-                <li>Keyword-rich service descriptions and Q&amp;A population</li>
-                <li>Weekly Google Posts (offers, projects, news)</li>
-                <li>Photo strategy — before/afters, job sites, team photos</li>
-                <li>Review acquisition system + response management</li>
-                <li>GBP insights reporting — calls, directions, website clicks</li>
+                <li>Full GBP setup, verification &amp; categories</li>
+                <li>Weekly Google Posts &amp; photo strategy</li>
+                <li>Review acquisition &amp; response management</li>
+                <li>GBP Insights reporting</li>
               </ul>
-              <a href="/services/gbp/" className="service-card-cta">Learn more about GBP →</a>
+              <a href="/services/gbp/" className="service-card-cta">GBP Optimization details →</a>
+            </article>
+
+            <article className="service-card">
+              <div className="service-icon">🔍</div>
+              <h3>Keyword Research</h3>
+              <p>
+                Know exactly what Bay Area buyers type into Google before hiring a contractor — then build your entire strategy around those terms.
+              </p>
+              <ul className="service-features">
+                <li>Trade-specific keyword mapping</li>
+                <li>Neighborhood &amp; city-level opportunities</li>
+                <li>Search volume &amp; competition scoring</li>
+                <li>Content roadmap delivery</li>
+              </ul>
+              <a href="/services/keyword-research/" className="service-card-cta">Keyword Research details →</a>
+            </article>
+
+            <article className="service-card">
+              <div className="service-icon">🔗</div>
+              <h3>Link Building</h3>
+              <p>
+                Authority links from Bay Area publications, trade associations, and local directories tell Google your business is the real deal.
+              </p>
+              <ul className="service-features">
+                <li>Local &amp; industry-relevant link outreach</li>
+                <li>Contractor directory placements</li>
+                <li>Digital PR for completed projects</li>
+                <li>Zero spammy link schemes</li>
+              </ul>
+              <a href="/services/link-building/" className="service-card-cta">Link Building details →</a>
+            </article>
+
+            <article className="service-card">
+              <div className="service-icon">📦</div>
+              <h3>SEO Packages</h3>
+              <p>
+                Bundled monthly plans designed for contractors at every stage — from new businesses building visibility to established firms scaling fast.
+              </p>
+              <ul className="service-features">
+                <li>Starter, Growth &amp; Pro tiers</li>
+                <li>Everything included — no à la carte surprises</li>
+                <li>Month-to-month, no lock-in contracts</li>
+                <li>Clear deliverables &amp; reporting every month</li>
+              </ul>
+              <a href="/services/seo-packages/" className="service-card-cta">View SEO Packages →</a>
+            </article>
+
+            <article className="service-card">
+              <div className="service-icon">🤖</div>
+              <h3>AI Receptionist</h3>
+              <p>
+                Never miss a lead again. Our AI receptionist answers calls, qualifies prospects, and books estimates — 24/7, even when you&apos;re on the job.
+              </p>
+              <ul className="service-features">
+                <li>24/7 call answering &amp; lead qualification</li>
+                <li>Estimate booking directly to your calendar</li>
+                <li>Trained on construction industry scripts</li>
+                <li>Instant SMS follow-up to every caller</li>
+              </ul>
+              <a href="/services/ai-receptionist/" className="service-card-cta">AI Receptionist details →</a>
             </article>
 
           </div>
