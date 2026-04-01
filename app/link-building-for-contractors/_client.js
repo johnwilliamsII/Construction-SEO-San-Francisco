@@ -615,7 +615,7 @@ export default function LinkBuildingClient() {
                 icon: '🔍',
                 visual: 'audit',
                 title: 'Place Your Order',
-                body: 'Choose your package and tier, provide your target URL and preferred anchor text. We confirm your order within one business day.',
+                body: 'Choose your package and tier, then provide your target URL and preferred anchor text. You write and submit your article — we handle placement. Where the site allows it, we\'ll submit your article directly with your anchor text and link. Where it doesn\'t, we use your anchor text and link within our own content. Ideally you get both.',
               },
               {
                 num: '2',
@@ -651,17 +651,29 @@ export default function LinkBuildingClient() {
                 }}>
                   {step.visual === 'audit' && (
                     <>
-                      <div style={{ fontSize: '2.5rem' }}>🔍</div>
-                      <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--navy)', textAlign: 'center', lineHeight: 1.4 }}>
+                      <div style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>🔍</div>
+                      <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--navy)', textAlign: 'center', lineHeight: 1.4, marginBottom: '0.4rem' }}>
                         Target URL<br/>
                         <span style={{ color: 'var(--accent)' }}>contractorco.com/hvac-sf</span>
                       </div>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--gray)', textAlign: 'center' }}>
-                        Anchor: "HVAC contractor San Francisco"
+                      <div style={{ width: '100%' }}>
+                        {[
+                          'You provide your article',
+                          'You choose your anchor text',
+                          'We submit it — or write around it',
+                        ].map((item) => (
+                          <div key={item} style={{
+                            display: 'flex', alignItems: 'center', gap: '5px',
+                            fontSize: '0.68rem', color: 'var(--slate)', marginBottom: '3px',
+                          }}>
+                            <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                            {item}
+                          </div>
+                        ))}
                       </div>
                       <div style={{
-                        marginTop: '0.5rem', padding: '6px 16px', borderRadius: '9999px',
-                        background: 'var(--accent)', color: '#fff', fontSize: '0.72rem', fontWeight: 700,
+                        marginTop: '0.4rem', padding: '5px 14px', borderRadius: '9999px',
+                        background: 'var(--accent)', color: '#fff', fontSize: '0.68rem', fontWeight: 700,
                       }}>
                         Order Confirmed ✓
                       </div>
