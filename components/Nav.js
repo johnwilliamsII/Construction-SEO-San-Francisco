@@ -58,7 +58,7 @@ export default function Nav() {
 
         {/* Logo */}
         <Link href="/" className="nav-logo">
-          Construction<span>SEO</span>SanFrancisco<em>.com</em>
+          Construction<span>SEO</span><span className="logo-long">SanFrancisco</span><span className="logo-short">SF</span><em>.com</em>
         </Link>
 
         {/* Desktop nav */}

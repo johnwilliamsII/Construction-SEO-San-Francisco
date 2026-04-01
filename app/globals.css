@@ -145,6 +145,12 @@ h1 em, h2 em {
 }
 .nav-logo span { color: var(--yellow-dk); }
 .nav-logo em   { font-style: normal; color: var(--gray); }
+.logo-long  { display: none; }
+.logo-short { display: inline; }
+@media (max-width: 900px) {
+  .logo-long  { display: inline; }
+  .logo-short { display: none; }
+}
 
 .nav-desktop { flex: 1; }
 .nav-links {
