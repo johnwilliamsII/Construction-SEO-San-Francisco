@@ -444,10 +444,10 @@ export default function LinkBuildingClient() {
             gap: '1rem', textAlign: 'center',
           }}>
             {[
-              { v: '10+',  l: 'Quality Links/Month'  },
-              { v: '0',    l: 'Spammy Links, Ever'   },
-              { v: '2–4×', l: 'DA Improvement'       },
-              { v: '40+',  l: 'Contractors Ranking'  },
+              { v: 'À La Carte', l: 'No Monthly Contract' },
+              { v: '0',          l: 'Spammy Links, Ever'  },
+              { v: '2–4×',       l: 'DA Improvement'      },
+              { v: '40+',        l: 'Contractors Ranking' },
             ].map(({ v, l }) => (
               <div key={l}>
                 <div style={{
