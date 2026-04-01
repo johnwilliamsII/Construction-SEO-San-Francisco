@@ -164,69 +164,103 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section id="hero" className="hero-section" aria-labelledby="hero-heading">
-        <div className="container hero-grid">
+      <section
+        id="hero"
+        aria-labelledby="hero-heading"
+        style={{
+          position: 'relative',
+          overflow: 'hidden',
+          padding: 'clamp(5rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6rem)',
+          backgroundImage: 'linear-gradient(rgba(13,27,42,0.58), rgba(13,27,42,0.52)), url(https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="container" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
 
-          <div className="hero-text">
-            <span className="section-label">Bay Area Contractor SEO</span>
-            <h1 id="hero-heading">
-              SEO for Contractors <em>in the Bay Area</em>
-            </h1>
-            <p className="hero-subhead">
-              Dominate Bay Area Local Search and Stop Renting Your Leads
-            </p>
-            <p className="hero-body">
-              We help San Francisco contractors, GCs, and specialty trades own Google search —
-              map pack, organic rankings, and inbound calls that compound month after month.
-              No ads. No Angi. No HomeAdvisor tax.
-            </p>
-            <div className="hero-actions">
-              <a href="/free-seo-audit/" className="btn btn-primary">Get Your Free SEO Audit</a>
-              <a href="#how-it-works" className="btn btn-outline-dark">See How It Works</a>
-            </div>
-            <div className="hero-trust">
-              <div className="hero-trust-icons">
-                <div className="avatar">JM</div>
-                <div className="avatar">RT</div>
-                <div className="avatar">SK</div>
-                <div className="avatar">AL</div>
-              </div>
-              <span>Trusted by 40+ Bay Area contractors</span>
-            </div>
+          {/* Badge */}
+          <span style={{
+            display: 'inline-flex', alignItems: 'center', gap: '6px',
+            padding: '5px 16px', borderRadius: '9999px',
+            background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.30)',
+            color: '#fff', fontSize: '0.75rem', fontWeight: 600,
+            letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '1.5rem',
+          }}>
+            🏗️ Construction SEO &bull; San Francisco, California
+          </span>
+
+          <h1 id="hero-heading" style={{
+            fontSize: 'clamp(2.2rem, 5vw, 3.6rem)',
+            color: '#fff',
+            fontFamily: 'var(--font-manrope)',
+            fontWeight: 800,
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+            marginBottom: '1.25rem',
+            maxWidth: '780px',
+          }}>
+            SEO for Contractors <em style={{ color: 'var(--yellow)', fontStyle: 'italic' }}>in the Bay Area</em>
+          </h1>
+
+          <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.82)', maxWidth: '580px', lineHeight: 1.7, marginBottom: '0.75rem' }}>
+            Dominate Bay Area local search and stop renting your leads
+          </p>
+          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.65)', maxWidth: '540px', lineHeight: 1.7, marginBottom: '2.25rem' }}>
+            We help San Francisco contractors, GCs, and specialty trades own Google search —
+            map pack, organic rankings, and inbound calls that compound month after month.
+            No ads. No Angi. No HomeAdvisor tax.
+          </p>
+
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '2.5rem' }}>
+            <a href="/free-seo-audit/" className="btn btn-primary" style={{ fontSize: '1rem', padding: '15px 32px' }}>
+              Get Your Free SEO Audit
+            </a>
+            <a href="#how-it-works" className="btn" style={{
+              fontSize: '1rem', padding: '15px 32px',
+              background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.45)',
+              color: '#fff', backdropFilter: 'blur(8px)',
+            }}>
+              See How It Works
+            </a>
           </div>
 
-          <div className="hero-card" aria-hidden="true">
-            <div className="hero-card-title">Live Ranking Snapshot — SF Bay Area</div>
-            <div className="stat-row">
-              <div className="stat-box">
-                <span className="num">+312%</span>
-                <div className="lbl">Organic Traffic</div>
+          {/* Trust */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '3rem' }}>
+            <div style={{ display: 'flex' }}>
+              {['JM','RT','SK','AL'].map((i) => (
+                <div key={i} className="avatar" style={{ border: '2px solid rgba(255,255,255,0.5)', marginLeft: '-8px' }}>{i}</div>
+              ))}
+            </div>
+            <span style={{ color: 'rgba(255,255,255,0.80)', fontSize: '0.9rem' }}>Trusted by 40+ Bay Area contractors</span>
+          </div>
+
+          {/* How It Works strip */}
+          <div style={{
+            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px',
+            background: 'rgba(255,255,255,0.15)', borderRadius: '12px', overflow: 'hidden',
+            width: '100%', maxWidth: '680px',
+          }}>
+            {[
+              { num: '1', label: 'Free Consultation' },
+              { num: '2', label: 'Custom Strategy' },
+              { num: '3', label: 'Get Results' },
+            ].map((step, i) => (
+              <div key={step.num} style={{
+                background: 'rgba(255,255,255,0.10)',
+                backdropFilter: 'blur(8px)',
+                padding: '1rem',
+                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
+                borderRight: i < 2 ? '1px solid rgba(255,255,255,0.15)' : 'none',
+              }}>
+                <div style={{
+                  width: '32px', height: '32px', borderRadius: '50%',
+                  background: 'var(--yellow)', color: 'var(--navy)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontWeight: 800, fontSize: '0.9rem',
+                }}>{step.num}</div>
+                <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.85rem', fontWeight: 600 }}>{step.label}</span>
               </div>
-              <div className="stat-box">
-                <span className="num">4.8×</span>
-                <div className="lbl">More Leads / Mo</div>
-              </div>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;General contractor San Francisco&rdquo;</span>
-              <span className="rank-badge">#1</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;Remodeling contractor Bay Area&rdquo;</span>
-              <span className="rank-badge">#2</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;Kitchen remodel contractor SF&rdquo;</span>
-              <span className="rank-badge">#1</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;HVAC contractor San Francisco&rdquo;</span>
-              <span className="rank-badge">#1</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;Commercial construction Oakland&rdquo;</span>
-              <span className="rank-badge">#3</span>
-            </div>
+            ))}
           </div>
 
         </div>
