@@ -598,40 +598,305 @@ export default function LinkBuildingClient() {
               fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
               fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2,
             }}>
-              How Link Building Works
+              How It Works
             </h2>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '760px', margin: '0 auto' }}>
-            {STEPS.map((step) => (
-              <div key={step.num} style={{
-                display: 'grid', gridTemplateColumns: '60px 1fr', gap: '1.5rem', alignItems: 'start',
-                background: '#fff', borderRadius: '16px', padding: '1.75rem 2rem',
-                boxShadow: '0 2px 12px rgba(13,27,42,0.05)',
-                borderLeft: '4px solid var(--accent)',
-              }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '2rem',
+            maxWidth: '960px',
+            margin: '0 auto',
+          }}>
+            {[
+              {
+                num: '1',
+                icon: '🔍',
+                visual: 'audit',
+                title: 'Place Your Order',
+                body: 'Choose your package and tier, provide your target URL and preferred anchor text. We confirm your order within one business day.',
+              },
+              {
+                num: '2',
+                icon: '✍️',
+                visual: 'outreach',
+                title: 'We Get to Work',
+                body: 'Manual outreach to real editors and site owners. For niche placements, you pre-approve every domain before we publish a single word.',
+              },
+              {
+                num: '3',
+                icon: '📊',
+                visual: 'results',
+                title: 'Get Results',
+                body: 'Links go live and you receive a full placement report — every URL, domain authority score, anchor text used, and live link confirmed.',
+              },
+            ].map((step) => (
+              <div key={step.num} style={{ textAlign: 'center' }}>
+                {/* Visual card frame — mirrors the reference style */}
                 <div style={{
-                  width: '44px', height: '44px', borderRadius: '50%',
-                  background: 'var(--accent)', color: '#fff',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 800, fontSize: '0.82rem', fontFamily: 'var(--font-manrope)',
-                  flexShrink: 0,
+                  border: '3px solid var(--accent)',
+                  borderRadius: '18px',
+                  overflow: 'hidden',
+                  marginBottom: '1.25rem',
+                  background: '#fff',
+                  boxShadow: '0 4px 24px rgba(232,97,26,0.12)',
+                  aspectRatio: '4/3',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                  gap: '0.5rem',
+                  padding: '1.5rem',
                 }}>
-                  {step.num}
+                  {step.visual === 'audit' && (
+                    <>
+                      <div style={{ fontSize: '2.5rem' }}>🔍</div>
+                      <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--navy)', textAlign: 'center', lineHeight: 1.4 }}>
+                        Target URL<br/>
+                        <span style={{ color: 'var(--accent)' }}>contractorco.com/hvac-sf</span>
+                      </div>
+                      <div style={{ fontSize: '0.72rem', color: 'var(--gray)', textAlign: 'center' }}>
+                        Anchor: "HVAC contractor San Francisco"
+                      </div>
+                      <div style={{
+                        marginTop: '0.5rem', padding: '6px 16px', borderRadius: '9999px',
+                        background: 'var(--accent)', color: '#fff', fontSize: '0.72rem', fontWeight: 700,
+                      }}>
+                        Order Confirmed ✓
+                      </div>
+                    </>
+                  )}
+                  {step.visual === 'outreach' && (
+                    <>
+                      <div style={{ fontSize: '2.5rem' }}>✍️</div>
+                      <div style={{ width: '100%' }}>
+                        {['Real Sites — DA 30–65', 'Pre-Approved Domains', 'Manual Outreach Only', 'Human-to-Human'].map((item) => (
+                          <div key={item} style={{
+                            display: 'flex', alignItems: 'center', gap: '6px',
+                            fontSize: '0.72rem', color: 'var(--slate)', marginBottom: '4px',
+                          }}>
+                            <span style={{ color: 'var(--accent)', fontWeight: 700 }}>✓</span>
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                  {step.visual === 'results' && (
+                    <>
+                      <div style={{ fontSize: '2.5rem' }}>📊</div>
+                      <div style={{ width: '100%' }}>
+                        {[
+                          { label: 'Links Live', val: '10', color: '#059669' },
+                          { label: 'Avg DA',     val: '44', color: '#2563EB' },
+                          { label: 'Indexed',    val: '10', color: 'var(--accent)' },
+                        ].map((r) => (
+                          <div key={r.label} style={{
+                            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                            padding: '4px 0', borderBottom: '1px solid #F1F5F9',
+                            fontSize: '0.72rem',
+                          }}>
+                            <span style={{ color: 'var(--gray)' }}>{r.label}</span>
+                            <strong style={{ color: r.color }}>{r.val}</strong>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
-                <div>
-                  <h3 style={{
-                    fontSize: '1.05rem', color: 'var(--navy)',
-                    fontFamily: 'var(--font-manrope)', fontWeight: 700, marginBottom: '0.4rem',
-                  }}>
-                    {step.title}
-                  </h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--gray)', lineHeight: 1.7, margin: 0 }}>
-                    {step.body}
-                  </p>
-                </div>
+
+                <h3 style={{
+                  fontSize: '1.1rem', fontFamily: 'var(--font-manrope)', fontWeight: 800,
+                  color: 'var(--accent)', marginBottom: '0.5rem',
+                }}>
+                  {step.num}. {step.title}
+                </h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--gray)', lineHeight: 1.65, margin: 0 }}>
+                  {step.body}
+                </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── What's Included / Sample Report ── */}
+      <section style={{ background: '#fff', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <span style={{
+              display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
+              letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)',
+              marginBottom: '0.75rem',
+            }}>
+              Also Included In Every Order
+            </span>
+            <h2 style={{
+              fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
+              fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2, marginBottom: '0.75rem',
+            }}>
+              Your Link Report — Delivered With Every Campaign
+            </h2>
+            <p style={{ color: 'var(--gray)', fontSize: '0.95rem', maxWidth: '540px', margin: '0 auto' }}>
+              Every link we build comes with full documentation. No black boxes, no vague deliverables —
+              you see exactly where your links landed and how to use them.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid', gridTemplateColumns: '1fr 1.6fr',
+            gap: 'clamp(2rem, 4vw, 4rem)', alignItems: 'start',
+          }}>
+            {/* Inclusions list */}
+            <div>
+              <h3 style={{
+                fontSize: '1.05rem', fontFamily: 'var(--font-manrope)', fontWeight: 800,
+                color: 'var(--navy)', marginBottom: '1.25rem',
+              }}>
+                What Every Report Includes:
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
+                {[
+                  'Professional link placement with industry-proven outreach',
+                  'Live URL for every link placed — no dead links, ever',
+                  'Domain authority score for each placement',
+                  'Exact anchor text used on every link',
+                  'Confirmation of do-follow status',
+                  'Full report in PDF and CSV — white-label available',
+                  'Delivery period 10–14 working days',
+                  'All links run through an indexing network',
+                ].map((item) => (
+                  <div key={item} style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0, marginTop: '1px' }}>✓</span>
+                    <span style={{ fontSize: '0.9rem', color: 'var(--slate)', lineHeight: 1.5 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a href="/free-seo-audit/" className="btn btn-primary">Start My Campaign →</a>
+            </div>
+
+            {/* Mock report widget */}
+            <div style={{
+              border: '2px solid #E2E8F0', borderRadius: '16px', overflow: 'hidden',
+              boxShadow: '0 4px 24px rgba(13,27,42,0.08)',
+            }}>
+              {/* Report header */}
+              <div style={{
+                background: 'var(--navy)', padding: '0.9rem 1.25rem',
+                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+              }}>
+                <div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.50)', marginBottom: '2px' }}>
+                    Published: Campaign Report
+                  </div>
+                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#fff', fontFamily: 'var(--font-manrope)' }}>
+                    Release Placement &amp; Pick-Ups
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  {['PDF', 'CSV'].map((f) => (
+                    <span key={f} style={{
+                      fontSize: '0.65rem', fontWeight: 700, padding: '3px 10px',
+                      border: '1px solid rgba(255,255,255,0.30)', borderRadius: '4px',
+                      color: 'rgba(255,255,255,0.70)',
+                    }}>
+                      {f}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Stats row */}
+              <div style={{
+                display: 'grid', gridTemplateColumns: 'repeat(3,1fr)',
+                borderBottom: '1px solid #E2E8F0',
+              }}>
+                {[
+                  { label: 'Placements', main: '634', sub: 'Full Text', sub2: '62 Headline' },
+                  { label: 'Total Views', main: '5,171', sub: '289 Unique', sub2: 'Readers' },
+                  { label: 'Reach', main: '373M', sub: '1.4B', sub2: 'Headline Reach' },
+                ].map((stat, i) => (
+                  <div key={stat.label} style={{
+                    padding: '1rem',
+                    borderRight: i < 2 ? '1px solid #E2E8F0' : 'none',
+                    textAlign: 'center',
+                  }}>
+                    <div style={{ fontSize: '0.65rem', color: 'var(--gray)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      {stat.label}
+                    </div>
+                    <div style={{
+                      fontSize: '1.5rem', fontWeight: 800, color: 'var(--accent)',
+                      fontFamily: 'var(--font-manrope)', lineHeight: 1,
+                    }}>
+                      {stat.main}
+                    </div>
+                    <div style={{ fontSize: '0.68rem', color: 'var(--gray)', marginTop: '4px' }}>
+                      {stat.sub}<br/>{stat.sub2}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Link placement table */}
+              <div style={{ padding: '1rem 1.25rem' }}>
+                <div style={{
+                  fontSize: '0.72rem', fontWeight: 700, color: 'var(--navy)',
+                  textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.75rem',
+                }}>
+                  Sample Link Placements
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                  {/* Table header */}
+                  <div style={{
+                    display: 'grid', gridTemplateColumns: '2fr 0.7fr 1.4fr 0.7fr',
+                    gap: '0.5rem', padding: '6px 0',
+                    borderBottom: '2px solid #E2E8F0',
+                  }}>
+                    {['Site / URL', 'DA', 'Anchor Text', 'Status'].map((h) => (
+                      <span key={h} style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase' }}>
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+                  {/* Table rows */}
+                  {[
+                    { site: 'homedecortrends.com/…',    da: '48', anchor: 'HVAC contractor SF',      status: 'Live' },
+                    { site: 'contractorguide.net/…',    da: '37', anchor: 'plumber San Francisco',   status: 'Live' },
+                    { site: 'bayhomeowners.com/…',      da: '55', anchor: 'general contractor SF',   status: 'Live' },
+                    { site: 'sfbuildingpros.com/…',     da: '41', anchor: 'roofing contractor Bay Area', status: 'Live' },
+                  ].map((row, i) => (
+                    <div key={i} style={{
+                      display: 'grid', gridTemplateColumns: '2fr 0.7fr 1.4fr 0.7fr',
+                      gap: '0.5rem', padding: '8px 0',
+                      borderBottom: '1px solid #F1F5F9',
+                      alignItems: 'center',
+                    }}>
+                      <span style={{ fontSize: '0.72rem', color: '#2563EB', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {row.site}
+                      </span>
+                      <span style={{
+                        fontSize: '0.72rem', fontWeight: 700,
+                        color: parseInt(row.da) >= 50 ? '#059669' : parseInt(row.da) >= 40 ? '#2563EB' : 'var(--accent)',
+                      }}>
+                        {row.da}
+                      </span>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--slate)', lineHeight: 1.3 }}>{row.anchor}</span>
+                      <span style={{
+                        fontSize: '0.65rem', fontWeight: 700, color: '#059669',
+                        background: '#ECFDF5', padding: '2px 8px', borderRadius: '9999px',
+                        textAlign: 'center',
+                      }}>
+                        {row.status}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p style={{ fontSize: '0.72rem', color: 'var(--gray)', marginTop: '0.75rem', marginBottom: 0, fontStyle: 'italic' }}>
+                  Sample report data for illustration. Actual placements vary by package and niche.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
