@@ -215,12 +215,12 @@ export default function HomePage() {
             <a href="/free-seo-audit/" className="btn btn-primary" style={{ fontSize: '1rem', padding: '15px 32px' }}>
               Get Your Free SEO Audit
             </a>
-            <a href="#how-it-works" className="btn" style={{
+            <a href="/link-building-for-contractors/" className="btn" style={{
               fontSize: '1rem', padding: '15px 32px',
               background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.45)',
               color: '#fff', backdropFilter: 'blur(8px)',
             }}>
-              See How It Works
+              Order Now
             </a>
           </div>
 
