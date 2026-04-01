@@ -7,6 +7,25 @@ import CtaBanner from '../../components/sections/CtaBanner'
    DATA
 ───────────────────────────────────────────── */
 
+const PAIN_POINTS = [
+  {
+    icon: '💸',
+    pain: 'Paying $100+/mo for SEMrush or Ahrefs and still not sure which keywords to actually target',
+  },
+  {
+    icon: '📉',
+    pain: 'Writing blog posts and service pages that get zero traffic because nobody searches for those exact phrases',
+  },
+  {
+    icon: '😤',
+    pain: 'Watching competitors rank on page 1 for the terms that actually drive calls — while you\'re stuck on page 3',
+  },
+  {
+    icon: '🎲',
+    pain: 'Guessing at which cities, neighborhoods, or services to build pages for instead of knowing',
+  },
+]
+
 const DELIVERABLES = [
   {
     icon: '🗺️',
@@ -16,17 +35,17 @@ const DELIVERABLES = [
   {
     icon: '📊',
     title: 'Search Volume & Difficulty Scoring',
-    body: 'Real monthly search numbers and keyword difficulty scores — so you invest in terms worth winning instead of chasing vanity keywords.',
+    body: 'Real monthly search numbers and keyword difficulty scores on every term — so you invest only in keywords worth winning.',
   },
   {
     icon: '🎯',
     title: 'Buyer-Intent Prioritization',
-    body: 'Not all keywords are equal. We separate "just browsing" searches from "ready to hire" searches and sort your map by revenue potential.',
+    body: '"Just browsing" searches vs. "ready to hire" searches — sorted and labeled so your most revenue-ready terms rise to the top.',
   },
   {
     icon: '🔍',
     title: 'Competitor Gap Analysis',
-    body: 'We find every high-value keyword your top 3 competitors rank for that you don\'t — then build your strategy around closing those exact gaps.',
+    body: 'Every high-value keyword your top 5 competitors rank for that you don\'t. We show you the exact gaps — and which ones to close first.',
   },
   {
     icon: '📍',
@@ -36,212 +55,40 @@ const DELIVERABLES = [
   {
     icon: '📋',
     title: 'Page-by-Page Content Blueprint',
-    body: 'Every keyword cluster comes with a content recommendation — which page to create, what to say, and how to structure it for maximum rankings.',
+    body: 'Every keyword cluster comes with a page recommendation — what to build, what to say, and how to structure it for maximum rankings.',
   },
-]
-
-const PACKAGES = [
-  {
-    id: 'starter',
-    badge: 'Start Here',
-    icon: '🗺️',
-    title: 'Starter Keyword Map',
-    price: '$297',
-    priceNote: 'one-time',
-    description: 'Perfect for a single trade or new contractor website. Get the foundational keyword data you need to start building the right pages from day one.',
-    features: [
-      '1 trade / service category',
-      'Up to 3 target cities or neighborhoods',
-      '100+ mapped keywords',
-      'Volume + difficulty scoring on every term',
-      'Buyer-intent sorting',
-      'Delivered in 3–5 business days',
-    ],
-    highlight: false,
-  },
-  {
-    id: 'full-market',
-    badge: 'Most Popular',
-    icon: '📊',
-    title: 'Full Market Map',
-    price: '$597',
-    priceNote: 'one-time',
-    description: 'The complete keyword strategy for an established Bay Area contractor. Covers multiple services, full competitor gap analysis, and your entire local market.',
-    features: [
-      'Up to 3 trades / service categories',
-      'Full Bay Area service area coverage',
-      '300+ mapped keywords',
-      'Competitor gap analysis (top 3 rivals)',
-      'Buyer-intent + revenue-potential scoring',
-      'Page-by-page content blueprint',
-      'Delivered in 5–7 business days',
-    ],
-    highlight: true,
-  },
-  {
-    id: 'authority',
-    badge: 'Maximum Coverage',
-    icon: '🏆',
-    title: 'Complete Authority Map',
-    price: '$997',
-    priceNote: 'one-time',
-    description: 'Full-scale keyword intelligence for contractors who want to dominate every trade and every corner of the Bay Area. Built for growth-stage businesses.',
-    features: [
-      'Unlimited trades / service categories',
-      'SF + Peninsula + East Bay + South Bay',
-      '600+ mapped keywords',
-      'Top 5 competitor deep-dive',
-      'Neighborhood-level targeting included',
-      'Full content architecture blueprint',
-      'Priority delivery in 5 business days',
-      '30-min strategy call to walk through results',
-    ],
-    highlight: false,
-  },
-]
-
-const COMPARISONS = [
-  {
-    bad:  'Writing blog posts nobody searches for',
-    good: 'Targeting 2,400/mo "HVAC contractor San Francisco" with a purpose-built page',
-  },
-  {
-    bad:  'One generic "Services" page trying to rank for everything',
-    good: '12 city + service landing pages, each locked onto one proven keyword',
-  },
-  {
-    bad:  'Guessing which neighborhoods drive the best leads',
-    good: 'Data showing Castro, Marina & Nob Hill bring 3× higher average ticket size',
-  },
-]
-
-const STEPS = [
-  { num: '01', title: 'Discovery Call',       body: 'We learn your trade(s), service area, and revenue goals — so the map reflects what you actually want to rank for, not generic industry terms.' },
-  { num: '02', title: 'Seed Keyword Build',   body: 'We pull every search term in your niche using professional SEO tools, your competitors\' organic rankings, and our Bay Area contractor keyword library.' },
-  { num: '03', title: 'Intent & Volume Sort', body: 'Every keyword is scored on monthly search volume, ranking difficulty, and buyer intent — separating "hire-ready" searches from informational browsing.' },
-  { num: '04', title: 'Competitor Gap Map',   body: 'We run a side-by-side ranking analysis against your top 3 competitors to find every high-value term they rank for that you\'re missing.' },
-  { num: '05', title: 'Blueprint Delivery',   body: 'You receive a structured map organized by keyword clusters, with specific content recommendations for each — ready to hand to a writer or SEO team.' },
 ]
 
 const FAQS = [
   {
-    q: 'What does the keyword research deliverable actually look like?',
-    a: 'You receive a structured spreadsheet organized by service type, location, and buyer intent. Each keyword includes monthly search volume, competition score, current ranking (if any), and a specific content recommendation. It\'s built to be immediately actionable — not a raw data dump.',
+    q: 'What exactly do I need to send you to get started?',
+    a: 'Just three things: (1) your website URL, (2) up to 20 keywords you\'re currently targeting or want to rank for, and (3) up to 5 competitor URLs. That\'s it. We handle everything from there.',
   },
   {
-    q: 'Is keyword research a one-time thing or ongoing?',
-    a: 'We start with a foundational map that covers your core services and top markets. As you expand into new service areas, add trade specialties, or enter new cities, we update the map. Clients on monthly SEO plans get quarterly keyword expansion reviews included.',
+    q: 'What does the report actually look like when I receive it?',
+    a: 'You get a structured, organized report with every keyword mapped by service type and location. Each term includes monthly search volume, keyword difficulty, buyer-intent classification, competitor gap notes, and a specific content recommendation. It\'s built to be handed directly to a writer or SEO team — not a raw data dump.',
   },
   {
-    q: 'How is this different from just using Google Keyword Planner?',
-    a: 'Keyword Planner shows you raw volume. It doesn\'t show you which terms your specific competitors rank for, which have buyer intent vs. informational intent, or how to cluster them into a content strategy. Our research takes 3–5 days and produces a strategic blueprint, not just a list.',
+    q: 'What\'s the 20-page / 20-keyword limit?',
+    a: 'This package covers up to 20 target pages and maps up to 20 seed keywords you provide. In practice this covers most Bay Area contractors fully — a typical campaign maps service pages (HVAC, plumbing, etc.) across several neighborhoods. If you need broader coverage, reach out and we\'ll quote accordingly.',
   },
   {
-    q: 'Do you specialize in any particular trades?',
-    a: 'We work exclusively with Bay Area contractors — HVAC, GC, remodeling, roofing, plumbing, electrical, landscaping, flooring, ADU builders, and more. Our keyword libraries are built from years of working in these specific trade categories, not generic marketing knowledge.',
+    q: 'Is this different from just using Google Keyword Planner?',
+    a: 'Completely. Keyword Planner gives you raw volume on terms you already know. We find terms you don\'t know about yet — specifically what your competitors rank for that you\'re missing, hyperlocal Bay Area variations, and buyer-intent terms your tools never surface. Two days of strategy work vs. a data list.',
   },
   {
-    q: 'Can I use this keyword map with my own team or a different SEO agency?',
-    a: 'Absolutely. The deliverable is yours. Many clients use our keyword map as the strategic foundation and then execute content creation or link building with us or another team. It\'s designed to be plug-and-play for any SEO workflow.',
+    q: 'How long does the research take?',
+    a: 'Delivery in 5–7 business days from when you submit your information. If you need it faster, reach out — we can often turn rush orders in 3 days.',
   },
   {
-    q: 'What if I want keyword research as part of an ongoing SEO package?',
-    a: 'Our Standard and Pro SEO packages include initial keyword mapping plus quarterly updates. If you\'re planning to do ongoing SEO with us, starting with the Full Market Map package gives you a head start before your monthly campaign begins.',
+    q: 'Can I use this report with a different SEO agency or my own team?',
+    a: 'Absolutely. The report is yours — take it anywhere. Many contractors use our keyword map as the strategic foundation and then execute with their own team or another agency. It\'s plug-and-play for any SEO workflow.',
   },
 ]
 
 /* ─────────────────────────────────────────────
    SUB-COMPONENTS
 ───────────────────────────────────────────── */
-
-function PricingCard({ pkg }) {
-  return (
-    <div style={{
-      background: pkg.highlight ? 'var(--navy)' : '#fff',
-      border: pkg.highlight ? '2px solid var(--accent)' : '1.5px solid #E2E8F0',
-      borderRadius: '20px',
-      padding: '2rem',
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'relative',
-      boxShadow: pkg.highlight
-        ? '0 8px 32px rgba(232,97,26,0.18)'
-        : '0 4px 20px rgba(13,27,42,0.07)',
-    }}>
-      <span style={{
-        position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)',
-        background: pkg.highlight ? 'var(--accent)' : 'var(--navy)',
-        color: '#fff', fontSize: '0.68rem', fontWeight: 700,
-        letterSpacing: '0.08em', textTransform: 'uppercase',
-        padding: '4px 14px', borderRadius: '9999px', whiteSpace: 'nowrap',
-      }}>
-        {pkg.badge}
-      </span>
-
-      <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>{pkg.icon}</div>
-      <h3 style={{
-        fontSize: '1.15rem',
-        color: pkg.highlight ? '#fff' : 'var(--navy)',
-        marginBottom: '0.35rem',
-        fontFamily: 'var(--font-manrope)',
-        fontWeight: 800,
-      }}>
-        {pkg.title}
-      </h3>
-
-      <div style={{ marginBottom: '0.75rem' }}>
-        <span style={{
-          fontSize: '2rem', fontWeight: 800, fontFamily: 'var(--font-manrope)',
-          color: pkg.highlight ? '#fff' : 'var(--navy)',
-        }}>
-          {pkg.price}
-        </span>
-        <span style={{
-          fontSize: '0.78rem', color: pkg.highlight ? 'rgba(255,255,255,0.50)' : 'var(--gray)',
-          marginLeft: '6px',
-        }}>
-          {pkg.priceNote}
-        </span>
-      </div>
-
-      <p style={{
-        fontSize: '0.88rem',
-        color: pkg.highlight ? 'rgba(255,255,255,0.68)' : 'var(--gray)',
-        lineHeight: 1.6, marginBottom: '1.5rem',
-      }}>
-        {pkg.description}
-      </p>
-
-      <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.75rem', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
-        {pkg.features.map((f) => (
-          <li key={f} style={{
-            display: 'flex', gap: '0.6rem', alignItems: 'flex-start',
-            fontSize: '0.85rem',
-            color: pkg.highlight ? 'rgba(255,255,255,0.75)' : 'var(--slate)',
-          }}>
-            <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>✓</span>
-            {f}
-          </li>
-        ))}
-      </ul>
-
-      <a
-        href="/free-seo-audit/"
-        style={{
-          marginTop: 'auto', width: '100%', display: 'flex', justifyContent: 'center',
-          padding: '13px 0', borderRadius: 'var(--radius-md)',
-          background: pkg.highlight ? 'var(--accent)' : 'transparent',
-          color: pkg.highlight ? '#fff' : 'var(--accent)',
-          border: '2px solid var(--accent)',
-          fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none',
-          fontFamily: 'var(--font-manrope)',
-        }}
-      >
-        Get Started →
-      </a>
-    </div>
-  )
-}
 
 function FaqItem({ faq }) {
   const [open, setOpen] = useState(false)
@@ -319,18 +166,18 @@ export default function KeywordResearchClient() {
             color: 'rgba(255,255,255,0.78)', fontSize: '1.05rem', lineHeight: 1.75,
             maxWidth: '600px', margin: '0 auto 2rem',
           }}>
-            We map every high-intent keyword your Bay Area buyers use — by trade, city, and neighborhood.
-            Every page you build after this has a clear, data-backed path to traffic and leads.
+            One flat fee. You send us your URL, your keywords, and up to 5 competitors.
+            We send back a complete, organized keyword map built for Bay Area contractors — ready to rank.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="/free-seo-audit/" className="btn btn-primary">Get a Free Keyword Audit</a>
-            <a href="#packages" style={{
+            <a href="/free-seo-audit/" className="btn btn-primary">Order Your Keyword Map — $450</a>
+            <a href="#how-it-works" style={{
               display: 'inline-flex', alignItems: 'center', padding: '13px 24px',
               borderRadius: 'var(--radius-md)', border: '1.5px solid rgba(255,255,255,0.30)',
               color: 'rgba(255,255,255,0.85)', fontSize: '0.92rem',
               fontWeight: 600, textDecoration: 'none',
             }}>
-              View Packages ↓
+              See How It Works ↓
             </a>
           </div>
         </div>
@@ -344,10 +191,10 @@ export default function KeywordResearchClient() {
             gap: '1rem', textAlign: 'center',
           }}>
             {[
-              { v: '750+',   l: 'Keywords Mapped'        },
-              { v: '40+',    l: 'Trades Covered'         },
-              { v: '3×',     l: 'More Content ROI'       },
-              { v: '60–90',  l: 'Days to First Rankings' },
+              { v: '$450',    l: 'Flat Fee — One-Time'    },
+              { v: '20',      l: 'Pages Mapped'           },
+              { v: '5',       l: 'Competitors Analyzed'   },
+              { v: '5–7',     l: 'Day Delivery'           },
             ].map(({ v, l }) => (
               <div key={l}>
                 <div style={{
@@ -363,8 +210,94 @@ export default function KeywordResearchClient() {
         </div>
       </section>
 
-      {/* ── Deliverables ── */}
+      {/* ── Pain Point Section ── */}
       <section style={{ background: '#fff', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+        <div className="container" style={{ maxWidth: '900px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <span style={{
+              display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
+              letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)',
+              marginBottom: '0.75rem',
+            }}>
+              Sound Familiar?
+            </span>
+            <h2 style={{
+              fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
+              fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2, marginBottom: '0.75rem',
+            }}>
+              You Keep Paying for Keyword Visibility
+              <br />With{' '}
+              <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Nothing to Show for It.</em>
+            </h2>
+            <p style={{ color: 'var(--gray)', fontSize: '1rem', maxWidth: '560px', margin: '0 auto', lineHeight: 1.75 }}>
+              Most contractors we talk to are doing <em>something</em> for SEO — but flying blind
+              on which keywords actually drive calls and booked jobs.
+            </p>
+          </div>
+
+          {/* Pain points grid */}
+          <div style={{
+            display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '1rem', marginBottom: '3rem',
+          }}>
+            {PAIN_POINTS.map((p) => (
+              <div key={p.pain} style={{
+                background: '#FFF7F4', border: '1.5px solid #FDDDD0',
+                borderRadius: '14px', padding: '1.5rem',
+                display: 'flex', gap: '1rem', alignItems: 'flex-start',
+              }}>
+                <span style={{ fontSize: '1.75rem', flexShrink: 0 }}>{p.icon}</span>
+                <p style={{ fontSize: '0.9rem', color: 'var(--slate)', lineHeight: 1.65, margin: 0 }}>
+                  {p.pain}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Pivot card */}
+          <div style={{
+            background: 'var(--navy)', borderRadius: '20px', padding: '2.5rem',
+            textAlign: 'center', position: 'relative', overflow: 'hidden',
+          }}>
+            <div aria-hidden="true" style={{
+              position: 'absolute', top: '-60px', right: '-60px',
+              width: '280px', height: '280px', borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(232,97,26,0.18) 0%, transparent 70%)',
+              pointerEvents: 'none',
+            }} />
+            <span style={{
+              display: 'inline-block', padding: '4px 16px', borderRadius: '9999px',
+              background: 'rgba(232,97,26,0.20)', border: '1px solid rgba(232,97,26,0.40)',
+              color: '#F4875A', fontSize: '0.72rem', fontWeight: 700,
+              letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem',
+            }}>
+              The Fix
+            </span>
+            <h3 style={{
+              fontSize: 'clamp(1.3rem, 2.5vw, 1.9rem)', fontFamily: 'var(--font-manrope)',
+              fontWeight: 800, color: '#fff', lineHeight: 1.25, marginBottom: '0.85rem',
+            }}>
+              Let Us Get You the Targeting You Need
+              <br />to{' '}
+              <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Win More Calls and Sales.</em>
+            </h3>
+            <p style={{
+              color: 'rgba(255,255,255,0.70)', fontSize: '0.95rem', lineHeight: 1.75,
+              maxWidth: '540px', margin: '0 auto 1.75rem',
+            }}>
+              You don&rsquo;t need another tool subscription. You need a strategist who understands your
+              trade and your Bay Area market — and can hand you a clear map of exactly what to rank for.
+              That&rsquo;s what $450 buys you here.
+            </p>
+            <a href="/free-seo-audit/" className="btn btn-primary" style={{ fontSize: '1rem', padding: '14px 32px' }}>
+              Order Your Keyword Map →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── What You Get ── */}
+      <section style={{ background: '#F8FAFC', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span style={{
@@ -381,8 +314,8 @@ export default function KeywordResearchClient() {
               A Complete Keyword Map — Not a Spreadsheet Dump
             </h2>
             <p style={{ color: 'var(--gray)', fontSize: '0.95rem', maxWidth: '520px', margin: '0 auto' }}>
-              Every keyword comes with volume, competition, buyer intent scoring, and a specific content recommendation.
-              Built to be immediately actionable by you, your writer, or your SEO team.
+              Every keyword comes with volume, difficulty, buyer-intent scoring, and a specific page recommendation.
+              Built to be immediately usable by you, your writer, or your SEO team.
             </p>
           </div>
 
@@ -393,7 +326,7 @@ export default function KeywordResearchClient() {
           }}>
             {DELIVERABLES.map((d) => (
               <div key={d.title} style={{
-                background: '#F8FAFC', border: '1.5px solid #E2E8F0',
+                background: '#fff', border: '1.5px solid #E2E8F0',
                 borderRadius: '16px', padding: '1.75rem',
                 boxShadow: '0 2px 12px rgba(13,27,42,0.04)',
               }}>
@@ -413,127 +346,8 @@ export default function KeywordResearchClient() {
         </div>
       </section>
 
-      {/* ── Before / After ── */}
-      <section style={{ background: '#F8FAFC', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
-        <div className="container">
-          <div style={{
-            display: 'grid', gridTemplateColumns: '1fr 1fr',
-            gap: 'clamp(2rem, 4vw, 4rem)', alignItems: 'center',
-          }}>
-            <div>
-              <span style={{
-                display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
-                letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)',
-                marginBottom: '0.75rem',
-              }}>
-                Why It Matters
-              </span>
-              <h2 style={{
-                fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontFamily: 'var(--font-manrope)',
-                fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2, marginBottom: '1rem',
-              }}>
-                Most Contractor Content Fails Because It Targets the{' '}
-                <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Wrong Keywords</em>
-              </h2>
-              <p style={{ color: 'var(--gray)', lineHeight: 1.75, marginBottom: '1rem', fontSize: '0.95rem' }}>
-                Writing blog posts and landing pages without keyword data is guesswork. You might spend
-                20 hours producing content that 8 people per month search for — while 10,000-search
-                terms in your market go completely unaddressed.
-              </p>
-              <p style={{ color: 'var(--gray)', lineHeight: 1.75, marginBottom: '1.75rem', fontSize: '0.95rem' }}>
-                Our keyword maps tell you exactly which terms to target, in what order, and with what
-                type of content. Every hour you spend on SEO after the map is invested — not gambled.
-              </p>
-              <a href="/free-seo-audit/" className="btn btn-primary">
-                See Your Keyword Opportunities →
-              </a>
-            </div>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {COMPARISONS.map((c, i) => (
-                <div key={i} style={{
-                  background: '#fff', borderRadius: '14px', overflow: 'hidden',
-                  border: '1.5px solid #E2E8F0',
-                  boxShadow: '0 2px 12px rgba(13,27,42,0.05)',
-                  display: 'grid', gridTemplateColumns: '1fr 1fr',
-                }}>
-                  <div style={{ padding: '1.1rem 1.25rem', borderRight: '1px solid #E2E8F0' }}>
-                    <div style={{
-                      fontSize: '0.65rem', fontWeight: 700, color: '#DC2626',
-                      textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.4rem',
-                    }}>
-                      ✕ Before
-                    </div>
-                    <p style={{ fontSize: '0.82rem', color: 'var(--gray)', margin: 0, lineHeight: 1.5 }}>
-                      {c.bad}
-                    </p>
-                  </div>
-                  <div style={{ padding: '1.1rem 1.25rem', background: 'rgba(232,97,26,0.04)' }}>
-                    <div style={{
-                      fontSize: '0.65rem', fontWeight: 700, color: 'var(--accent)',
-                      textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.4rem',
-                    }}>
-                      ✓ After
-                    </div>
-                    <p style={{ fontSize: '0.82rem', color: 'var(--slate)', margin: 0, lineHeight: 1.5 }}>
-                      {c.good}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Packages ── */}
-      <section id="packages" style={{ background: '#fff', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <span style={{
-              display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
-              letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)',
-              marginBottom: '0.75rem',
-            }}>
-              Packages &amp; Pricing
-            </span>
-            <h2 style={{
-              fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
-              fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2, marginBottom: '0.75rem',
-            }}>
-              Choose Your Keyword Map Package
-            </h2>
-            <p style={{ color: 'var(--gray)', fontSize: '0.95rem', maxWidth: '520px', margin: '0 auto' }}>
-              All packages are one-time deliverables. No subscriptions, no retainers.
-              Get the data, then use it however you need.
-            </p>
-          </div>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))',
-            gap: '1.5rem', alignItems: 'start',
-          }}>
-            {PACKAGES.map((pkg) => <PricingCard key={pkg.id} pkg={pkg} />)}
-          </div>
-
-          <div style={{
-            marginTop: '2.5rem', background: '#F8FAFC', borderRadius: '14px',
-            padding: '1.5rem 2rem', textAlign: 'center',
-          }}>
-            <p style={{ color: 'var(--slate)', fontSize: '0.9rem', margin: 0 }}>
-              <strong style={{ color: 'var(--navy)' }}>Already signed up for an SEO package?</strong>{' '}
-              Keyword mapping is included — ask us to start there.{' '}
-              <a href="/free-seo-audit/" style={{ color: 'var(--accent)', fontWeight: 600 }}>
-                Book your audit call →
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── How It Works ── */}
-      <section style={{ background: '#F8FAFC', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+      <section id="how-it-works" style={{ background: '#fff', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span style={{
@@ -547,46 +361,396 @@ export default function KeywordResearchClient() {
               fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
               fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2,
             }}>
-              How Keyword Research Works
+              How It Works
             </h2>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '760px', margin: '0 auto' }}>
-            {STEPS.map((step) => (
-              <div key={step.num} style={{
-                display: 'grid', gridTemplateColumns: '60px 1fr', gap: '1.5rem', alignItems: 'start',
-                background: '#fff', borderRadius: '16px', padding: '1.75rem 2rem',
-                boxShadow: '0 2px 12px rgba(13,27,42,0.05)',
-                borderLeft: '4px solid var(--accent)',
-              }}>
+          <div style={{
+            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '2rem', maxWidth: '960px', margin: '0 auto',
+          }}>
+            {[
+              {
+                num: '1',
+                visual: 'submit',
+                title: 'Submit Your Info',
+                body: 'Send us your website URL, up to 20 keywords you want to rank for, and up to 5 competitor URLs. That\'s everything we need — no calls, no questionnaires.',
+              },
+              {
+                num: '2',
+                visual: 'research',
+                title: 'We Get to Work',
+                body: 'We run deep keyword research using professional tools, cross-reference your competitor rankings, apply buyer-intent scoring, and map every term to a specific page recommendation.',
+              },
+              {
+                num: '3',
+                visual: 'report',
+                title: 'Receive Your Report',
+                body: 'Within 5–7 business days you receive a fully organized keyword map — sorted by priority, labeled by intent, and ready to hand to any writer or SEO team.',
+              },
+            ].map((step) => (
+              <div key={step.num} style={{ textAlign: 'center' }}>
+                {/* Visual card frame */}
                 <div style={{
-                  width: '44px', height: '44px', borderRadius: '50%',
-                  background: 'var(--accent)', color: '#fff',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 800, fontSize: '0.82rem', fontFamily: 'var(--font-manrope)',
-                  flexShrink: 0,
+                  border: '3px solid var(--accent)',
+                  borderRadius: '18px',
+                  overflow: 'hidden',
+                  marginBottom: '1.25rem',
+                  background: '#fff',
+                  boxShadow: '0 4px 24px rgba(232,97,26,0.12)',
+                  aspectRatio: '4/3',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                  gap: '0.5rem',
+                  padding: '1.5rem',
                 }}>
-                  {step.num}
+                  {step.visual === 'submit' && (
+                    <>
+                      <div style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>📝</div>
+                      <div style={{ width: '100%' }}>
+                        {[
+                          'Your website URL',
+                          'Up to 20 target keywords',
+                          'Up to 5 competitor URLs',
+                        ].map((item) => (
+                          <div key={item} style={{
+                            display: 'flex', alignItems: 'center', gap: '5px',
+                            fontSize: '0.72rem', color: 'var(--slate)', marginBottom: '5px',
+                          }}>
+                            <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                      <div style={{
+                        padding: '5px 14px', borderRadius: '9999px',
+                        background: 'var(--accent)', color: '#fff', fontSize: '0.68rem', fontWeight: 700,
+                      }}>
+                        Submitted ✓
+                      </div>
+                    </>
+                  )}
+                  {step.visual === 'research' && (
+                    <>
+                      <div style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>🔬</div>
+                      <div style={{ width: '100%' }}>
+                        {[
+                          'Professional SEO tools',
+                          'Competitor ranking analysis',
+                          'Buyer-intent scoring',
+                          'Bay Area keyword library',
+                        ].map((item) => (
+                          <div key={item} style={{
+                            display: 'flex', alignItems: 'center', gap: '5px',
+                            fontSize: '0.68rem', color: 'var(--slate)', marginBottom: '4px',
+                          }}>
+                            <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                  {step.visual === 'report' && (
+                    <>
+                      <div style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>📊</div>
+                      <div style={{ width: '100%' }}>
+                        {[
+                          { label: 'Keywords Mapped', val: '60+',  color: '#059669' },
+                          { label: 'Competitor Gaps', val: '22',   color: '#2563EB' },
+                          { label: 'Buyer-Intent',    val: '38',   color: 'var(--accent)' },
+                        ].map((r) => (
+                          <div key={r.label} style={{
+                            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                            padding: '4px 0', borderBottom: '1px solid #F1F5F9', fontSize: '0.72rem',
+                          }}>
+                            <span style={{ color: 'var(--gray)' }}>{r.label}</span>
+                            <strong style={{ color: r.color }}>{r.val}</strong>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
-                <div>
-                  <h3 style={{
-                    fontSize: '1.05rem', color: 'var(--navy)',
-                    fontFamily: 'var(--font-manrope)', fontWeight: 700, marginBottom: '0.4rem',
-                  }}>
-                    {step.title}
-                  </h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--gray)', lineHeight: 1.7, margin: 0 }}>
-                    {step.body}
-                  </p>
-                </div>
+                <h3 style={{
+                  fontSize: '1.1rem', fontFamily: 'var(--font-manrope)', fontWeight: 800,
+                  color: 'var(--accent)', marginBottom: '0.5rem',
+                }}>
+                  {step.num}. {step.title}
+                </h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--gray)', lineHeight: 1.65, margin: 0 }}>
+                  {step.body}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── FAQ ── */}
+      {/* ── Pricing ── */}
+      <section style={{ background: '#F8FAFC', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+        <div className="container" style={{ maxWidth: '680px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <span style={{
+              display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
+              letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)',
+              marginBottom: '0.75rem',
+            }}>
+              Simple, Flat Pricing
+            </span>
+            <h2 style={{
+              fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
+              fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2,
+            }}>
+              One Price. Full Report. No Subscription.
+            </h2>
+          </div>
+
+          {/* Single pricing card */}
+          <div style={{
+            background: 'var(--navy)', border: '2px solid var(--accent)',
+            borderRadius: '24px', padding: '2.5rem',
+            boxShadow: '0 8px 40px rgba(232,97,26,0.18)',
+            position: 'relative', overflow: 'hidden',
+          }}>
+            <div aria-hidden="true" style={{
+              position: 'absolute', top: '-80px', right: '-80px',
+              width: '300px', height: '300px', borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(232,97,26,0.15) 0%, transparent 70%)',
+              pointerEvents: 'none',
+            }} />
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '2rem', alignItems: 'start' }}>
+              <div>
+                <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🗺️</div>
+                <h3 style={{
+                  fontSize: '1.4rem', color: '#fff', fontFamily: 'var(--font-manrope)',
+                  fontWeight: 800, marginBottom: '0.5rem',
+                }}>
+                  Contractor Keyword Map
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.92rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
+                  A complete, organized keyword strategy report built specifically for your trade and Bay Area market.
+                  One-time purchase — yours to keep and use forever.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
+                  {[
+                    'Up to 20 pages mapped',
+                    'Up to 20 seed keywords analyzed',
+                    'Up to 5 competitors included',
+                    'Full volume + difficulty scoring',
+                    'Buyer-intent classification on every term',
+                    'Competitor gap analysis',
+                    'Neighborhood & zip-level Bay Area targeting',
+                    'Page-by-page content blueprint',
+                    'Delivered in 5–7 business days',
+                  ].map((f) => (
+                    <div key={f} style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                      <span style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.75)' }}>{f}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ textAlign: 'center', flexShrink: 0 }}>
+                <div style={{ fontSize: '3rem', fontWeight: 800, color: '#fff', fontFamily: 'var(--font-manrope)', lineHeight: 1 }}>
+                  $450
+                </div>
+                <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.50)', marginBottom: '1.25rem' }}>
+                  one-time
+                </div>
+                <a href="/free-seo-audit/" style={{
+                  display: 'block', padding: '13px 24px', borderRadius: 'var(--radius-md)',
+                  background: 'var(--accent)', color: '#fff',
+                  fontWeight: 700, fontSize: '0.92rem', textDecoration: 'none',
+                  fontFamily: 'var(--font-manrope)', textAlign: 'center', whiteSpace: 'nowrap',
+                }}>
+                  Order Now →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sample Report ── */}
       <section style={{ background: '#fff', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <span style={{
+              display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
+              letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)',
+              marginBottom: '0.75rem',
+            }}>
+              What You Receive
+            </span>
+            <h2 style={{
+              fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
+              fontWeight: 800, color: 'var(--navy)', lineHeight: 1.2, marginBottom: '0.75rem',
+            }}>
+              Your Keyword Report — Detailed, Organized, Actionable
+            </h2>
+            <p style={{ color: 'var(--gray)', fontSize: '0.95rem', maxWidth: '520px', margin: '0 auto' }}>
+              Every term mapped, scored, and prioritized. Hand it directly to a writer,
+              your SEO team, or use it to build pages yourself.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid', gridTemplateColumns: '1fr 1.7fr',
+            gap: 'clamp(2rem, 4vw, 4rem)', alignItems: 'start',
+          }}>
+            {/* Inclusions list */}
+            <div>
+              <h3 style={{
+                fontSize: '1.05rem', fontFamily: 'var(--font-manrope)', fontWeight: 800,
+                color: 'var(--navy)', marginBottom: '1.25rem',
+              }}>
+                Every Report Includes:
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
+                {[
+                  'Organized by trade, service type, and city',
+                  'Monthly search volume on every keyword',
+                  'Keyword difficulty score (0–100)',
+                  'Buyer-intent label: Informational / Commercial / Transactional',
+                  'Competitor gap flags — what they rank for that you don\'t',
+                  'Priority tier: High / Medium / Low',
+                  'Recommended page for each keyword cluster',
+                  'Delivered as PDF + CSV — share with any team',
+                ].map((item) => (
+                  <div key={item} style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0, marginTop: '1px' }}>✓</span>
+                    <span style={{ fontSize: '0.9rem', color: 'var(--slate)', lineHeight: 1.5 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <a href="/free-seo-audit/" className="btn btn-primary">Order My Keyword Map →</a>
+            </div>
+
+            {/* Mock report widget */}
+            <div style={{
+              border: '2px solid #E2E8F0', borderRadius: '16px', overflow: 'hidden',
+              boxShadow: '0 4px 24px rgba(13,27,42,0.08)',
+            }}>
+              {/* Header */}
+              <div style={{
+                background: 'var(--navy)', padding: '0.9rem 1.25rem',
+                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+              }}>
+                <div>
+                  <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.50)', marginBottom: '2px' }}>
+                    Keyword Research Report — Bay Area Contractor
+                  </div>
+                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#fff', fontFamily: 'var(--font-manrope)' }}>
+                    HVAC Contractor — San Francisco
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  {['PDF', 'CSV'].map((f) => (
+                    <span key={f} style={{
+                      fontSize: '0.65rem', fontWeight: 700, padding: '3px 10px',
+                      border: '1px solid rgba(255,255,255,0.30)', borderRadius: '4px',
+                      color: 'rgba(255,255,255,0.70)',
+                    }}>
+                      {f}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Summary stats */}
+              <div style={{
+                display: 'grid', gridTemplateColumns: 'repeat(3,1fr)',
+                borderBottom: '1px solid #E2E8F0',
+              }}>
+                {[
+                  { label: 'Keywords Mapped', main: '64', sub: 'Across 18 pages' },
+                  { label: 'Competitor Gaps', main: '27', sub: 'Terms to target' },
+                  { label: 'Buyer-Intent Terms', main: '41', sub: 'High-priority' },
+                ].map((stat, i) => (
+                  <div key={stat.label} style={{
+                    padding: '1rem', textAlign: 'center',
+                    borderRight: i < 2 ? '1px solid #E2E8F0' : 'none',
+                  }}>
+                    <div style={{ fontSize: '0.65rem', color: 'var(--gray)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      {stat.label}
+                    </div>
+                    <div style={{
+                      fontSize: '1.5rem', fontWeight: 800, color: 'var(--accent)',
+                      fontFamily: 'var(--font-manrope)', lineHeight: 1,
+                    }}>
+                      {stat.main}
+                    </div>
+                    <div style={{ fontSize: '0.68rem', color: 'var(--gray)', marginTop: '4px' }}>{stat.sub}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Keyword table */}
+              <div style={{ padding: '1rem 1.25rem' }}>
+                <div style={{
+                  fontSize: '0.72rem', fontWeight: 700, color: 'var(--navy)',
+                  textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.75rem',
+                }}>
+                  Sample Keywords
+                </div>
+                {/* Table header */}
+                <div style={{
+                  display: 'grid', gridTemplateColumns: '2.2fr 0.8fr 0.7fr 1.1fr 0.8fr',
+                  gap: '0.4rem', padding: '6px 0', borderBottom: '2px solid #E2E8F0',
+                }}>
+                  {['Keyword', 'Vol/mo', 'KD', 'Intent', 'Priority'].map((h) => (
+                    <span key={h} style={{ fontSize: '0.62rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase' }}>
+                      {h}
+                    </span>
+                  ))}
+                </div>
+                {/* Rows */}
+                {[
+                  { kw: 'HVAC contractor San Francisco',     vol: '2,400', kd: '38', intent: 'Transactional', priority: 'High',   pColor: '#059669', pBg: '#ECFDF5' },
+                  { kw: 'emergency HVAC San Francisco',      vol: '880',   kd: '22', intent: 'Transactional', priority: 'High',   pColor: '#059669', pBg: '#ECFDF5' },
+                  { kw: 'AC repair Nob Hill SF',             vol: '390',   kd: '14', intent: 'Transactional', priority: 'High',   pColor: '#059669', pBg: '#ECFDF5' },
+                  { kw: 'best HVAC company Bay Area',        vol: '1,100', kd: '45', intent: 'Commercial',    priority: 'Medium', pColor: '#2563EB', pBg: '#EFF6FF' },
+                  { kw: 'how much does AC installation cost',vol: '720',   kd: '29', intent: 'Informational', priority: 'Medium', pColor: '#2563EB', pBg: '#EFF6FF' },
+                ].map((row, i) => (
+                  <div key={i} style={{
+                    display: 'grid', gridTemplateColumns: '2.2fr 0.8fr 0.7fr 1.1fr 0.8fr',
+                    gap: '0.4rem', padding: '8px 0',
+                    borderBottom: '1px solid #F1F5F9', alignItems: 'center',
+                  }}>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--navy)', lineHeight: 1.3 }}>{row.kw}</span>
+                    <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--slate)' }}>{row.vol}</span>
+                    <span style={{
+                      fontSize: '0.72rem', fontWeight: 700,
+                      color: parseInt(row.kd) < 25 ? '#059669' : parseInt(row.kd) < 40 ? '#2563EB' : 'var(--accent)',
+                    }}>
+                      {row.kd}
+                    </span>
+                    <span style={{ fontSize: '0.65rem', color: 'var(--gray)', lineHeight: 1.3 }}>{row.intent}</span>
+                    <span style={{
+                      fontSize: '0.65rem', fontWeight: 700, color: row.pColor,
+                      background: row.pBg, padding: '2px 8px', borderRadius: '9999px',
+                      textAlign: 'center', whiteSpace: 'nowrap',
+                    }}>
+                      {row.priority}
+                    </span>
+                  </div>
+                ))}
+                <p style={{ fontSize: '0.72rem', color: 'var(--gray)', marginTop: '0.75rem', marginBottom: 0, fontStyle: 'italic' }}>
+                  Sample report data for illustration. Actual results vary by trade and market.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section style={{ background: '#F8FAFC', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <span style={{
@@ -603,7 +767,6 @@ export default function KeywordResearchClient() {
               Keyword Research FAQs
             </h2>
           </div>
-
           <div style={{ maxWidth: '760px', margin: '0 auto' }}>
             {FAQS.map((faq) => <FaqItem key={faq.q} faq={faq} />)}
           </div>
@@ -614,8 +777,8 @@ export default function KeywordResearchClient() {
       <CtaBanner
         label="Start With Data"
         heading={<>Know Exactly Which Keywords Will <em>Win Your Market</em></>}
-        body="Start with a free audit — we'll pull your current rankings, show your top keyword gaps, and map out what it takes to own your Bay Area market."
-        primaryCta={{ label: 'Get My Free Keyword Audit', href: '/free-seo-audit/' }}
+        body="$450. One-time. No subscription. You send us your URL, keywords, and competitors — we send back the complete roadmap."
+        primaryCta={{ label: 'Order My Keyword Map — $450', href: '/free-seo-audit/' }}
         secondaryCta={{ label: 'View SEO Packages', href: '/seo-packages-for-contractors/' }}
         dark
       />
