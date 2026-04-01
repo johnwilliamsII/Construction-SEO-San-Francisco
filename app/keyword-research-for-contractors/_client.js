@@ -86,9 +86,203 @@ const FAQS = [
   },
 ]
 
+const PAGE_STRUCTURES = [
+  {
+    url: '/hvac-contractor-san-francisco/',
+    h1: 'HVAC Contractor San Francisco',
+    h2s: ['Trusted Heating & Cooling Services in the Bay Area', 'Our HVAC Services', 'SF Neighborhoods We Serve', 'Why Homeowners Choose Us'],
+    supporting: ['hvac company san francisco', 'hvac services sf', 'heating cooling contractor sf'],
+    firstSentence: 'If your heating or cooling system is acting up in San Francisco, our licensed HVAC technicians are ready to diagnose, repair, or replace it — with same-day availability across every neighborhood.',
+    intent: 'Transactional', priority: 'High',
+  },
+  {
+    url: '/emergency-hvac-san-francisco/',
+    h1: '24/7 Emergency HVAC San Francisco',
+    h2s: ['We Answer When You Call — Day or Night', 'Common HVAC Emergencies We Handle', 'Fast Response Across All SF Neighborhoods'],
+    supporting: ['emergency hvac sf', '24 hour hvac san francisco', 'hvac emergency repair sf'],
+    firstSentence: 'HVAC emergencies don\'t wait for business hours — and neither do we. Our emergency team serves all San Francisco neighborhoods with response times under two hours.',
+    intent: 'Transactional', priority: 'High',
+  },
+  {
+    url: '/ac-repair-san-francisco/',
+    h1: 'AC Repair San Francisco',
+    h2s: ['Signs Your AC Needs Repair', 'Our AC Repair Process', 'Flat-Rate Diagnostic — No Surprise Bills'],
+    supporting: ['air conditioner repair sf', 'ac not cooling san francisco', 'ac technician sf'],
+    firstSentence: 'When your air conditioner stops working in a San Francisco heat wave, you need a reliable AC repair team that shows up fast, diagnoses accurately, and fixes it right the first time.',
+    intent: 'Transactional', priority: 'High',
+  },
+  {
+    url: '/hvac-nob-hill-sf/',
+    h1: 'HVAC Contractor Nob Hill, San Francisco',
+    h2s: ['Local HVAC Service for Nob Hill Residents', 'Heating & Cooling in Historic Buildings', 'Schedule Same-Day Service'],
+    supporting: ['hvac nob hill', 'heating repair nob hill sf', 'ac service nob hill'],
+    firstSentence: 'Nob Hill homeowners trust us for HVAC service that works around the unique challenges of San Francisco\'s older buildings — from Victorian-era ductwork to modern mini-split installs.',
+    intent: 'Transactional', priority: 'High',
+  },
+  {
+    url: '/hvac-marina-district-sf/',
+    h1: 'HVAC Contractor Marina District, San Francisco',
+    h2s: ['HVAC Service in the Marina', 'Heating & Cooling for Marina Homes & Condos', 'Book a Same-Day Appointment'],
+    supporting: ['hvac marina district', 'ac repair marina sf', 'furnace repair marina district'],
+    firstSentence: 'From Marina District condos to single-family homes, our HVAC team provides fast, reliable heating and cooling service backed by a satisfaction guarantee.',
+    intent: 'Transactional', priority: 'High',
+  },
+  {
+    url: '/ac-installation-san-francisco/',
+    h1: 'AC Installation San Francisco',
+    h2s: ['Central AC vs. Mini-Split — Which is Right for Your Home?', 'Our Installation Process', 'Financing Available'],
+    supporting: ['ac installation cost sf', 'mini split installation san francisco', 'central ac install sf'],
+    firstSentence: 'Installing air conditioning in a San Francisco home requires understanding the city\'s mild climate, older building stock, and permit requirements — our team has done it hundreds of times.',
+    intent: 'Commercial', priority: 'High',
+  },
+  {
+    url: '/furnace-repair-san-francisco/',
+    h1: 'Furnace Repair San Francisco',
+    h2s: ['Signs Your Furnace Needs Repair', 'Common Furnace Problems We Fix', 'When to Repair vs. Replace'],
+    supporting: ['furnace repair sf', 'gas furnace repair san francisco', 'heater repair sf'],
+    firstSentence: 'A broken furnace on a cold San Francisco night is more than an inconvenience — our furnace repair team provides same-day diagnostics and most repairs completed in a single visit.',
+    intent: 'Transactional', priority: 'Medium',
+  },
+  {
+    url: '/hvac-maintenance-san-francisco/',
+    h1: 'HVAC Maintenance Plans San Francisco',
+    h2s: ['What\'s Included in Our Maintenance Plan', 'How Regular Maintenance Saves You Money', 'Annual vs. Bi-Annual Service'],
+    supporting: ['hvac tune up sf', 'hvac annual maintenance san francisco', 'ac maintenance plan sf'],
+    firstSentence: 'San Francisco\'s damp winters and warm summers put real strain on HVAC systems — our maintenance plans keep your equipment running efficiently and catch problems before they become expensive.',
+    intent: 'Commercial', priority: 'Medium',
+  },
+  {
+    url: '/commercial-hvac-san-francisco/',
+    h1: 'Commercial HVAC San Francisco',
+    h2s: ['HVAC Solutions for SF Businesses', 'Retail, Office & Restaurant HVAC', 'Preventive Maintenance for Commercial Systems'],
+    supporting: ['commercial hvac company sf', 'office hvac san francisco', 'commercial ac repair sf'],
+    firstSentence: 'San Francisco businesses rely on us for commercial HVAC installation, repair, and maintenance — with flexible scheduling designed to minimize disruption to your operations.',
+    intent: 'Commercial', priority: 'Medium',
+  },
+  {
+    url: '/how-much-does-hvac-cost-san-francisco/',
+    h1: 'How Much Does HVAC Cost in San Francisco?',
+    h2s: ['Average HVAC Costs in SF', 'Factors That Affect Your Price', 'Getting an Accurate Quote', 'Financing Options'],
+    supporting: ['hvac cost sf', 'hvac replacement cost san francisco', 'how much is a new ac unit sf'],
+    firstSentence: 'HVAC costs in San Francisco typically run higher than national averages — this guide breaks down real pricing for repairs, replacements, and new installs so you know what to expect before you call.',
+    intent: 'Informational', priority: 'Medium',
+  },
+]
+
 /* ─────────────────────────────────────────────
    SUB-COMPONENTS
 ───────────────────────────────────────────── */
+
+function PageCard({ page, index, isOpen, onToggle }) {
+  const intentColor = page.intent === 'Transactional' ? '#059669' : page.intent === 'Commercial' ? '#2563EB' : 'var(--gray)'
+  const intentBg   = page.intent === 'Transactional' ? '#ECFDF5' : page.intent === 'Commercial' ? '#EFF6FF' : '#F1F5F9'
+  return (
+    <div style={{
+      border: '1.5px solid',
+      borderColor: isOpen ? 'var(--accent)' : '#E2E8F0',
+      borderRadius: '14px', overflow: 'hidden',
+      boxShadow: isOpen ? '0 4px 20px rgba(232,97,26,0.10)' : '0 2px 8px rgba(13,27,42,0.04)',
+      transition: 'border-color 0.2s, box-shadow 0.2s',
+    }}>
+      {/* Row header — always visible */}
+      <button
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        style={{
+          width: '100%', display: 'grid',
+          gridTemplateColumns: 'auto 1fr auto auto',
+          gap: '0.75rem', alignItems: 'center',
+          padding: '1rem 1.25rem', background: isOpen ? '#FFF7F4' : '#fff',
+          border: 'none', cursor: 'pointer', textAlign: 'left',
+          transition: 'background 0.2s',
+        }}
+      >
+        <span style={{
+          width: '28px', height: '28px', borderRadius: '50%', flexShrink: 0,
+          background: 'var(--accent)', color: '#fff',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontSize: '0.75rem', fontWeight: 800, fontFamily: 'var(--font-manrope)',
+        }}>
+          {index + 1}
+        </span>
+        <div>
+          <span style={{
+            fontSize: '0.72rem', color: '#2563EB', fontFamily: 'monospace',
+            display: 'block', marginBottom: '1px',
+          }}>
+            {page.url}
+          </span>
+          <span style={{
+            fontSize: '0.9rem', fontWeight: 700, color: 'var(--navy)',
+            fontFamily: 'var(--font-manrope)',
+          }}>
+            H1: {page.h1}
+          </span>
+        </div>
+        <span style={{
+          fontSize: '0.65rem', fontWeight: 700, color: intentColor,
+          background: intentBg, padding: '3px 10px', borderRadius: '9999px',
+          whiteSpace: 'nowrap', flexShrink: 0,
+        }}>
+          {page.intent}
+        </span>
+        <span style={{
+          width: '24px', height: '24px', borderRadius: '50%', flexShrink: 0,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: isOpen ? 'var(--accent)' : '#F1F5F9',
+          color: isOpen ? '#fff' : 'var(--navy)',
+          fontSize: '1rem', fontWeight: 700,
+        }}>
+          {isOpen ? '−' : '+'}
+        </span>
+      </button>
+
+      {/* Expanded detail */}
+      {isOpen && (
+        <div style={{
+          padding: '1.25rem 1.25rem 1.5rem',
+          borderTop: '1px solid #FDDDD0',
+          background: '#fff',
+          display: 'grid', gridTemplateColumns: '1fr 1fr',
+          gap: '1.25rem',
+        }}>
+          <div>
+            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.4rem' }}>H2 Sections</div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+              {page.h2s.map((h) => (
+                <li key={h} style={{ fontSize: '0.82rem', color: 'var(--slate)', display: 'flex', gap: '6px', alignItems: 'flex-start' }}>
+                  <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>H2</span> {h}
+                </li>
+              ))}
+            </ul>
+            <div style={{ marginTop: '0.9rem' }}>
+              <div style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.4rem' }}>Supporting Keywords</div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
+                {page.supporting.map((kw) => (
+                  <span key={kw} style={{
+                    fontSize: '0.7rem', background: '#F1F5F9', color: 'var(--slate)',
+                    padding: '3px 10px', borderRadius: '9999px', fontFamily: 'monospace',
+                  }}>
+                    {kw}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.4rem' }}>First Sentence on Page</div>
+            <p style={{
+              fontSize: '0.85rem', color: 'var(--navy)', lineHeight: 1.65, margin: 0,
+              fontStyle: 'italic', borderLeft: '3px solid var(--accent)', paddingLeft: '0.75rem',
+            }}>
+              &ldquo;{page.firstSentence}&rdquo;
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
 
 function FaqItem({ faq }) {
   const [open, setOpen] = useState(false)
@@ -136,6 +330,8 @@ function FaqItem({ faq }) {
 ───────────────────────────────────────────── */
 
 export default function KeywordResearchClient() {
+  const [openPage, setOpenPage] = useState(0)
+
   return (
     <main>
 
@@ -746,6 +942,67 @@ export default function KeywordResearchClient() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Page Architecture Examples ── */}
+      <section style={{ background: 'var(--navy)', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <span style={{
+              display: 'inline-block', fontSize: '0.72rem', fontWeight: 700,
+              letterSpacing: '0.12em', textTransform: 'uppercase',
+              color: 'rgba(232,97,26,0.90)', marginBottom: '0.75rem',
+            }}>
+              How We Use This Data
+            </span>
+            <h2 style={{
+              fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontFamily: 'var(--font-manrope)',
+              fontWeight: 800, color: '#fff', lineHeight: 1.2, marginBottom: '0.85rem',
+            }}>
+              We Don&rsquo;t Just Hand You Data.
+              <br />We Show You{' '}
+              <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>How to Build With It.</em>
+            </h2>
+            <p style={{
+              color: 'rgba(255,255,255,0.65)', fontSize: '0.97rem', lineHeight: 1.75,
+              maxWidth: '620px', margin: '0 auto',
+            }}>
+              Included in your report: the top 10 page structure recommendations based on your keyword map.
+              For each priority page we give you the URL, H1, H2 sections, supporting keywords, and
+              the first sentence — so you can see exactly how we&rsquo;d build it.
+              This is our thought process. You take it from here.
+            </p>
+            <div style={{
+              display: 'inline-block', marginTop: '1.25rem',
+              padding: '0.65rem 1.25rem', borderRadius: '10px',
+              background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)',
+            }}>
+              <p style={{ margin: 0, fontSize: '0.82rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.5 }}>
+                <strong style={{ color: 'rgba(255,255,255,0.80)' }}>Note:</strong>{' '}
+                This isn&rsquo;t a complete site plan — we don&rsquo;t have all the pieces of your puzzle.
+                But for a straightforward contractor website, this is exactly our approach.
+                The rest of the report is yours as a full keyword spreadsheet to work from.
+              </p>
+            </div>
+          </div>
+
+          {/* Page cards */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', maxWidth: '900px', margin: '0 auto' }}>
+            {PAGE_STRUCTURES.map((page, i) => (
+              <PageCard
+                key={page.url}
+                page={page}
+                index={i}
+                isOpen={openPage === i}
+                onToggle={() => setOpenPage(openPage === i ? null : i)}
+              />
+            ))}
+          </div>
+
+          <p style={{ textAlign: 'center', fontSize: '0.8rem', color: 'rgba(255,255,255,0.40)', marginTop: '1.5rem' }}>
+            Example shown for HVAC contractor in San Francisco. Your report uses your actual trade, URL structure, and keyword data.
+          </p>
         </div>
       </section>
 
