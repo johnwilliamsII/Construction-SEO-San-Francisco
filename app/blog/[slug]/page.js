@@ -34,7 +34,7 @@ export function generateMetadata({ params }) {
     title,
     description,
     robots: isPublished ? undefined : { index: false, follow: false },
-    alternates: { canonical: `/blog/${params.slug}/` },
+    alternates: { canonical: `https://www.contractorseobayarea.com/blog/${params.slug}/` },
     openGraph: {
       title,
       description,

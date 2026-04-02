@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'SEO Packages for Contractors | Construction SEO San Francisco',
   description: 'Monthly SEO packages built for Bay Area construction companies. Starter, Growth, and Pro tiers — all-inclusive, month-to-month, with no hidden fees.',
-  alternates: { canonical: '/services/seo-packages/' },
+  alternates: { canonical: 'https://www.contractorseobayarea.com/services/seo-packages/' },
 }
 
 export default function SEOPackagesPage() {

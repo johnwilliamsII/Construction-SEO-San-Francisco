@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Link Building for Contractors | Construction SEO San Francisco',
   description: 'Authority link building for Bay Area construction companies. Local citations, trade directories, digital PR, and white-hat backlinks that boost your Google rankings.',
-  alternates: { canonical: '/services/link-building/' },
+  alternates: { canonical: 'https://www.contractorseobayarea.com/services/link-building/' },
 }
 
 export default function LinkBuildingPage() {

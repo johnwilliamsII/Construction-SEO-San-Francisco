@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Google Business Profile Optimization | Construction SEO San Francisco',
   description:
     'Get into the Google Maps 3-Pack for Bay Area construction searches. We fully optimize and manage your GBP to drive more calls and direction requests.',
-  alternates: { canonical: '/services/gbp/' },
+  alternates: { canonical: 'https://www.contractorseobayarea.com/services/gbp/' },
 }
 
 const FEATURES = [

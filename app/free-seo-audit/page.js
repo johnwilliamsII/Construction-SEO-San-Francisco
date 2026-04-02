@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Free SEO Audit Near Me for Contractors | contractorseobayarea.com',
   description:
     'Get a free SEO audit near me for Bay Area contractors. We show your rankings, top competitors, and a clear path to page one — no pitch, no pressure.',
-  alternates: { canonical: '/free-seo-audit/' },
+  alternates: { canonical: 'https://www.contractorseobayarea.com/free-seo-audit/' },
 }
 
 const WHAT_HAPPENS = [

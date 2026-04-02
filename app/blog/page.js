@@ -11,7 +11,7 @@ export const metadata = {
   description:
     'The Construction SEO Blog for Bay Area contractors — local search strategies, Google Business Profile guides, and actionable SEO tips for HVAC, electrical, roofing, and general contractors.',
   robots: { index: true, follow: true },
-  alternates: { canonical: '/blog/' },
+  alternates: { canonical: 'https://www.contractorseobayarea.com/blog/' },
 }
 
 /* Run SEO enforcement on all published posts at render/build time */

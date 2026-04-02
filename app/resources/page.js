@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Resources | Construction SEO San Francisco',
   description:
     'Free guides, checklists, and tools for Bay Area construction companies looking to improve their Google rankings and generate more leads.',
-  alternates: { canonical: '/resources/' },
+  alternates: { canonical: 'https://www.contractorseobayarea.com/resources/' },
 }
 
 /* ── Resource items ─────────────────────────────────────────────

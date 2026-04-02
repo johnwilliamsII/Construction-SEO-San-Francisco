@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'AI Receptionist for Contractors | Construction SEO San Francisco',
   description: 'Never miss a lead again. Our AI receptionist answers calls, qualifies prospects, and books estimates 24/7 — built specifically for Bay Area construction companies.',
-  alternates: { canonical: '/services/ai-receptionist/' },
+  alternates: { canonical: 'https://www.contractorseobayarea.com/services/ai-receptionist/' },
 }
 
 export default function AIReceptionistPage() {
