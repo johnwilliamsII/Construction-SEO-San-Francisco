@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Request Received | Contractor SEO Bay Area',
-  description: 'Thanks for reaching out. We'll review your info and follow up within 1 business day.',
+  description: "Thanks for reaching out. We'll review your info and follow up within 1 business day.",
   robots: 'noindex',
 }
 
