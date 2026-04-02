@@ -24,3 +24,6 @@ Thumbs.db
 
 # Nested project copies (should never be committed)
 Construction-SEO-San-Francisco/
+
+# Claude worktrees
+.claude/
