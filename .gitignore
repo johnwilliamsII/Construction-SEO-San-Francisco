@@ -21,3 +21,6 @@ Thumbs.db
 
 # Editor
 .vscode/
+
+# Nested project copies (should never be committed)
+Construction-SEO-San-Francisco/
