@@ -332,7 +332,7 @@ export default function AIReceptionistClient() {
               Two Tiers. One Goal: Every Call Handled.
             </h2>
             <p style={{ color: 'var(--gray)', fontSize: '0.95rem', maxWidth: '520px', margin: '0 auto', lineHeight: 1.75 }}>
-              Basic at $500/mo (Nimbata) or Pro at $950/mo (Smith.ai). Choose based on how much you want the AI to do.
+              Basic at $500/mo or Pro at $950/mo. Choose based on how much you want the AI to do.
             </p>
           </div>
 
@@ -352,7 +352,7 @@ export default function AIReceptionistClient() {
                 AI Receptionist
               </h3>
               <p style={{ color: 'var(--gray)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                Powered by Nimbata — your phone answered 24/7, up to 150 calls/mo. Every caller handled professionally. Every inquiry logged and sent to your inbox monthly.
+                Your phone answered 24/7, up to 150 calls/mo. Every caller handled professionally. Every inquiry logged and sent to your inbox monthly.
               </p>
 
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', marginBottom: '0.3rem' }}>
@@ -415,7 +415,7 @@ export default function AIReceptionistClient() {
                 Agentic AI Receptionist
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                Powered by Smith.ai — a fully trained, autonomous AI agent built around your sales process. Qualifies leads, handles objections, books appointments, and logs every interaction. 150 agentic calls/month included.
+                A fully trained, autonomous AI agent built around your sales process. Qualifies leads, handles objections, books appointments, and logs every interaction. 150 agentic calls/month included.
               </p>
 
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', marginBottom: '0.3rem' }}>
