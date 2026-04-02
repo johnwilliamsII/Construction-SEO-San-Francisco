@@ -257,9 +257,10 @@ function PricingCard({ pkg }) {
           {open && (
             <div style={{
               position: 'absolute', top: 'calc(100% + 4px)', left: 0, right: 0, zIndex: 10,
-              border: pkg.highlight ? '1px solid rgba(255,255,255,0.15)' : '1.5px solid #E2E8F0',
+              background: pkg.highlight ? '#1a1f33' : '#ffffff',
+              border: pkg.highlight ? '1px solid rgba(255,255,255,0.18)' : '1.5px solid #D1D9E0',
               borderRadius: '10px', overflow: 'hidden',
-              boxShadow: '0 8px 24px rgba(13,27,42,0.12)',
+              boxShadow: '0 12px 32px rgba(13,27,42,0.18), 0 2px 8px rgba(13,27,42,0.10)',
             }}>
               {pkg.tiers.map((tier, i) => (
                 <button
@@ -411,8 +412,8 @@ export default function LinkBuildingClient() {
             fontFamily: 'var(--font-manrope)', fontWeight: 800,
             lineHeight: 1.15, letterSpacing: '-0.02em', marginBottom: '1rem',
           }}>
-            Build the Authority That Makes{' '}
-            <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Competitive Rankings Possible.</em>
+            Link Building for Contractors{' '}
+            <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>in the Bay Area</em>
           </h1>
           <p style={{
             color: 'rgba(255,255,255,0.78)', fontSize: '1.05rem', lineHeight: 1.75,

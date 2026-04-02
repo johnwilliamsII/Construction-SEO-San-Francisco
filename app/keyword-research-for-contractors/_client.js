@@ -363,8 +363,8 @@ export default function KeywordResearchClient() {
             fontFamily: 'var(--font-manrope)', fontWeight: 800,
             lineHeight: 1.15, letterSpacing: '-0.02em', marginBottom: '1rem',
           }}>
-            Stop Guessing. Start Ranking the{' '}
-            <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Terms That Drive Real Jobs.</em>
+            Keyword Research for Contractors{' '}
+            <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>in the Bay Area</em>
           </h1>
           <p style={{
             color: 'rgba(255,255,255,0.78)', fontSize: '1.05rem', lineHeight: 1.75,
@@ -388,7 +388,7 @@ export default function KeywordResearchClient() {
       </section>
 
       {/* ── Stats bar ── */}
-      <section style={{ background: 'var(--navy)', padding: '1.75rem 0' }}>
+      <section style={{ background: '#16192A', padding: '1.75rem 0' }}>
         <div className="container">
           <div style={{
             display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
@@ -407,7 +407,7 @@ export default function KeywordResearchClient() {
                 }}>
                   {v}
                 </div>
-                <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.58)', marginTop: '2px' }}>{l}</div>
+                <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.75)', marginTop: '2px' }}>{l}</div>
               </div>
             ))}
           </div>
@@ -460,7 +460,7 @@ export default function KeywordResearchClient() {
 
           {/* Pivot card */}
           <div style={{
-            background: 'var(--navy)', borderRadius: '20px', padding: '2.5rem',
+            background: '#16192A', borderRadius: '20px', padding: '2.5rem',
             textAlign: 'center', position: 'relative', overflow: 'hidden',
           }}>
             <div aria-hidden="true" style={{
@@ -714,7 +714,7 @@ export default function KeywordResearchClient() {
 
           {/* Single pricing card */}
           <div style={{
-            background: 'var(--navy)', border: '2px solid var(--accent)',
+            background: '#16192A', border: '2px solid var(--accent)',
             borderRadius: '24px', padding: '2.5rem',
             boxShadow: '0 8px 40px rgba(232,97,26,0.18)',
             position: 'relative', overflow: 'hidden',
@@ -842,7 +842,7 @@ export default function KeywordResearchClient() {
             }}>
               {/* Header */}
               <div style={{
-                background: 'var(--navy)', padding: '0.9rem 1.25rem',
+                background: '#16192A', padding: '0.9rem 1.25rem',
                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
               }}>
                 <div>
@@ -954,7 +954,7 @@ export default function KeywordResearchClient() {
       </section>
 
       {/* ── Page Architecture Examples ── */}
-      <section style={{ background: 'var(--navy)', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+      <section style={{ background: '#16192A', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span style={{
@@ -1008,8 +1008,8 @@ export default function KeywordResearchClient() {
             ))}
           </div>
 
-          <p style={{ textAlign: 'center', fontSize: '0.78rem', color: 'rgba(255,255,255,0.35)', marginTop: '1rem', lineHeight: 1.6, maxWidth: '680px', margin: '1rem auto 0' }}>
-            <strong style={{ color: 'rgba(255,255,255,0.50)', fontWeight: 600 }}>Disclaimer:</strong>{' '}
+          <p style={{ textAlign: 'center', fontSize: '0.78rem', color: 'rgba(255,255,255,0.50)', marginTop: '1.5rem', lineHeight: 1.6, maxWidth: '680px', margin: '1.5rem auto 0' }}>
+            <strong style={{ color: 'rgba(255,255,255,0.75)', fontWeight: 700 }}>Disclaimer:</strong>{' '}
             All volume figures, keyword data, URLs, H1s, H2s, supporting keywords, and first sentences shown above are illustrative filler data only and do not represent real research or real search volumes.
             Your actual report will contain live, verified data specific to your trade, market, and competitor set.
           </p>

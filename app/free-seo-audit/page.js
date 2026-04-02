@@ -1,9 +1,9 @@
 import FormField from '../../components/forms/FormField'
 
 export const metadata = {
-  title: 'Free SEO Consultation | contractorseosanfrancisco.com',
+  title: 'Free SEO Audit Near Me for Contractors | contractorseosanfrancisco.com',
   description:
-    'Book a free SEO consultation for your Bay Area contracting business. We research your market before the call — no templates, no guesswork.',
+    'Get a free SEO audit near me for Bay Area contractors. We show your rankings, top competitors, and a clear path to page one — no pitch, no pressure.',
 }
 
 const TRADES = [
@@ -39,7 +39,7 @@ export default function FreeAuditPage() {
             Free SEO Consultation
           </span>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', color: '#fff', fontFamily: 'var(--font-manrope)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1rem' }}>
-            Book Your Free SEO Consultation
+            Free SEO Audit Near Me for Bay Area Contractors
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.80)', fontSize: '1.05rem', lineHeight: 1.7 }}>
             Before you spend a dollar on SEO, know the truth: what&rsquo;s broken, who&rsquo;s beating you, and why.

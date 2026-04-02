@@ -3,7 +3,7 @@ import KeywordResearchClient from './_client'
 export const metadata = {
   title: 'Keyword Research for Contractors | contractorseosanfrancisco.com',
   description:
-    'Stop guessing which terms drive leads. We map every high-intent keyword across your trade, cities, and Bay Area neighborhoods — so every page you build has a direct path to traffic and jobs.',
+    'Our keyword research for contractors maps every high-intent search in your Bay Area market. Find the exact terms your buyers use to find and hire trades.',
 }
 
 export default function KeywordResearchPage() {

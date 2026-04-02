@@ -776,12 +776,12 @@ small  { font-size: var(--text-sm); }
   left:          50%;
   transform:     translateX(-50%);
   min-width:     260px;
-  background:    var(--bg-glass-strong);
-  backdrop-filter: var(--blur-xl);
-  -webkit-backdrop-filter: var(--blur-xl);
-  border:        1px solid var(--border-glass);
+  background:    rgba(255,255,255,0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border:        1px solid rgba(0,0,0,0.09);
   border-radius: var(--radius-lg);
-  box-shadow:    var(--shadow-xl);
+  box-shadow:    0 12px 40px rgba(13,27,42,0.16), 0 2px 8px rgba(13,27,42,0.08);
   padding:       var(--space-2);
   z-index:       600;
   animation:     dd-open var(--duration-normal) var(--ease-out) forwards;
