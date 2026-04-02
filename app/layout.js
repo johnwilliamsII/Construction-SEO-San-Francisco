@@ -61,19 +61,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
-        {/* ── Google Analytics 4 (GA4) — G-KW3R4LTZ2V ── */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW3R4LTZ2V" />
+        {/* Google tag (gtag.js) */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW3R4LTZ2V"></script>
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-KW3R4LTZ2V');
-            `,
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KW3R4LTZ2V');`,
           }}
         />
-        {/* ── END Google Analytics 4 ── */}
 
         {/* ── Schema.org structured data ── */}
         <script
