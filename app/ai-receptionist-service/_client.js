@@ -162,7 +162,7 @@ export default function AIReceptionistClient() {
             single inquiry. No salary. No sick days. No turnover.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a href="/free-seo-audit/" className="btn btn-primary">Get Started — $500 Setup</a>
+            <a href="#pricing" className="btn btn-primary">See Plans — From $500/mo</a>
             <a href="#pricing" style={{
               display: 'inline-flex', alignItems: 'center', padding: '13px 24px',
               borderRadius: 'var(--radius-md)', border: '1.5px solid rgba(255,255,255,0.30)',
@@ -182,7 +182,7 @@ export default function AIReceptionistClient() {
             {[
               { v: '24/7',  l: 'Call Coverage'         },
               { v: '365',   l: 'Days a Year'            },
-              { v: '$500',  l: 'Flat Setup Fee'         },
+              { v: '$500',  l: 'Basic Plan / mo'         },
               { v: '< 2s',  l: 'Answer Time'            },
             ].map(({ v, l }) => (
               <div key={l}>
@@ -300,7 +300,7 @@ export default function AIReceptionistClient() {
                   <em style={{ color: 'var(--accent)', fontStyle: 'normal' }}>Never Calls In Sick.</em>
                 </h3>
                 <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.88rem', lineHeight: 1.65, margin: '0 0 1rem' }}>
-                  $500 one-time setup. Low monthly subscription. 24/7/365 coverage from day one.
+                  From $500/mo (Basic) or $950/mo (Pro). 24/7/365 coverage from day one.
                 </p>
                 <a href="#pricing" style={{
                   display: 'inline-block', padding: '10px 24px', borderRadius: 'var(--radius-md)',
@@ -332,7 +332,7 @@ export default function AIReceptionistClient() {
               Two Tiers. One Goal: Every Call Handled.
             </h2>
             <p style={{ color: 'var(--gray)', fontSize: '0.95rem', maxWidth: '520px', margin: '0 auto', lineHeight: 1.75 }}>
-              Both plans start with the same $500 setup fee. Choose based on how much you want the AI to do.
+              Basic at $500/mo (Nimbata) or Pro at $950/mo (Smith.ai). Choose based on how much you want the AI to do.
             </p>
           </div>
 
@@ -352,15 +352,15 @@ export default function AIReceptionistClient() {
                 AI Receptionist
               </h3>
               <p style={{ color: 'var(--gray)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                Your phone answered 24/7. Every caller handled professionally. Every inquiry logged and sent to your inbox monthly.
+                Powered by Nimbata — your phone answered 24/7, up to 150 calls/mo. Every caller handled professionally. Every inquiry logged and sent to your inbox monthly.
               </p>
 
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', marginBottom: '0.3rem' }}>
                 <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--navy)', fontFamily: 'var(--font-manrope)' }}>$500</span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>one-time setup</span>
+                <span style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>/month</span>
               </div>
               <div style={{ fontSize: '0.9rem', color: 'var(--gray)', marginBottom: '1.75rem' }}>
-                + monthly subscription
+                150 calls/mo included — no setup fee
               </div>
 
               <div style={{ marginBottom: '0.65rem' }}>
@@ -375,13 +375,13 @@ export default function AIReceptionistClient() {
                 ))}
               </div>
 
-              <a href="/free-seo-audit/" style={{
+              <a href="https://buy.stripe.com/fZu00jg6v72m6fl5VL43S08" target="_blank" rel="noopener noreferrer" style={{
                 display: 'block', padding: '13px 24px', borderRadius: 'var(--radius-md)',
                 border: '2px solid var(--navy)', color: 'var(--navy)',
                 fontWeight: 700, fontSize: '0.92rem', textDecoration: 'none',
                 fontFamily: 'var(--font-manrope)', textAlign: 'center', marginTop: '1.5rem',
               }}>
-                Get Started →
+                Get Started — $500/mo →
               </a>
             </div>
 
@@ -409,21 +409,21 @@ export default function AIReceptionistClient() {
               </div>
 
               <div style={{ fontSize: '0.72rem', fontWeight: 700, color: 'rgba(232,97,26,0.90)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.4rem' }}>
-                Advanced
+                Pro
               </div>
               <h3 style={{ fontSize: '1.3rem', color: '#fff', fontFamily: 'var(--font-manrope)', fontWeight: 800, marginBottom: '0.5rem' }}>
                 Agentic AI Receptionist
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem', lineHeight: 1.65, marginBottom: '1.5rem' }}>
-                A fully trained, autonomous AI agent built around your sales process — qualifying leads, handling objections, and logging every interaction. 150 agentic calls/month included.
+                Powered by Smith.ai — a fully trained, autonomous AI agent built around your sales process. Qualifies leads, handles objections, books appointments, and logs every interaction. 150 agentic calls/month included.
               </p>
 
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem', marginBottom: '0.3rem' }}>
-                <span style={{ fontSize: '2rem', fontWeight: 800, color: '#fff', fontFamily: 'var(--font-manrope)' }}>$500</span>
-                <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)' }}>one-time setup + onboarding</span>
+                <span style={{ fontSize: '2rem', fontWeight: 800, color: '#fff', fontFamily: 'var(--font-manrope)' }}>$950</span>
+                <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)' }}>/month</span>
               </div>
               <div style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.55)', marginBottom: '1.75rem' }}>
-                + monthly subscription — autopays
+                150 agentic calls/mo included — larger packages available
               </div>
 
               <div style={{ marginBottom: '0.65rem' }}>
@@ -438,13 +438,13 @@ export default function AIReceptionistClient() {
                 ))}
               </div>
 
-              <a href="/free-seo-audit/" style={{
+              <a href="https://buy.stripe.com/14A28rcUjeuOfPVac143S09" target="_blank" rel="noopener noreferrer" style={{
                 display: 'block', padding: '13px 24px', borderRadius: 'var(--radius-md)',
                 background: 'var(--accent)', color: '#fff',
                 fontWeight: 700, fontSize: '0.92rem', textDecoration: 'none',
                 fontFamily: 'var(--font-manrope)', textAlign: 'center', marginTop: '1.5rem',
               }}>
-                Book Onboarding Call →
+                Get Started — $950/mo →
               </a>
             </div>
 

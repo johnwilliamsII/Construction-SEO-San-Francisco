@@ -123,14 +123,14 @@ export default function PricingPage() {
           </h1>
 
           <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.60)', lineHeight: 'var(--leading-relaxed)', maxWidth: '560px', margin: '0 auto 1.75rem' }}>
-            Pricing is scoped after your free audit — your market, trade, and competition level all affect what it takes to win. Packages <strong style={{ color: 'rgba(255,255,255,0.85)' }}>start at $900/month.</strong>
+            Pricing is scoped after your free audit — your market, trade, and competition level all affect what it takes to win. Packages <strong style={{ color: 'rgba(255,255,255,0.85)' }}>start at $1,500/month.</strong>
           </p>
 
           {/* Ads vs SEO comparison */}
           <div style={{ display: 'inline-flex', gap: '1rem', background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 'var(--radius-lg)', padding: '0.9rem 1.5rem', flexWrap: 'wrap', justifyContent: 'center', fontSize: '0.88rem' }}>
-            <span style={{ color: '#f87171', fontWeight: 600 }}>✗ $900 in ads = 9 days of visibility, then gone</span>
+            <span style={{ color: '#f87171', fontWeight: 600 }}>✗ $1,500 in ads = ~15 days of visibility, then gone</span>
             <span style={{ color: 'rgba(255,255,255,0.30)' }}>vs.</span>
-            <span style={{ color: '#6ee7b7', fontWeight: 600 }}>✓ $900/mo with us = 30 days + full team + monthly deliverables</span>
+            <span style={{ color: '#6ee7b7', fontWeight: 600 }}>✓ $1,500/mo with us = 30 days + full team + monthly deliverables</span>
           </div>
         </div>
       </section>
@@ -164,11 +164,11 @@ export default function PricingPage() {
 
             <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.25rem', marginBottom: '1.25rem' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem' }}>
-                <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-manrope)' }}>From $900</span>
+                <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-manrope)' }}>$1,500</span>
                 <span style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)' }}>/month</span>
               </div>
               <div style={{ fontSize: '0.82rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
-                Exact quote after your free audit — scoped to your market & trade
+                Month-to-month — no setup fees, no long-term contracts
               </div>
             </div>
 
@@ -201,11 +201,11 @@ export default function PricingPage() {
 
             <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.25rem', marginBottom: '1.25rem' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.4rem' }}>
-                <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)', fontFamily: 'var(--font-manrope)' }}>From $900</span>
+                <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--text-primary)', fontFamily: 'var(--font-manrope)' }}>$3,000</span>
                 <span style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)' }}>/month</span>
               </div>
               <div style={{ fontSize: '0.82rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
-                Exact quote after your free audit — based on market size & content scope
+                Month-to-month — no setup fees, no long-term contracts
               </div>
             </div>
 

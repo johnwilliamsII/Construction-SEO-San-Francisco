@@ -35,10 +35,10 @@ const PACKAGES = [
     description: 'You need backlinks for any site to rank in even a mildly competitive niche. That\'s SEO 101. Outside of links that grow organically, guest posts are the safest, most powerful way to build your site\'s authority.',
     highlight: false,
     tiers: [
-      { label: '5 Links',  price: '$175',   per: '$35 / link'    },
-      { label: '10 Links', price: '$325',   per: '$32.50 / link' },
-      { label: '20 Links', price: '$600',   per: '$30 / link'    },
-      { label: '30 Links', price: '$850',   per: '$28.33 / link' },
+      { label: '5 Posts',  price: '$199',   per: '$39.80 / post', stripeUrl: 'https://buy.stripe.com/5kQ14ndYn0DY1Z56ZP43S0a' },
+      { label: '10 Posts', price: '$370',   per: '$37 / post',    stripeUrl: 'https://buy.stripe.com/7sY5kDg6v72mavB1Fv43S0b' },
+      { label: '20 Posts', price: '$710',   per: '$35.50 / post', stripeUrl: 'https://buy.stripe.com/eVq4gz2fFcmGbzF83T43S0c' },
+      { label: '50 Posts', price: '$1,710', per: '$34.20 / post', stripeUrl: 'https://buy.stripe.com/28E9AT2fFcmGgTZesh43S0d' },
     ],
     features: [
       'Niche article with contextual anchor/link',
@@ -52,14 +52,16 @@ const PACKAGES = [
     badge: 'Best Authority',
     icon: '🏆',
     title: 'Bulk Guest Posts',
-    subtitle: 'Standard — DR 30–65',
+    subtitle: 'Standard — DA 30–65+',
     description: 'Stronger than PBNs — these are real sites with real traffic and higher metrics than any private blog network. 100% safe backlinks from sites Google actually trusts, constantly updated with the best current network.',
     highlight: true,
     tiers: [
-      { label: '5 Links',  price: '$275',   per: '$55 / link'    },
-      { label: '10 Links', price: '$500',   per: '$50 / link'    },
-      { label: '20 Links', price: '$925',   per: '$46.25 / link' },
-      { label: '30 Links', price: '$1,300', per: '$43.33 / link' },
+      { label: '5 Posts',     price: '$300',    per: '$60 / post',    stripeUrl: 'https://buy.stripe.com/eVqbJ19I7aey47dfwl43S0e' },
+      { label: '10 Posts',    price: '$550',    per: '$55 / post',    stripeUrl: 'https://buy.stripe.com/eVqbJ107x0DYbzFesh43S0f' },
+      { label: '25 Posts',    price: '$1,450',  per: '$58 / post',    stripeUrl: 'https://buy.stripe.com/14A3cv07xgCWeLR83T43S0g' },
+      { label: '50 Posts',    price: '$2,150',  per: '$43 / post',    stripeUrl: 'https://buy.stripe.com/5kQcN5cUjcmG8nt0Br43S0h' },
+      { label: '100 Posts',   price: '$4,250',  per: '$42.50 / post', stripeUrl: 'https://buy.stripe.com/eVq6oHg6veuO6fl3ND43S0i' },
+      { label: '1,000 Posts', price: '$34,200', per: '$34.20 / post', stripeUrl: 'https://buy.stripe.com/5kQ4gzf2r86qdHN2Jz43S0j' },
     ],
     features: [
       'DoFollow links on real traffic sites',
@@ -74,12 +76,12 @@ const PACKAGES = [
     id: 'niche-gold',
     badge: 'Highest Value',
     icon: '🎯',
-    title: 'Niched Guest Posts',
-    subtitle: 'Gold — DR 50–70',
+    title: 'Niche Guest Post',
+    subtitle: 'Single Placement — DR 50–70',
     description: 'Real sites, real organic traffic. Niche-specific placements that generate relevant traffic and reinforce your authority — plus pre-approval of every domain before we publish.',
     highlight: false,
     tiers: [
-      { label: '1 Placement', price: '$400', per: 'per placement' },
+      { label: '1 Placement', price: '$400', per: 'per placement', stripeUrl: 'https://buy.stripe.com/6oU14n1bB5Yi339esh43S0k' },
     ],
     features: [
       'Domain organic traffic: 0–2,000/mo',
@@ -99,8 +101,8 @@ const PACKAGES = [
     description: 'Serious news site power pointing back to your brand. Established names attracting tens of millions of visitors every month — giving instant expert status to anyone published on them.',
     highlight: false,
     tiers: [
-      { label: 'Standard — 500+ News Sites',  price: '$570',   per: 'one-time' },
-      { label: 'Premium — APNews, Yahoo & More', price: '$1,425', per: 'one-time' },
+      { label: 'Standard — 500+ News Sites',      price: '$570',   per: 'one-time', stripeUrl: 'https://buy.stripe.com/bJedR9f2r5Yi5bh5VL43S0l' },
+      { label: 'Premium — Yahoo + Major Outlets',  price: '$1,425', per: 'one-time', stripeUrl: 'https://buy.stripe.com/dRm9AT4nN2M65bhesh43S0m' },
     ],
     features: [
       'Brand building & reputation management',
@@ -115,14 +117,14 @@ const PACKAGES = [
     id: 'local-press',
     badge: 'Bay Area Focus',
     icon: '📍',
-    title: 'Media Outreach Distribution',
-    subtitle: 'Targeted Press Placement',
+    title: 'Local AB News',
+    subtitle: 'Targeted Media Outreach',
     description: 'Web + Media Outreach Distribution — a single premium press release with targeted outreach across 5 industry targets. USA and Canada only.',
     highlight: false,
     tiers: [
-      { label: 'Local — One City / Metro / State', price: '$300', per: 'per placement' },
-      { label: 'Regional — Multi-State',           price: '$450', per: 'per placement' },
-      { label: 'Nationwide Distribution',          price: '$600', per: 'per placement' },
+      { label: 'Local — One City / Metro / State', price: '$300', per: 'per placement', stripeUrl: 'https://buy.stripe.com/5kQaEX7zZ72mbzF1Fv43S0n' },
+      { label: 'Regional — Multi-State',           price: '$450', per: 'per placement', stripeUrl: 'https://buy.stripe.com/5kQ9ATbQfbiCcDJ83T43S0o' },
+      { label: 'National Distribution',            price: '$600', per: 'per placement', stripeUrl: 'https://buy.stripe.com/5kQ14n1bB5Yi339esh43S0k' },
     ],
     features: [
       'Premium press release included',
@@ -326,7 +328,9 @@ function PricingCard({ pkg }) {
       </ul>
 
       <a
-        href="/free-seo-audit/"
+        href={pkg.tiers[selected]?.stripeUrl || '/free-seo-audit/'}
+        target={pkg.tiers[selected]?.stripeUrl ? '_blank' : undefined}
+        rel={pkg.tiers[selected]?.stripeUrl ? 'noopener noreferrer' : undefined}
         style={{
           marginTop: 'auto', width: '100%', display: 'flex', justifyContent: 'center',
           padding: '13px 0', borderRadius: 'var(--radius-md)',
@@ -337,7 +341,7 @@ function PricingCard({ pkg }) {
           fontFamily: 'var(--font-manrope)',
         }}
       >
-        Get Started →
+        Buy Now →
       </a>
     </div>
   )
