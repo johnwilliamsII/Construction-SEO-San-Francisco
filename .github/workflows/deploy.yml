@@ -1,50 +1,37 @@
-name: Build & Deploy to Hostinger
+# FTP deploy workflow — DISABLED.
+# Hostinger runs this repo as a Node.js Web App with its own Git auto-deployment.
+# That pipeline (hPanel → Git → auto-build → npm start) is the single source of truth.
+# This file is kept for reference but will never trigger (no valid `on:` trigger).
+#
+# To re-enable FTP static export in the future:
+#   1. Set output: 'export' back in next.config.js
+#   2. Add FTP_SERVER / FTP_USERNAME / FTP_PASSWORD to GitHub repo secrets
+#   3. Restore the `on: push: branches: [main]` trigger below
+
+name: Build & Deploy to Hostinger (DISABLED)
 
 on:
-  push:
-    branches: [main]          # deploys automatically every time you push to main
+  workflow_dispatch:     # manual trigger only — never fires on push
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Pull the repo
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # 2. Set up Node 20 (matches Hostinger's LTS)
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
-      # 3. Install dependencies
-      - name: Install
-        run: npm ci
-
-      # 4. Build static export → outputs to /out
-      - name: Build
-        run: npm run build
-
-      # 5. Push /out to Hostinger public_html via FTP
-      #    Add these three secrets in your GitHub repo:
-      #    Settings → Secrets and variables → Actions → New repository secret
-      #
-      #    FTP_SERVER   → your Hostinger FTP hostname  (e.g. files.000webhost.com or your domain)
-      #    FTP_USERNAME → your Hostinger FTP username
-      #    FTP_PASSWORD → your Hostinger FTP password
-      #    (Find all three in Hostinger hPanel → Hosting → FTP Accounts)
-      - name: Deploy to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - run: npm ci
+      - run: npm run build
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server:     ${{ secrets.FTP_SERVER }}
           username:   ${{ secrets.FTP_USERNAME }}
           password:   ${{ secrets.FTP_PASSWORD }}
           local-dir:  ./out/
           server-dir: /public_html/
-          exclude:    |
+          exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
