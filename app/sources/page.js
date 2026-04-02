@@ -51,7 +51,7 @@ export default function SourcesPage() {
             <li>• All fonts are served via Next.js Google Fonts optimization and comply with the SIL Open Font License.</li>
             <li>• Stock photos from Unsplash are used under the Unsplash License (free for commercial use, no attribution required — we credit voluntarily).</li>
             <li>• Custom icons and illustrations created for this site are &copy; {new Date().getFullYear()} Construction SEO San Francisco.</li>
-            <li>• If you believe an asset has been incorrectly attributed, please contact <a href="mailto:hello@constructionseo.sf" style={{ color: 'var(--accent)' }}>hello@constructionseo.sf</a>.</li>
+            <li>• If you believe an asset has been incorrectly attributed, please contact <a href="mailto:partners@contractorseobayarea.com" style={{ color: 'var(--accent)' }}>partners@contractorseobayarea.com</a>.</li>
           </ul>
         </div>
       </Section>

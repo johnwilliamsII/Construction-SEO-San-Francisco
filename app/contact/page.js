@@ -1,7 +1,7 @@
 import SectionHeading from '../../components/sections/SectionHeading'
-import FormField from '../../components/forms/FormField'
 import StatCard from '../../components/sections/StatCard'
 import Section from '../../components/layout/Section'
+import ContactForm from './ContactForm'
 
 export const metadata = {
   title: 'Get a Free SEO Audit | Construction SEO San Francisco',
@@ -16,14 +16,6 @@ const TRUST_STATS = [
   { value: '40+',   label: 'Contractors Helped' },
   { value: '4.8×',  label: 'Average Lead Growth' },
   { value: '100%',  label: 'Construction Focus'  },
-]
-
-const SERVICE_OPTIONS = [
-  { value: '',              label: 'Select a service…' },
-  { value: 'local-seo',     label: 'Local SEO' },
-  { value: 'gbp',           label: 'Google Business Profile' },
-  { value: 'both',          label: 'Both Services' },
-  { value: 'not-sure',      label: 'Not sure yet' },
 ]
 
 export default function ContactPage() {
@@ -56,39 +48,7 @@ export default function ContactPage() {
             <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.95rem' }}>
               We&apos;ll review your Google presence within 1 business day.
             </p>
-
-            {/* Static export: use a mailto or Formspree action */}
-            <form
-              action="mailto:hello@constructionseo.sf"
-              method="POST"
-              encType="text/plain"
-              style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}
-            >
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                <FormField id="first-name" label="First Name"   type="text"  required placeholder="James" />
-                <FormField id="last-name"  label="Last Name"    type="text"  required placeholder="Moreno" />
-              </div>
-              <FormField id="email"    label="Email Address"    type="email" required placeholder="james@morenoconstruction.com" />
-              <FormField id="phone"    label="Phone Number"     type="tel"            placeholder="(415) 555-0123" hint="Optional — for faster follow-up" />
-              <FormField id="company"  label="Company Name"     type="text"  required placeholder="Moreno Construction Co." />
-              <FormField
-                id="service"
-                label="What service are you interested in?"
-                type="select"
-                options={SERVICE_OPTIONS}
-              />
-              <FormField
-                id="message"
-                label="Anything else we should know?"
-                type="textarea"
-                placeholder="Tell us about your business, service area, or current Google situation…"
-                hint="Optional but helpful"
-              />
-
-              <button type="submit" className="btn btn-primary btn--lg btn--full">
-                Request My Free Audit →
-              </button>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Info panel */}
@@ -115,8 +75,8 @@ export default function ContactPage() {
               <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Prefer Email?</h3>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
                 Reach us directly at{' '}
-                <a href="mailto:hello@constructionseo.sf" style={{ color: 'var(--accent)', fontWeight: 600 }}>
-                  hello@constructionseo.sf
+                <a href="mailto:partners@contractorseobayarea.com" style={{ color: 'var(--accent)', fontWeight: 600 }}>
+                  partners@contractorseobayarea.com
                 </a>
               </p>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>

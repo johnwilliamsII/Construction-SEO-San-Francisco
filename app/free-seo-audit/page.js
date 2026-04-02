@@ -1,16 +1,10 @@
-import FormField from '../../components/forms/FormField'
+import AuditForm from './AuditForm'
 
 export const metadata = {
-  title: 'Free SEO Audit Near Me for Contractors | contractorseosanfrancisco.com',
+  title: 'Free SEO Audit Near Me for Contractors | contractorseobayarea.com',
   description:
     'Get a free SEO audit near me for Bay Area contractors. We show your rankings, top competitors, and a clear path to page one — no pitch, no pressure.',
 }
-
-const TRADES = [
-  'General Contractors', 'HVAC', 'Remodeling Contractors', 'Roofing', 'Plumbing',
-  'Electrical', 'Landscaping', 'Concrete & Foundation', 'Flooring', 'Painting',
-  'Deck & Fencing', 'ADU / Room Additions', 'Design-Build Firms', 'Other Trade',
-]
 
 const WHAT_HAPPENS = [
   { icon: '🔍', text: 'We audit your keyword rankings for your top 20 terms' },
@@ -59,70 +53,7 @@ export default function FreeAuditPage() {
               <p style={{ color: 'var(--gray)', fontSize: '0.9rem', marginBottom: '2rem' }}>
                 Takes 2 minutes. We&rsquo;ll follow up within 1 business day to schedule your consultation.
               </p>
-
-              <form
-                name="free-seo-audit"
-                method="POST"
-                action="/free-seo-audit/thank-you/"
-                style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
-              >
-                <input type="hidden" name="form-name" value="free-seo-audit" />
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <FormField label="First Name" name="first_name" required placeholder="James" />
-                  <FormField label="Last Name" name="last_name" required placeholder="Moreno" />
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <FormField label="Phone" name="phone" type="tel" required placeholder="(415) 555-0100" />
-                  <FormField label="Email" name="email" type="email" required placeholder="james@company.com" />
-                </div>
-
-                <FormField label="Business Name" name="business_name" required placeholder="Moreno Construction Co." />
-                <FormField label="Website URL" name="website_url" type="url" placeholder="https://yoursite.com" />
-
-                <div className="form-group">
-                  <label className="form-label form-label--required" htmlFor="trade_type">Trade / Service Type</label>
-                  <select id="trade_type" name="trade_type" className="form-select" required defaultValue="">
-                    <option value="" disabled>Select your trade...</option>
-                    {TRADES.map((t) => <option key={t} value={t}>{t}</option>)}
-                  </select>
-                </div>
-
-                <FormField
-                  label="Primary Service Area"
-                  name="service_area"
-                  required
-                  placeholder="e.g. San Francisco, Oakland, South Bay"
-                  hint="City or region where you most want to rank"
-                />
-
-                <FormField
-                  label="Target Keywords (optional)"
-                  name="target_keywords"
-                  as="textarea"
-                  rows={2}
-                  placeholder="e.g. general contractor San Francisco, kitchen remodel Oakland..."
-                  hint="What searches do you most want to show up for?"
-                />
-
-                <FormField
-                  label="Current SEO Strategy (optional)"
-                  name="current_strategy"
-                  as="textarea"
-                  rows={2}
-                  placeholder="e.g. We run Google Ads, have a basic website, use Angi for leads..."
-                  hint="What are you currently doing to get found online?"
-                />
-
-                <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem', fontSize: '1rem', padding: '15px' }}>
-                  Book My Free Consultation →
-                </button>
-
-                <p style={{ fontSize: '0.78rem', color: 'var(--gray)', textAlign: 'center', margin: 0 }}>
-                  No commitment. No spam. Honest data about your market.
-                </p>
-              </form>
+              <AuditForm />
             </div>
 
             {/* Right — Info Panel */}
@@ -134,8 +65,8 @@ export default function FreeAuditPage() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '1.5rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <span style={{ fontSize: '1.1rem' }}>✉️</span>
-                    <a href="mailto:hello@contractorseosanfrancisco.com" style={{ color: 'var(--navy)', fontSize: '0.92rem', fontWeight: 500 }}>
-                      hello@contractorseosanfrancisco.com
+                    <a href="mailto:partners@contractorseobayarea.com" style={{ color: 'var(--navy)', fontSize: '0.92rem', fontWeight: 500 }}>
+                      partners@contractorseobayarea.com
                     </a>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
@@ -147,7 +78,7 @@ export default function FreeAuditPage() {
                     <span style={{ color: 'var(--gray)', fontSize: '0.92rem' }}>Headquartered in San Francisco, CA</span>
                   </div>
                 </div>
-                <a href="mailto:hello@contractorseosanfrancisco.com" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', display: 'flex', fontSize: '0.95rem' }}>
+                <a href="mailto:partners@contractorseobayarea.com" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', display: 'flex', fontSize: '0.95rem' }}>
                   Email Us Directly →
                 </a>
               </div>

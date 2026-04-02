@@ -1,4 +1,5 @@
 import { Inter, Manrope } from 'next/font/google'
+import Script from 'next/script'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import ScrollToTop from '../components/layout/ScrollToTop'
@@ -36,7 +37,7 @@ export const metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'contractorseosanfrancisco.com',
+  name: 'contractorseobayarea.com',
   description:
     'SEO services exclusively for construction companies and contractors in the San Francisco Bay Area.',
   areaServed: [
@@ -61,19 +62,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
-        {/* Google tag (gtag.js) */}
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW3R4LTZ2V"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KW3R4LTZ2V');`,
-          }}
-        />
-
         {/* ── Schema.org structured data ── */}
         <script
           type="application/ld+json"
@@ -89,6 +77,19 @@ export default function RootLayout({ children }) {
         <Footer />
         <ScrollToTop />
       </body>
+
+      {/* Google tag (gtag.js) */}
+      <Script
+        id="gtag-load"
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-KW3R4LTZ2V"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KW3R4LTZ2V');`}
+      </Script>
     </html>
   )
 }

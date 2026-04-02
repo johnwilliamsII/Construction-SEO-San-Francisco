@@ -83,7 +83,7 @@ export default function Footer() {
           <p>
             &copy; {year} contractorseobayarea.com
             &nbsp;|&nbsp;
-            <Link href="mailto:hello@contractorseobayarea.com">hello@contractorseobayarea.com</Link>
+            <Link href="mailto:partners@contractorseobayarea.com">partners@contractorseobayarea.com</Link>
             &nbsp;|&nbsp;
             <Link href="/sources/">Image Sources & Credits</Link>
           </p>
