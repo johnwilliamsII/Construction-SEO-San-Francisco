@@ -7,6 +7,7 @@ export const metadata = {
   title: 'Image Sources & Credits | Construction SEO San Francisco',
   description:
     'Attribution and licensing information for all third-party images, fonts, icons, and media assets used on this website.',
+  alternates: { canonical: '/sources/' },
 }
 
 export default function SourcesPage() {

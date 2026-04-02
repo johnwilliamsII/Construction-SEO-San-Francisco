@@ -7,6 +7,7 @@ export const metadata = {
   title: 'Get a Free SEO Audit | Construction SEO San Francisco',
   description:
     'Request a free, no-obligation SEO audit for your Bay Area construction company. We\'ll show you where you rank, who\'s beating you, and what it takes to reach #1.',
+  alternates: { canonical: '/contact/' },
 }
 
 /* NOTE: This form uses a static mailto fallback for the static export.

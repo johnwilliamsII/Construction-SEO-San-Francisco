@@ -9,6 +9,7 @@ export const metadata = {
   title: 'Local SEO for Contractors | Construction SEO San Francisco',
   description:
     'Hyper-local SEO for Bay Area construction companies. Rank for "contractor near me" searches across SF neighborhoods, Oakland, San Jose, and the Peninsula.',
+  alternates: { canonical: '/services/local-seo/' },
 }
 
 const FEATURES = [

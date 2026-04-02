@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Keyword Research for Contractors | Construction SEO San Francisco',
   description: 'Find the exact search terms Bay Area homeowners use before hiring a contractor. Our construction-specific keyword research drives targeted traffic that converts to calls.',
+  alternates: { canonical: '/services/keyword-research/' },
 }
 
 export default function KeywordResearchPage() {

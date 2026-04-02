@@ -8,6 +8,7 @@ export const metadata = {
   title: 'Bay Area SEO Company for Contractors | contractorseosanfrancisco.com',
   description:
     'We are the Bay Area SEO company built for contractors only. One trade focus, one market — helping Bay Area construction businesses dominate Google.',
+  alternates: { canonical: '/bay-area-seo-company/' },
 }
 
 const STATS = [

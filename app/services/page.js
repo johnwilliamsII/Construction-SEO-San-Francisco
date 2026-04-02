@@ -7,6 +7,7 @@ export const metadata = {
   title: 'Services | Construction SEO San Francisco',
   description:
     'Two focused SEO services for Bay Area contractors: Local SEO and Google Business Profile optimization. Both built exclusively for construction businesses.',
+  alternates: { canonical: '/services/' },
 }
 
 const SERVICES = [

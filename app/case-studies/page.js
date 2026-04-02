@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Case Studies | Construction SEO San Francisco',
   description:
     'Real results from real Bay Area contractors. See how we\'ve helped construction companies rank #1 on Google, fill their pipelines, and reduce cost per lead.',
+  alternates: { canonical: '/case-studies/' },
 }
 
 const STATS = [

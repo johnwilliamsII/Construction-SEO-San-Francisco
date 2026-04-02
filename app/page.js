@@ -9,6 +9,7 @@ export const metadata = {
   title: 'Contractor SEO Bay Area | contractorseosanfrancisco.com',
   description:
     'Get contractor SEO Bay Area services that rank your business at the top of Google. More calls, more jobs, no lead-renting. Packages from $1,200/mo.',
+  alternates: { canonical: '/' },
 }
 
 const SERVICES = [

@@ -7,6 +7,7 @@ export const metadata = {
   title: 'Contractor SEO Agency — Packages for Bay Area Trades | contractorseosanfrancisco.com',
   description:
     'We are a contractor SEO agency built for Bay Area trades. See our packages starting at $900/mo — full team, monthly reports, no long-term contracts.',
+  alternates: { canonical: '/seo-packages-for-contractors/' },
 }
 
 const PACKAGE_FEATURES_LOCAL = [
