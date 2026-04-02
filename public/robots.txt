@@ -1,4 +1,205 @@
-User-agent: *
+# ============================================================
+#  robots.txt — contractorseobayarea.com
+#  Strategy: Open to all legitimate search & social crawlers.
+#            Block AI training scrapers, aggressive SEO tools,
+#            and known malicious / spam bots.
+# ============================================================
+
+
+# ── MAJOR SEARCH ENGINES — Full Access ──────────────────────
+
+User-agent: Googlebot
 Allow: /
 
-Sitemap: https://www.constructionseo.sf/sitemap.xml
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: teoma
+Allow: /
+
+
+# ── SOCIAL & PREVIEW CRAWLERS — Allow ───────────────────────
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+
+# ── AI TRAINING CRAWLERS — Block ────────────────────────────
+#  These crawl for LLM training data, not search indexing.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: Youbot
+Disallow: /
+
+
+# ── AGGRESSIVE SEO / DATA HARVESTING TOOLS — Block ──────────
+#  High-frequency crawlers used for competitive intelligence.
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: SEOkicks
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: seoscannerbot
+Disallow: /
+
+User-agent: Cliqzbot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: SearchmetricsBot
+Disallow: /
+
+
+# ── KNOWN SPAM / MALICIOUS BOTS — Block ─────────────────────
+
+User-agent: SputnikBot
+Disallow: /
+
+User-agent: 008
+Disallow: /
+
+User-agent: voltron
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: CopyRightCheck
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: Zeus
+Disallow: /
+
+User-agent: Harvest
+Disallow: /
+
+
+# ── ALL OTHER BOTS — Default rules ──────────────────────────
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /free-seo-audit/thank-you/
+
+
+# ── SITEMAP ─────────────────────────────────────────────────
+
+Sitemap: https://www.contractorseobayarea.com/sitemap.xml
