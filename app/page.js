@@ -6,9 +6,9 @@ import CtaBanner from '../components/sections/CtaBanner'
 import FaqAccordion from '../components/sections/FaqAccordion'
 
 export const metadata = {
-  title: 'SEO for Contractors in the Bay Area | contractorseosanfrancisco.com',
+  title: 'Contractor SEO Bay Area | contractorseosanfrancisco.com',
   description:
-    'Dominate Bay Area local search and stop renting your leads from Angi, Yelp, and HomeAdvisor. SEO built exclusively for Bay Area construction companies and contractors.',
+    'Get contractor SEO Bay Area services that rank your business at the top of Google. More calls, more jobs, no lead-renting. Packages from $1,200/mo.',
 }
 
 const SERVICES = [
@@ -101,22 +101,22 @@ const STEPS = [
   {
     num: '01',
     title: 'Free Audit & Strategy Call',
-    body: 'We analyze your current Google presence, map your top competitors, and identify exactly which keywords are driving jobs in your service area. You get a clear picture before spending a dollar.',
+    body: 'We map your rankings, competitors, and best keywords — free.',
   },
   {
     num: '02',
     title: 'We Build Your SEO Foundation',
-    body: 'Keyword research, on-page optimization, local citations, content, and schema — all engineered to Google\'s guidelines. We do the work so you can focus on running jobs.',
+    body: 'We build the technical foundation your site needs to rank.',
   },
   {
     num: '03',
     title: 'Rankings Climb, Calls Come In',
-    body: 'Organic positions rise, inbound calls increase, and your pipeline fills with qualified Bay Area leads. No renting. No platform dependency. You own the traffic.',
+    body: 'Positions climb. Your phone rings. You own the traffic.',
   },
   {
     num: '04',
     title: 'You Scale on Owned Traffic',
-    body: 'Unlike ads that stop the moment you stop paying, SEO compounds. Month 6 is better than month 3. Year 2 is better than year 1. You build an asset — not a monthly bill.',
+    body: 'Rankings compound monthly. We maintain them so they hold.',
   },
 ]
 
@@ -164,216 +164,107 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section id="hero" className="hero-section" aria-labelledby="hero-heading">
-        <div className="container hero-grid">
+      <section
+        id="hero"
+        aria-labelledby="hero-heading"
+        style={{
+          position: 'relative',
+          overflow: 'hidden',
+          padding: 'clamp(5rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6rem)',
+          backgroundImage: 'linear-gradient(rgba(13,27,42,0.58), rgba(13,27,42,0.52)), url(https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="container" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
 
-          <div className="hero-text">
-            <span className="section-label">Bay Area Contractor SEO</span>
-            <h1 id="hero-heading">
-              SEO for Contractors <em>in the Bay Area</em>
-            </h1>
-            <p className="hero-subhead">
-              Dominate Bay Area Local Search and Stop Renting Your Leads
-            </p>
-            <p className="hero-body">
-              We help San Francisco contractors, GCs, and specialty trades own Google search —
-              map pack, organic rankings, and inbound calls that compound month after month.
-              No ads. No Angi. No HomeAdvisor tax.
-            </p>
-            <div className="hero-actions">
-              <a href="/free-seo-audit/" className="btn btn-primary">Get Your Free SEO Audit</a>
-              <a href="#how-it-works" className="btn btn-outline-dark">See How It Works</a>
-            </div>
-            <div className="hero-trust">
-              <div className="hero-trust-icons">
-                <div className="avatar">JM</div>
-                <div className="avatar">RT</div>
-                <div className="avatar">SK</div>
-                <div className="avatar">AL</div>
-              </div>
-              <span>Trusted by 40+ Bay Area contractors</span>
-            </div>
+          {/* Badge */}
+          <span style={{
+            display: 'inline-flex', alignItems: 'center', gap: '6px',
+            padding: '5px 16px', borderRadius: '9999px',
+            background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.30)',
+            color: '#fff', fontSize: '0.75rem', fontWeight: 600,
+            letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '1.5rem',
+          }}>
+            🏗️ Construction SEO &bull; San Francisco, California
+          </span>
+
+          <h1 id="hero-heading" style={{
+            fontSize: 'clamp(2.2rem, 5vw, 3.6rem)',
+            color: '#fff',
+            fontFamily: 'var(--font-manrope)',
+            fontWeight: 800,
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+            marginBottom: '1.25rem',
+            maxWidth: '780px',
+          }}>
+            Contractor SEO Bay Area: <em style={{ color: 'var(--yellow)', fontStyle: 'italic' }}>Get More Bay Area Jobs</em>
+          </h1>
+
+          <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.82)', maxWidth: '580px', lineHeight: 1.7, marginBottom: '0.75rem' }}>
+            Dominate Bay Area local search and stop renting your leads
+          </p>
+          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.65)', maxWidth: '540px', lineHeight: 1.7, marginBottom: '2.25rem' }}>
+            We help San Francisco contractors, GCs, and specialty trades own Google search —
+            map pack, organic rankings, and inbound calls that compound month after month.
+            No ads. No Angi. No HomeAdvisor tax.
+          </p>
+
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '2.5rem' }}>
+            <a href="/free-seo-audit/" className="btn btn-primary" style={{ fontSize: '1rem', padding: '15px 32px' }}>
+              Get Your Free SEO Audit
+            </a>
+            <a href="/link-building-for-contractors/" className="btn" style={{
+              fontSize: '1rem', padding: '15px 32px',
+              background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.45)',
+              color: '#fff', backdropFilter: 'blur(8px)',
+            }}>
+              Order Now
+            </a>
           </div>
 
-          <div className="hero-card" aria-hidden="true">
-            <div className="hero-card-title">Live Ranking Snapshot — SF Bay Area</div>
-            <div className="stat-row">
-              <div className="stat-box">
-                <span className="num">+312%</span>
-                <div className="lbl">Organic Traffic</div>
+          {/* Trust */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '3rem' }}>
+            <div style={{ display: 'flex' }}>
+              {['JM','RT','SK','AL'].map((i) => (
+                <div key={i} className="avatar" style={{ border: '2px solid rgba(255,255,255,0.5)', marginLeft: '-8px' }}>{i}</div>
+              ))}
+            </div>
+            <span style={{ color: 'rgba(255,255,255,0.80)', fontSize: '0.9rem' }}>Trusted by 40+ Bay Area contractors</span>
+          </div>
+
+          {/* How It Works strip */}
+          <div style={{
+            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px',
+            background: 'rgba(255,255,255,0.15)', borderRadius: '12px', overflow: 'hidden',
+            width: '100%', maxWidth: '680px',
+          }}>
+            {[
+              { num: '1', label: 'Free Consultation' },
+              { num: '2', label: 'Custom Strategy' },
+              { num: '3', label: 'Get Results' },
+            ].map((step, i) => (
+              <div key={step.num} style={{
+                background: 'rgba(255,255,255,0.10)',
+                backdropFilter: 'blur(8px)',
+                padding: '1rem',
+                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
+                borderRight: i < 2 ? '1px solid rgba(255,255,255,0.15)' : 'none',
+              }}>
+                <div style={{
+                  width: '32px', height: '32px', borderRadius: '50%',
+                  background: 'var(--yellow)', color: 'var(--navy)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontWeight: 800, fontSize: '0.9rem',
+                }}>{step.num}</div>
+                <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.85rem', fontWeight: 600 }}>{step.label}</span>
               </div>
-              <div className="stat-box">
-                <span className="num">4.8×</span>
-                <div className="lbl">More Leads / Mo</div>
-              </div>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;General contractor San Francisco&rdquo;</span>
-              <span className="rank-badge">#1</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;Remodeling contractor Bay Area&rdquo;</span>
-              <span className="rank-badge">#2</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;Kitchen remodel contractor SF&rdquo;</span>
-              <span className="rank-badge">#1</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;HVAC contractor San Francisco&rdquo;</span>
-              <span className="rank-badge">#1</span>
-            </div>
-            <div className="rank-bar">
-              <span className="rank-bar-label">&ldquo;Commercial construction Oakland&rdquo;</span>
-              <span className="rank-badge">#3</span>
-            </div>
+            ))}
           </div>
 
         </div>
       </section>
-
-      {/* ===== SERVICES ===== */}
-      <section id="services" aria-labelledby="services-heading">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-label">What We Do</span>
-            <h2 id="services-heading">Every Service Bay Area Contractors Need to Win on Google</h2>
-            <p>From local rankings to AI-powered lead capture — our full suite is built exclusively for the construction industry.</p>
-          </div>
-
-          <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-
-            <article className="service-card">
-              <div className="service-icon">📍</div>
-              <h3>Local SEO for Contractors</h3>
-              <p>
-                Dominate &ldquo;contractor near me&rdquo; searches across SF neighborhoods, Oakland, the Peninsula, and every city you serve.
-              </p>
-              <ul className="service-features">
-                <li>City &amp; neighborhood landing pages</li>
-                <li>Local citations across 80+ directories</li>
-                <li>Schema markup + competitor gap analysis</li>
-                <li>Monthly ranking reports</li>
-              </ul>
-              <a href="/services/local-seo/" className="service-card-cta">Local SEO details →</a>
-            </article>
-
-            <article className="service-card">
-              <div className="service-icon">🗺️</div>
-              <h3>Google Business Profile (GBP)</h3>
-              <p>
-                The Maps 3-Pack gets 44% of all local clicks. We optimize and actively manage your GBP to own that prime real estate.
-              </p>
-              <ul className="service-features">
-                <li>Full GBP setup, verification &amp; categories</li>
-                <li>Weekly Google Posts &amp; photo strategy</li>
-                <li>Review acquisition &amp; response management</li>
-                <li>GBP Insights reporting</li>
-              </ul>
-              <a href="/services/gbp/" className="service-card-cta">GBP Optimization details →</a>
-            </article>
-
-            <article className="service-card">
-              <div className="service-icon">🔍</div>
-              <h3>Keyword Research</h3>
-              <p>
-                Know exactly what Bay Area buyers type into Google before hiring a contractor — then build your entire strategy around those terms.
-              </p>
-              <ul className="service-features">
-                <li>Trade-specific keyword mapping</li>
-                <li>Neighborhood &amp; city-level opportunities</li>
-                <li>Search volume &amp; competition scoring</li>
-                <li>Content roadmap delivery</li>
-              </ul>
-              <a href="/services/keyword-research/" className="service-card-cta">Keyword Research details →</a>
-            </article>
-
-            <article className="service-card">
-              <div className="service-icon">🔗</div>
-              <h3>Link Building</h3>
-              <p>
-                Authority links from Bay Area publications, trade associations, and local directories tell Google your business is the real deal.
-              </p>
-              <ul className="service-features">
-                <li>Local &amp; industry-relevant link outreach</li>
-                <li>Contractor directory placements</li>
-                <li>Digital PR for completed projects</li>
-                <li>Zero spammy link schemes</li>
-              </ul>
-              <a href="/services/link-building/" className="service-card-cta">Link Building details →</a>
-            </article>
-
-            <article className="service-card">
-              <div className="service-icon">📦</div>
-              <h3>SEO Packages</h3>
-              <p>
-                Bundled monthly plans designed for contractors at every stage — from new businesses building visibility to established firms scaling fast.
-              </p>
-              <ul className="service-features">
-                <li>Starter, Growth &amp; Pro tiers</li>
-                <li>Everything included — no à la carte surprises</li>
-                <li>Month-to-month, no lock-in contracts</li>
-                <li>Clear deliverables &amp; reporting every month</li>
-              </ul>
-              <a href="/services/seo-packages/" className="service-card-cta">View SEO Packages →</a>
-            </article>
-
-            <article className="service-card">
-              <div className="service-icon">🤖</div>
-              <h3>AI Receptionist</h3>
-              <p>
-                Never miss a lead again. Our AI receptionist answers calls, qualifies prospects, and books estimates — 24/7, even when you&apos;re on the job.
-              </p>
-              <ul className="service-features">
-                <li>24/7 call answering &amp; lead qualification</li>
-                <li>Estimate booking directly to your calendar</li>
-                <li>Trained on construction industry scripts</li>
-                <li>Instant SMS follow-up to every caller</li>
-              </ul>
-              <a href="/services/ai-receptionist/" className="service-card-cta">AI Receptionist details →</a>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ===== PROCESS ===== */}
-      <section id="process" aria-labelledby="process-heading">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-label">How It Works</span>
-            <h2 id="process-heading">Simple Process. <em>Real Results.</em></h2>
-            <p>No jargon, no mystery. Three steps from zero visibility to ranking at the top of Google for Bay Area construction searches.</p>
-          </div>
-
-          <div className="process-grid">
-
-            <div className="process-card">
-              <div className="process-num">01</div>
-              <h3>Free Audit &amp; Strategy Call</h3>
-              <p>
-                We analyze your current Google presence, map out your top competitors, and identify exactly which keywords are driving jobs in your service area. You get a clear picture before spending a dollar.
-              </p>
-            </div>
-
-            <div className="process-card">
-              <div className="process-num">02</div>
-              <h3>We Build Your SEO Foundation</h3>
-              <p>
-                On-page optimization, GBP setup, local citations, content, and schema — all built to Google&apos;s guidelines. We do the work so you can focus on running jobs.
-              </p>
-            </div>
-
-            <div className="process-card">
-              <div className="process-num">03</div>
-              <h3>You Rank, Get Calls, Win Work</h3>
-              <p>
-                Rankings climb, inbound calls increase, and your pipeline fills with qualified Bay Area leads. Monthly reports keep you informed, with plain-English explanations — no fluff.
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
 
       {/* ── BELIEF-BREAKER: Ads = Renting ── */}
       <Section variant="white" aria-labelledby="belief-heading">
@@ -385,8 +276,11 @@ export default function HomePage() {
           <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginBottom: '1.5rem' }}>
             Every dollar you pay Angi, HomeAdvisor, Yelp, or Google Ads buys you one lead. One. Stop paying and the pipeline goes cold overnight. There&rsquo;s no equity, no asset, and no path to independence.
           </p>
+          <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginBottom: '1.5rem' }}>
+            SEO is the opposite. You build rankings the way you build a structure — starting with a foundation. Once you own the #1 spot for &ldquo;general contractor San Francisco,&rdquo; that traffic arrives every day without another dollar changing hands. The asset compounds. The leads are yours.
+          </p>
           <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginBottom: '2rem' }}>
-            SEO is the opposite. You build rankings the way you build a building — with a foundation. Once you own the #1 spot for &ldquo;general contractor San Francisco,&rdquo; that traffic comes to you every day without another dollar changing hands. The asset compounds. The leads are yours.
+            But a foundation alone doesn&rsquo;t hold forever. Rankings are a living thing — links age, algorithms shift, competitors push back. What you don&rsquo;t actively maintain will slowly yield to the sites that do. We exist for one standing mission: get your site to #1 and keep it there. We refresh your link profile, build new content, monitor technical health, and keep your code and security current — so the asset you&rsquo;ve built never quietly erodes while your attention is on the job site.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', maxWidth: '560px', margin: '0 auto' }}>
             <div className="glass-card" style={{ padding: '1.25rem', borderTop: '3px solid var(--error)' }}>
@@ -398,13 +292,13 @@ export default function HomePage() {
                 <li>✗ Platform controls your pricing</li>
               </ul>
             </div>
-            <div className="glass-card" style={{ padding: '1.25rem', borderTop: '3px solid var(--accent)' }}>
-              <div style={{ fontWeight: 700, marginBottom: '0.5rem', color: 'var(--accent)' }}>Owning SEO Rankings</div>
+            <div className="glass-card" style={{ padding: '1.25rem', borderTop: '3px solid #22C55E' }}>
+              <div style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#22C55E' }}>Owning SEO Rankings</div>
               <ul style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                 <li>✓ Leads come in automatically</li>
-                <li>✓ Rankings stay when you pause</li>
+                <li>✓ Own the asset — not rent it</li>
                 <li>✓ Exclusive inbound calls</li>
-                <li>✓ You own the asset, not rent it</li>
+                <li>✓ Maintained and held at #1</li>
               </ul>
             </div>
           </div>
@@ -415,6 +309,101 @@ export default function HomePage() {
       <Section variant="subtle" aria-label="Client results summary">
         <div className="grid-4">
           {STATS.map((s) => <StatCard key={s.label} {...s} />)}
+        </div>
+      </Section>
+
+      {/* ── WHY US / VALUE SECTION ── */}
+      <Section variant="white" aria-labelledby="value-heading">
+        <div style={{ maxWidth: '920px', margin: '0 auto', textAlign: 'center' }}>
+          <span className="section-label">The Smarter Investment</span>
+          <h2 id="value-heading" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', marginBottom: '1rem' }}>
+            Why Pay $10,000/mo for a Big Agency When You Can <em>Own Google for $2,500?</em>
+          </h2>
+          <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', maxWidth: '620px', margin: '0 auto 2.75rem' }}>
+            Most contractors assume getting to the top of Google is expensive. Compared to your alternatives, it&rsquo;s the best deal in the trades.
+          </p>
+
+          {/* Pricing comparison 3-col */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '3rem', textAlign: 'left' }}>
+            <div className="glass-card" style={{ padding: '1.5rem', borderTop: '3px solid #E53E3E' }}>
+              <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#E53E3E', marginBottom: '0.5rem' }}>Hire In-House</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy)', lineHeight: 1, marginBottom: '0.3rem' }}>$8,500<span style={{ fontSize: '0.85rem', fontWeight: 500 }}>/mo</span></div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.5 }}>Average SEO manager salary + benefits. One person. One skill set.</div>
+              <ul style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                <li>✗ Months to find & hire</li>
+                <li>✗ Benefits, taxes, overhead on top</li>
+                <li>✗ Sick days, turnover risk</li>
+                <li>✗ Still only one person's knowledge</li>
+              </ul>
+            </div>
+
+            <div className="glass-card" style={{ padding: '1.5rem', borderTop: '3px solid #E53E3E' }}>
+              <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#E53E3E', marginBottom: '0.5rem' }}>Big Marketing Agency</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy)', lineHeight: 1, marginBottom: '0.3rem' }}>$10,000<span style={{ fontSize: '0.85rem', fontWeight: 500 }}>/mo+</span></div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.5 }}>Industry avg. for a full-service agency retainer. Generalists, not trade specialists.</div>
+              <ul style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                <li>✗ Junior staff on your account</li>
+                <li>✗ Cookie-cutter playbook</li>
+                <li>✗ Long-term contracts required</li>
+                <li>✗ Quarterly check-ins if you&rsquo;re lucky</li>
+              </ul>
+            </div>
+
+            <div style={{ padding: '1.5rem', borderRadius: '12px', background: '#16192A', borderTop: '3px solid #22C55E', textAlign: 'left', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: '14px', right: '14px', background: '#22C55E', color: '#fff', fontSize: '0.62rem', fontWeight: 700, padding: '3px 10px', borderRadius: '9999px', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Best Value</div>
+              <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#22C55E', marginBottom: '0.5rem' }}>Contractor SEO SF</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', lineHeight: 1, marginBottom: '0.3rem' }}>$2,500<span style={{ fontSize: '0.85rem', fontWeight: 500, color: 'rgba(255,255,255,0.6)' }}>/mo</span></div>
+              <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)', marginBottom: '1rem', lineHeight: 1.5 }}>Full team. Contractor-only focus. One mission: get you to #1.</div>
+              <ul style={{ fontSize: '0.82rem', listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                <li style={{ color: '#22C55E' }}>✓ Specialists who know the trades</li>
+                <li style={{ color: '#22C55E' }}>✓ Monthly reports + growth roadmap</li>
+                <li style={{ color: '#22C55E' }}>✓ Month-to-month. No lock-in.</li>
+                <li style={{ color: '#22C55E' }}>✓ Results you can see and measure</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Benefit cards 2×2 */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginBottom: '2.5rem', textAlign: 'left' }}>
+            {[
+              {
+                icon: '📞',
+                title: 'More Calls From People Ready to Hire',
+                body: "We're not here to make your Google dashboard look pretty. We're here to make your phone ring with real homeowners in your city who are ready to book a job — today.",
+              },
+              {
+                icon: '📍',
+                title: 'Your Name Shows Up First on Google',
+                body: "When someone in your service area searches for a contractor, your business is the first thing they see — on the map, in the results, and before any competitor gets a chance.",
+              },
+              {
+                icon: '📊',
+                title: "You're Always in the Loop",
+                body: 'No black box. Every month you get a plain-English report and a forward-looking growth roadmap — so you know exactly what we did, what worked, and what we\'re building next.',
+              },
+              {
+                icon: '🔨',
+                title: 'A Full Team for Less Than One Salary',
+                body: "Strategists, content writers, link builders, and technical experts — all working on your site every month. The output of an entire team, at a fraction of what one in-house hire costs.",
+              },
+            ].map((b) => (
+              <div key={b.title} className="glass-card glass-highlight" style={{ padding: '1.5rem' }}>
+                <div style={{ fontSize: '1.6rem', marginBottom: '0.6rem' }}>{b.icon}</div>
+                <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>{b.title}</h3>
+                <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', margin: 0 }}>{b.body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Closing caveat */}
+          <div style={{ background: '#16192A', borderRadius: '16px', padding: '2rem 2.5rem' }}>
+            <p style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', marginBottom: '0.6rem', lineHeight: 1.4 }}>
+              You&rsquo;re not buying SEO. You&rsquo;re buying jobs on the calendar.
+            </p>
+            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.62)', lineHeight: 'var(--leading-relaxed)', margin: 0 }}>
+              More calls from people in your city, searching for exactly what you do, ready to hire. That&rsquo;s the output. Rankings, links, content, technical health — those are just the engine. The destination is a full pipeline with your name at the top of Google. That&rsquo;s what we deliver, and it&rsquo;s the only metric we care about.
+            </p>
+          </div>
         </div>
       </Section>
 

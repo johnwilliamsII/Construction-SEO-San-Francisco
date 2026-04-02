@@ -1,28 +1,38 @@
-import Section from '../../components/layout/Section'
 import CtaBanner from '../../components/sections/CtaBanner'
-import { POSTS, PUBLISHED_SLUGS, BADGE_COLORS } from '../../lib/blog-posts'
+import Section from '../../components/layout/Section'
+import ReadingProgressBar from '../../components/blog/ReadingProgressBar'
+import CategoryFilter from '../../components/blog/CategoryFilter'
+import { POSTS } from '../../lib/blog-posts'
+import { CATEGORIES } from '../../lib/blog-categories'
+import { enforceAllPublished } from '../../lib/blog-seo-enforcer'
 
 export const metadata = {
-  title: 'Construction SEO Blog | Bay Area Contractor Marketing Tips',
+  title: 'Construction SEO Blog: Bay Area Contractor Marketing Tips & Guides | contractorseosanfrancisco.com',
   description:
-    'Actionable SEO tips, local search strategies, and Google Business Profile guides for Bay Area construction companies, HVAC contractors, and remodeling businesses.',
-  robots: { index: false, follow: false },
+    'The Construction SEO Blog for Bay Area contractors — local search strategies, Google Business Profile guides, and actionable SEO tips for HVAC, electrical, roofing, and general contractors.',
+  robots: { index: true, follow: true },
 }
 
-const CATEGORIES = ['All', 'HVAC Contractors', 'Remodeling Contractors', 'General Guides']
-
-const PUBLISHED_POSTS = POSTS.filter((p) => PUBLISHED_SLUGS.includes(p.slug))
-
-const CATEGORY_ICONS = {
-  'HVAC Contractors':       '❄️',
-  'Remodeling Contractors': '🏗️',
-  'General Guides':         '📋',
+/* Run SEO enforcement on all published posts at render/build time */
+const PUBLISHED = POSTS.filter((p) => p.published === true)
+if (PUBLISHED.length > 0) {
+  enforceAllPublished(POSTS, PUBLISHED.map((p) => p.slug))
 }
+
+const CATEGORY_COUNT = CATEGORIES.reduce((acc, cat) => {
+  acc[cat.slug] = cat.slug === 'all'
+    ? PUBLISHED.length
+    : PUBLISHED.filter((p) => p.seoCategory === cat.slug).length
+  return acc
+}, {})
 
 export default function BlogPage() {
   return (
     <>
-      {/* ── Dark Hero (inspired by editorial blog aesthetic) ── */}
+      {/* ── Reading Progress Bar — blog pages only (Section 1) ── */}
+      <ReadingProgressBar />
+
+      {/* ── Dark Hero ── */}
       <section
         aria-labelledby="blog-heading"
         style={{
@@ -33,9 +43,7 @@ export default function BlogPage() {
           textAlign:    'center',
         }}
       >
-        {/* Orange glow */}
         <div aria-hidden="true" style={{ position: 'absolute', top: '-100px', right: '-60px', width: '420px', height: '420px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(232,97,26,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        {/* Blue glow */}
         <div aria-hidden="true" style={{ position: 'absolute', bottom: '-80px', left: '-80px', width: '360px', height: '360px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
         <div className="container" style={{ maxWidth: '720px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
@@ -50,33 +58,27 @@ export default function BlogPage() {
           </span>
 
           <h1 id="blog-heading" style={{
-            fontSize: 'clamp(2rem, 4.5vw, 3.2rem)',
-            color: '#FFFFFF',
-            fontFamily: 'var(--font-manrope)',
-            fontWeight: 800,
-            lineHeight: 1.15,
+            fontSize:     'clamp(2rem, 4.5vw, 3.2rem)',
+            color:        '#FFFFFF',
+            fontFamily:   'var(--font-manrope)',
+            fontWeight:   800,
+            lineHeight:   1.15,
             letterSpacing: '-0.02em',
             marginBottom: '1rem',
           }}>
-            Insights for Bay Area <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Contractors</em>
+            The <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Construction SEO Blog</em> for Bay Area Contractors
           </h1>
 
-          <p style={{
-            fontSize: '1.05rem',
-            color: 'rgba(255,255,255,0.60)',
-            lineHeight: 'var(--leading-relaxed)',
-            maxWidth: '540px',
-            margin: '0 auto 2rem',
-          }}>
-            Actionable local SEO guides, GBP optimization tips, and lead generation strategies — written specifically for construction businesses and trades.
+          <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.60)', lineHeight: 'var(--leading-relaxed)', maxWidth: '540px', margin: '0 auto 2rem' }}>
+            The Construction SEO Blog covers local search strategy, Google Business Profile optimization, and lead generation — written for HVAC, roofing, electrical, and general contractors competing in the Bay Area.
           </p>
 
-          {/* Stats strip */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', fontSize: '0.85rem' }}>
+          {/* Category counts strip */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
             {[
-              { num: '20', label: 'HVAC articles' },
-              { num: '20', label: 'Remodeling articles' },
-              { num: '20', label: 'General guides' },
+              { num: PUBLISHED.length,                    label: 'Live Articles'  },
+              { num: CATEGORY_COUNT['local-seo']   || 0, label: 'Local SEO'      },
+              { num: CATEGORY_COUNT['seo-strategy'] || 0, label: 'SEO Strategy'  },
             ].map((s) => (
               <div key={s.label} style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--accent)', fontFamily: 'var(--font-manrope)' }}>{s.num}</div>
@@ -87,85 +89,9 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* ── Posts grid ── */}
+      {/* ── Posts grid with live category filter (Section 6) ── */}
       <Section variant="white">
-        {/* Category filter */}
-        <div className="tabs" style={{ marginBottom: '2rem' }}>
-          {CATEGORIES.map((cat) => (
-            <button key={cat} className={`tab-button${cat === 'All' ? ' active' : ''}`}>
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {PUBLISHED_POSTS.length > 0 ? (
-          <div className="grid-3">
-            {PUBLISHED_POSTS.map((post) => (
-              <article key={post.slug} className="glass-card glass-card--sm glass-highlight" style={{ display: 'flex', flexDirection: 'column' }}>
-                <div
-                  aria-hidden="true"
-                  style={{
-                    width: '100%', aspectRatio: '16/9',
-                    background: 'linear-gradient(135deg, var(--accent-light) 0%, var(--bg-subtle) 100%)',
-                    borderRadius: 'var(--radius-md)', marginBottom: '1rem',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '2rem', color: 'var(--accent)', opacity: 0.5,
-                  }}
-                >
-                  {CATEGORY_ICONS[post.category]}
-                </div>
-
-                <div style={{ padding: '0 0.25rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.6rem' }}>
-                    <span className={`badge ${BADGE_COLORS[post.category] || 'badge--neutral'}`}>{post.category}</span>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>{post.date}</span>
-                  </div>
-                  <h3 style={{ fontSize: '0.98rem', lineHeight: 'var(--leading-snug)', marginBottom: 'auto', color: 'var(--text-primary)' }}>
-                    {post.title}
-                  </h3>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}>
-                    <a href={`/blog/${post.slug}/`} style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--accent)', textDecoration: 'none' }}>
-                      Read article →
-                    </a>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)' }}>{post.readTime} min</span>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        ) : (
-          /* Coming soon — all articles publishing soon */
-          <div>
-            {/* Preview grid (shows structure, links disabled) */}
-            <p style={{ textAlign: 'center', fontSize: '0.88rem', color: 'var(--text-tertiary)', marginBottom: '2rem', fontStyle: 'italic' }}>
-              60 articles publishing soon — sign up for the free audit to get notified.
-            </p>
-            <div className="grid-3">
-              {POSTS.map((post) => (
-                <div key={post.slug} className="glass-card glass-card--sm" style={{ display: 'flex', flexDirection: 'column', opacity: 0.7 }}>
-                  <div
-                    aria-hidden="true"
-                    style={{
-                      width: '100%', aspectRatio: '16/9',
-                      background: 'linear-gradient(135deg, var(--accent-light) 0%, var(--bg-subtle) 100%)',
-                      borderRadius: 'var(--radius-md)', marginBottom: '1rem',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '1.75rem', color: 'var(--accent)', opacity: 0.4,
-                    }}
-                  >
-                    {CATEGORY_ICONS[post.category]}
-                  </div>
-                  <div style={{ padding: '0 0.25rem' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                      <span className={`badge ${BADGE_COLORS[post.category] || 'badge--neutral'}`}>{post.category}</span>
-                    </div>
-                    <h3 style={{ fontSize: '0.93rem', lineHeight: 'var(--leading-snug)', color: 'var(--text-secondary)' }}>{post.title}</h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        <CategoryFilter posts={PUBLISHED} initialSlug="all" />
       </Section>
 
       {/* ── CTA ── */}

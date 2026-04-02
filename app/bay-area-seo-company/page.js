@@ -7,7 +7,7 @@ import CtaBanner from '../../components/sections/CtaBanner'
 export const metadata = {
   title: 'Bay Area SEO Company for Contractors | contractorseosanfrancisco.com',
   description:
-    'We are the Bay Area SEO company built exclusively for contractors. Not a generic agency — a focused team that only works with construction companies, trades, and home service businesses.',
+    'We are the Bay Area SEO company built for contractors only. One trade focus, one market — helping Bay Area construction businesses dominate Google.',
 }
 
 const STATS = [
@@ -19,42 +19,36 @@ const STATS = [
 
 const DIFFERENCES = [
   {
-    icon: '🏗️',
     title: 'We Only Work With Contractors',
-    body: 'We don\'t have restaurant clients, e-commerce stores, or law firms. Every client we have is a contractor. That means our keyword research, content strategy, and link building playbooks are built from years of working exclusively in the construction and home services space.',
+    body: 'Every client is a contractor. No distractions. No divided focus.',
   },
   {
-    icon: '🗺️',
-    title: 'We Know the Bay Area Market Specifically',
-    body: 'The Bay Area is one of the most competitive local markets in the country. We know which SF neighborhoods, East Bay cities, Peninsula zip codes, and South Bay communities drive the highest-value projects — and we target them with precision.',
+    title: 'We Know the Bay Area Market',
+    body: 'We know which neighborhoods, cities, and searches drive real jobs.',
   },
   {
-    icon: '🤝',
-    title: 'Human Strategy + AI Efficiency',
-    body: 'We use AI tools to move faster on execution, but every strategy, content edit, and recommendation is reviewed by a human SEO who understands your trade. You get the speed of automation and the judgment of an expert.',
+    title: 'Strategy First, Always',
+    body: 'Expert human strategy behind every decision — no cookie-cutter playbooks.',
   },
   {
-    icon: '📊',
-    title: 'We Optimize for Calls, Not Just Rankings',
-    body: 'Rankings are a means to an end. We track what matters: inbound calls, contact form submissions, and Google Maps direction requests. The metrics that mean actual new business — not vanity numbers.',
+    title: 'We Optimize for Calls, Not Clicks',
+    body: 'Rankings mean nothing if your phone isn\'t ringing. Ours make it ring.',
   },
   {
-    icon: '🔒',
     title: 'No Long-Term Contracts, Ever',
-    body: 'We operate month-to-month. If our work isn\'t generating results, you should be able to leave. This keeps us accountable and keeps the incentives aligned. We earn your business every single month.',
+    body: 'Month-to-month only. Our results earn your business — not paperwork.',
   },
   {
-    icon: '📋',
-    title: 'Transparent Reporting, Plain English',
-    body: 'No jargon-filled reports you need an SEO degree to read. Monthly: keyword rankings moved, traffic gained, leads generated. Everything explained in plain English with clear next steps.',
+    title: 'Reporting You Can Actually Read',
+    body: 'Plain-English monthly reports: rankings moved, calls gained, what\'s next.',
   },
 ]
 
 const SERVICES = [
-  { title: 'Local SEO', href: '/local-seo-for-contractors/', description: 'Own the Google Maps 3-Pack for every high-value keyword in your service area.' },
-  { title: 'Link Building', href: '/link-building-for-contractors/', description: 'Earn authoritative backlinks that build your domain authority and outrank competitors.' },
-  { title: 'Keyword Research', href: '/keyword-research-for-contractors/', description: 'Map every buyer-intent keyword across your trade, cities, and neighborhoods.' },
-  { title: 'AI Receptionist', href: '/ai-receptionist-service/', description: 'Answer calls 24/7 and qualify leads automatically so no job slips through.' },
+  { title: 'Local SEO', href: '/local-seo-for-contractors/', description: 'Own the Google Maps results for every high-value search in your service area.' },
+  { title: 'Link Building', href: '/link-building-for-contractors/', description: 'Earn authoritative backlinks that push your site above every competitor.' },
+  { title: 'Keyword Research', href: '/keyword-research-for-contractors/', description: 'Map every buyer-intent search across your trade, cities, and neighborhoods.' },
+  { title: 'AI Receptionist', href: '/ai-receptionist-service/', description: 'Answer calls 24/7 and qualify leads automatically — no job slips through.' },
 ]
 
 const TESTIMONIALS = [
@@ -66,7 +60,7 @@ const TESTIMONIALS = [
     stars: 5,
   },
   {
-    quote: 'Most agencies threw generic SEO packages at us. These guys came in knowing what "design-build remodel" searches look like in Oakland. Night and day difference.',
+    quote: 'Most agencies threw generic packages at us. These guys came in knowing what "design-build remodel" searches look like in Oakland. Night and day difference.',
     name: 'Rachel Torres',
     role: 'Co-Owner, Bay Craft Remodeling — Oakland',
     initials: 'RT',
@@ -84,29 +78,30 @@ const TESTIMONIALS = [
 export default function AboutPage() {
   return (
     <>
-      {/* ── Dark Hero ── */}
+      {/* ── Hero ── */}
       <section
         aria-labelledby="about-hero-heading"
         style={{
-          background:   'linear-gradient(160deg, #16192A 0%, #1A2240 55%, #1C1F32 100%)',
-          position:     'relative',
-          overflow:     'hidden',
-          padding:      'clamp(4rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem)',
+          position: 'relative',
+          overflow: 'hidden',
+          padding: 'clamp(5rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6rem)',
+          backgroundImage:
+            'linear-gradient(rgba(13,27,42,0.65), rgba(13,27,42,0.60)), url(https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 40%',
         }}
       >
-        <div aria-hidden="true" style={{ position: 'absolute', top: '-100px', right: '-80px', width: '500px', height: '500px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(232,97,26,0.14) 0%, transparent 70%)', pointerEvents: 'none' }} />
-        <div aria-hidden="true" style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: '320px', height: '320px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
-
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ maxWidth: '700px' }}>
+          <div style={{ maxWidth: '680px' }}>
+
             <span style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '5px 16px', borderRadius: '9999px',
-              background: 'rgba(232,97,26,0.15)', border: '1px solid rgba(232,97,26,0.30)',
+              background: 'rgba(232,97,26,0.18)', border: '1px solid rgba(232,97,26,0.35)',
               color: '#F4875A', fontSize: '0.72rem', fontWeight: 700,
               letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem',
             }}>
-              About Us
+              Bay Area SEO Company
             </span>
 
             <h1 id="about-hero-heading" style={{
@@ -114,33 +109,34 @@ export default function AboutPage() {
               color: '#FFFFFF',
               fontFamily: 'var(--font-manrope)',
               fontWeight: 800,
-              lineHeight: 1.15,
+              lineHeight: 1.12,
               letterSpacing: '-0.02em',
-              marginBottom: '1rem',
+              marginBottom: '1.1rem',
             }}>
               Your Bay Area SEO Company{' '}
               <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>for Contractors</em>
             </h1>
 
-            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.65)', lineHeight: 'var(--leading-relaxed)', marginBottom: '0.75rem', maxWidth: '580px' }}>
-              Built for Trades. Not Generic Agencies.
+            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.82)', lineHeight: 'var(--leading-relaxed)', marginBottom: '0.75rem', maxWidth: '560px' }}>
+              We are not a generalist agency that happens to have a few contractor clients.
             </p>
-            <p style={{ fontSize: '0.97rem', color: 'rgba(255,255,255,0.45)', lineHeight: 'var(--leading-relaxed)', maxWidth: '580px', marginBottom: '2rem' }}>
-              We are a Bay Area SEO company with a single focus: helping construction companies, GCs, and specialty trades dominate Google search. Every strategy, every piece of content, every link we earn — designed for one type of business. Yours.
+            <p style={{ fontSize: '0.97rem', color: 'rgba(255,255,255,0.55)', lineHeight: 'var(--leading-relaxed)', maxWidth: '560px', marginBottom: '2rem' }}>
+              Every strategy, every piece of content, every link we earn is built for one type of business — construction companies, GCs, and specialty trades in the Bay Area who are done paying for leads they don&rsquo;t own.
             </p>
 
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a href="/free-seo-audit/" className="btn btn-primary">Get a Free SEO Audit</a>
               <a href="/seo-packages-for-contractors/" style={{
                 display: 'inline-flex', alignItems: 'center', padding: '13px 24px',
-                borderRadius: 'var(--radius-md)', border: '1.5px solid rgba(255,255,255,0.25)',
-                color: 'rgba(255,255,255,0.80)', fontSize: 'var(--text-sm)',
-                fontWeight: 600, textDecoration: 'none', transition: 'all 0.2s',
+                borderRadius: 'var(--radius-md)', border: '1.5px solid rgba(255,255,255,0.28)',
+                color: 'rgba(255,255,255,0.82)', fontSize: 'var(--text-sm)',
+                fontWeight: 600, textDecoration: 'none',
                 background: 'transparent',
               }}>
                 View Packages
               </a>
             </div>
+
           </div>
         </div>
       </section>
@@ -158,26 +154,26 @@ export default function AboutPage() {
           <div>
             <span className="section-label">Our Mission</span>
             <h2 id="mission-heading" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '1.25rem' }}>
-              We Exist to Kill the Lead-Renting Economy for Contractors
+              We Exist to End the Lead-Renting Economy for Bay Area Contractors
             </h2>
             <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginBottom: '1rem' }}>
-              Angi, HomeAdvisor, Yelp, and Google Ads have built a business model that keeps contractors permanently dependent on paying for access to their own customers. We think that&rsquo;s backwards.
+              Angi, HomeAdvisor, Yelp, and Google Ads have built a model that keeps contractors permanently dependent on paying for access to their own customers. We think that&rsquo;s backwards.
             </p>
             <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', marginBottom: '1rem' }}>
-              Our mission is to help every Bay Area contractor we work with build an owned lead generation asset through SEO — so their phone rings without a middleman taking a cut.
+              Our mission is to help every Bay Area contractor we work with build an owned pipeline through Google search — so their phone rings without a middleman taking a cut.
             </p>
             <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)' }}>
-              We focus exclusively on contractors because that&rsquo;s where we can go deepest. We know how construction buyers search, what they click, and what makes them call. That specialization is our edge.
+              We focus exclusively on contractors because that&rsquo;s where we can go deepest. We know how construction buyers search, what they click, and what makes them call. That focus is our edge.
             </p>
           </div>
           <div className="glass-card glass-strong" style={{ padding: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>The Contractor Advantage</h3>
+            <h3 style={{ fontSize: '1.05rem', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>What Makes Us Different</h3>
             {[
               'We speak construction. You never explain what a GC does.',
-              'We know Bay Area submarkets — not just "local SEO" in general.',
-              'We\'ve built playbooks for GCs, HVAC, roofing, remodeling, plumbing, electrical, and more.',
-              'Every content piece is written for your buyer — not generic homeowners.',
-              'Our case studies are from contractors. Our benchmarks are contractor benchmarks.',
+              'We know Bay Area submarkets — not just "local SEO" in theory.',
+              'We\'ve built strategies for GCs, HVAC, roofing, plumbing, electrical, and more.',
+              'Every piece of content is written for your buyer — not generic homeowners.',
+              'Our case studies come from contractors. Our benchmarks are contractor benchmarks.',
             ].map((point) => (
               <div key={point} style={{ display: 'flex', gap: '0.75rem', marginBottom: '0.9rem', alignItems: 'flex-start' }}>
                 <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>✓</span>
@@ -188,7 +184,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* ── What Makes Us Different ── */}
+      {/* ── Why Choose Us ── */}
       <Section variant="subtle" aria-labelledby="diff-heading">
         <SectionHeading
           label="Why Choose Us"
@@ -196,10 +192,17 @@ export default function AboutPage() {
           id="diff-heading"
         />
         <div className="grid-3" style={{ marginTop: '3rem' }}>
-          {DIFFERENCES.map((d) => (
+          {DIFFERENCES.map((d, i) => (
             <div key={d.title} className="glass-card glass-highlight">
-              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{d.icon}</div>
-              <h3 style={{ fontSize: '1.05rem', marginBottom: '0.6rem' }}>{d.title}</h3>
+              <div style={{
+                width: '36px', height: '36px', borderRadius: '8px',
+                background: 'var(--accent)', display: 'flex', alignItems: 'center',
+                justifyContent: 'center', marginBottom: '1rem',
+                fontSize: '0.8rem', fontWeight: 800, color: '#fff',
+              }}>
+                {String(i + 1).padStart(2, '0')}
+              </div>
+              <h3 style={{ fontSize: '1.02rem', marginBottom: '0.55rem' }}>{d.title}</h3>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)', margin: 0 }}>{d.body}</p>
             </div>
           ))}

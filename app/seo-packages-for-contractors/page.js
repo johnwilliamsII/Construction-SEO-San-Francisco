@@ -4,9 +4,9 @@ import CtaBanner from '../../components/sections/CtaBanner'
 import StatCard from '../../components/sections/StatCard'
 
 export const metadata = {
-  title: 'SEO Packages for Contractors | contractorseosanfrancisco.com',
+  title: 'Contractor SEO Agency — Packages for Bay Area Trades | contractorseosanfrancisco.com',
   description:
-    'Transparent SEO packages built for Bay Area contractors. Local SEO map pack focus or full organic growth — both include dedicated strategy and no long-term contracts.',
+    'We are a contractor SEO agency built for Bay Area trades. See our packages starting at $900/mo — full team, monthly reports, no long-term contracts.',
 }
 
 const PACKAGE_FEATURES_LOCAL = [
@@ -117,8 +117,8 @@ export default function PricingPage() {
             letterSpacing: '-0.02em',
             marginBottom: '1rem',
           }}>
-            SEO Packages for{' '}
-            <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Bay Area Contractors</em>
+            A Contractor SEO Agency{' '}
+            <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>Built for the Bay Area</em>
           </h1>
 
           <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.60)', lineHeight: 'var(--leading-relaxed)', maxWidth: '560px', margin: '0 auto 1.75rem' }}>

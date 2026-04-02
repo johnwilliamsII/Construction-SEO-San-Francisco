@@ -42,6 +42,9 @@ export default function Footer() {
               SEO built exclusively for Bay Area construction companies and contractors.
               More Google rankings, more calls, more booked work.
             </p>
+            <p style={{ marginTop: '6px', fontSize: '0.85rem', color: 'var(--gray)' }}>
+              Headquartered in San Francisco, CA
+            </p>
           </div>
 
           {/* Services */}
