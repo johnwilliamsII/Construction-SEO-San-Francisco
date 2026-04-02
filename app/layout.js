@@ -19,8 +19,6 @@ const manrope = Manrope({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://www.contractorseobayarea.com'),
-  alternates: { canonical: '/' },
   title: 'Construction SEO San Francisco | Rank #1 on Google | Bay Area Contractor Marketing',
   description:
     'SEO for construction companies in San Francisco & the Bay Area. Rank #1 on Google, dominate local search, and get more contractor leads with proven SEO strategies.',
