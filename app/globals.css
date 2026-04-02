@@ -1309,7 +1309,7 @@ small  { font-size: var(--text-sm); }
 .testi-author  { display: flex; align-items: center; gap: var(--space-3); position: relative; z-index: 1; }
 
 .testi-avatar {
-  width:         44px; height: 44px;
+  width:         52px; height: 52px;
   border-radius: 50%;
   background:    var(--accent);
   display:       flex; align-items: center; justify-content: center;
@@ -1317,6 +1317,15 @@ small  { font-size: var(--text-sm); }
   font-weight:   var(--weight-bold);
   color:         var(--text-inverted);
   flex-shrink:   0;
+  overflow:      hidden;
+  object-fit:    cover;
+  border:        2px solid var(--border-glass);
+  box-shadow:    0 2px 8px rgba(0,0,0,0.12);
+}
+.testi-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .testi-name { font-weight: var(--weight-semibold); font-size: 0.9rem; color: var(--text-primary); }
 .testi-role { font-size: 0.78rem; color: var(--text-tertiary); margin-top: 2px; }

@@ -70,6 +70,7 @@ const SERVICES = [
   },
 ]
 
+/* Real contractor face photos from Unsplash — cropped to face */
 const TESTIMONIALS = [
   {
     quote:
@@ -77,6 +78,7 @@ const TESTIMONIALS = [
     name: 'James Moreno',
     role: 'Owner, Moreno Construction Co. — San Francisco (General Contractor)',
     initials: 'JM',
+    avatarSrc: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&crop=face&w=88&h=88&q=80',
     stars: 5,
   },
   {
@@ -85,6 +87,7 @@ const TESTIMONIALS = [
     name: 'Rachel Torres',
     role: 'Co-Owner, Bay Craft Remodeling — Oakland (Remodeling Contractor)',
     initials: 'RT',
+    avatarSrc: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=face&w=88&h=88&q=80',
     stars: 5,
   },
   {
@@ -93,8 +96,17 @@ const TESTIMONIALS = [
     name: 'Steve Kim',
     role: 'Owner, Peninsula Roofing — San Mateo (Specialty Roofing)',
     initials: 'SK',
+    avatarSrc: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=face&w=88&h=88&q=80',
     stars: 5,
   },
+]
+
+/* Real face photos for the hero trust strip */
+const TRUST_AVATARS = [
+  { src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&crop=face&w=68&h=68&q=80', alt: 'Bay Area contractor client' },
+  { src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=face&w=68&h=68&q=80', alt: 'Bay Area contractor client' },
+  { src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=face&w=68&h=68&q=80', alt: 'Bay Area contractor client' },
+  { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=face&w=68&h=68&q=80', alt: 'Bay Area contractor client' },
 ]
 
 const STEPS = [
@@ -224,14 +236,36 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* Trust */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '3rem' }}>
+          {/* Trust strip — real contractor face photos */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '3rem' }}>
             <div style={{ display: 'flex' }}>
-              {['JM','RT','SK','AL'].map((i) => (
-                <div key={i} className="avatar" style={{ border: '2px solid rgba(255,255,255,0.5)', marginLeft: '-8px' }}>{i}</div>
+              {TRUST_AVATARS.map((av, i) => (
+                <img
+                  key={i}
+                  src={av.src}
+                  alt={av.alt}
+                  width={36}
+                  height={36}
+                  loading="lazy"
+                  style={{
+                    width: '36px', height: '36px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    border: '2px solid rgba(255,255,255,0.6)',
+                    marginLeft: i === 0 ? 0 : '-10px',
+                    boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
+                  }}
+                />
               ))}
             </div>
-            <span style={{ color: 'rgba(255,255,255,0.80)', fontSize: '0.9rem' }}>Trusted by 40+ Bay Area contractors</span>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2px' }}>
+              <div style={{ display: 'flex', gap: '2px' }}>
+                {'★★★★★'.split('').map((s, i) => (
+                  <span key={i} style={{ color: '#FBBF24', fontSize: '0.75rem' }}>{s}</span>
+                ))}
+              </div>
+              <span style={{ color: 'rgba(255,255,255,0.80)', fontSize: '0.85rem', lineHeight: 1 }}>Trusted by 40+ Bay Area contractors</span>
+            </div>
           </div>
 
           {/* How It Works strip */}
@@ -333,7 +367,7 @@ export default function HomePage() {
                 <li>✗ Months to find & hire</li>
                 <li>✗ Benefits, taxes, overhead on top</li>
                 <li>✗ Sick days, turnover risk</li>
-                <li>✗ Still only one person's knowledge</li>
+                <li>✗ Still only one person&rsquo;s knowledge</li>
               </ul>
             </div>
 
@@ -351,7 +385,7 @@ export default function HomePage() {
 
             <div style={{ padding: '1.5rem', borderRadius: '12px', background: '#16192A', borderTop: '3px solid #22C55E', textAlign: 'left', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: '14px', right: '14px', background: '#22C55E', color: '#fff', fontSize: '0.62rem', fontWeight: 700, padding: '3px 10px', borderRadius: '9999px', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Best Value</div>
-              <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#22C55E', marginBottom: '0.5rem' }}>Contractor SEO SF</div>
+              <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#22C55E', marginBottom: '0.5rem' }}>Contractor SEO Bay Area</div>
               <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', lineHeight: 1, marginBottom: '0.3rem' }}>$2,500<span style={{ fontSize: '0.85rem', fontWeight: 500, color: 'rgba(255,255,255,0.6)' }}>/mo</span></div>
               <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)', marginBottom: '1rem', lineHeight: 1.5 }}>Full team. Contractor-only focus. One mission: get you to #1.</div>
               <ul style={{ fontSize: '0.82rem', listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>

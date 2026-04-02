@@ -36,7 +36,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <div className="footer-logo">
-              contractor<span>seo</span>sanfrancisco<em>.com</em>
+              contractor<span>seo</span>bayarea<em>.com</em>
             </div>
             <p>
               SEO built exclusively for Bay Area construction companies and contractors.
@@ -81,9 +81,9 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>
-            &copy; {year} contractorseosanfrancisco.com
+            &copy; {year} contractorseobayarea.com
             &nbsp;|&nbsp;
-            <Link href="mailto:hello@contractorseosanfrancisco.com">hello@contractorseosanfrancisco.com</Link>
+            <Link href="mailto:hello@contractorseobayarea.com">hello@contractorseobayarea.com</Link>
             &nbsp;|&nbsp;
             <Link href="/sources/">Image Sources & Credits</Link>
           </p>

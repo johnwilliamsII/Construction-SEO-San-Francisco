@@ -60,8 +60,8 @@ export default function Header() {
         <a href="#main-content" className="skip-link">Skip to content</a>
 
         {/* Logo */}
-        <Link href="/" className="nav-logo" aria-label="Contractor SEO San Francisco — Home">
-          contractor<span>seo</span>sanfrancisco<em>.com</em>
+        <Link href="/" className="nav-logo" aria-label="Contractor SEO Bay Area — Home">
+          contractor<span>seo</span>bayarea<em>.com</em>
         </Link>
 
         {/* Desktop nav */}
