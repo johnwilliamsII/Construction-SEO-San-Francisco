@@ -1,17 +1,14 @@
+import Script from 'next/script'
 import SectionHeading from '../../components/sections/SectionHeading'
 import StatCard from '../../components/sections/StatCard'
 import Section from '../../components/layout/Section'
-import ContactForm from './ContactForm'
 
 export const metadata = {
   title: 'Get a Free SEO Audit | Construction SEO San Francisco',
   description:
-    'Request a free, no-obligation SEO audit for your Bay Area construction company. We\'ll show you where you rank, who\'s beating you, and what it takes to reach #1.',
+    'Book a free, no-obligation SEO audit for your Bay Area construction company. We\'ll show you where you rank, who\'s beating you, and what it takes to reach #1.',
   alternates: { canonical: 'https://www.contractorseobayarea.com/contact/' },
 }
-
-/* NOTE: This form uses a static mailto fallback for the static export.
-   Wire up a real form handler (Formspree, Netlify Forms, etc.) before launch. */
 
 const TRUST_STATS = [
   { value: '40+',   label: 'Contractors Helped' },
@@ -27,7 +24,7 @@ export default function ContactPage() {
         <SectionHeading
           as="h1"
           label="Free SEO Audit"
-          heading={<>Get Your <em>Free</em> Bay Area SEO Audit</>}
+          heading={<>Book Your <em>Free</em> Bay Area SEO Audit</>}
           body="No commitment. No spam. Just an honest look at where your construction business stands on Google — and what it takes to reach #1."
           id="contact-heading"
         />
@@ -40,52 +37,36 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      {/* ── Contact form ── */}
+      {/* ── TidyCal Booking ── */}
       <Section variant="subtle">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(2rem, 6vw, 5rem)', alignItems: 'start', maxWidth: '1000px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '860px', margin: '0 auto' }}>
 
-          {/* Form */}
-          <div className="glass-card glass-highlight">
-            <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Request Your Free Audit</h2>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '0.95rem' }}>
-              We&apos;ll review your Google presence within 1 business day.
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Schedule Your Free Audit</h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+              Pick a time that works for you — we&apos;ll review your Google presence before the call.
             </p>
-            <ContactForm />
           </div>
 
-          {/* Info panel */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div className="glass-card glass-card--sm glass-highlight">
-              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem' }}>What You&apos;ll Get</h3>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                {[
-                  'Current rankings for your top 10 keywords',
-                  'Competitor analysis — who\'s beating you and why',
-                  'GBP health check and 3-Pack eligibility',
-                  'Top 3 quick wins you can implement immediately',
-                  'Honest assessment of what SEO can do for your business',
-                ].map((item) => (
-                  <li key={item} style={{ display: 'flex', gap: '0.75rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                    <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="glass-card glass-card--sm glass-highlight">
-              <h3 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Prefer Email?</h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
-                Reach us directly at{' '}
-                <a href="mailto:partners@contractorseobayarea.com" style={{ color: 'var(--accent)', fontWeight: 600 }}>
-                  partners@contractorseobayarea.com
-                </a>
-              </p>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-tertiary)' }}>
-                We respond within 1 business day, usually faster.
-              </p>
-            </div>
+          <div className="glass-card glass-highlight" style={{ padding: '2rem' }}>
+            <div className="tidycal-embed" data-path="3og59pd/30-minute-meeting-m2xdyw7" />
+            <Script
+              src="https://asset-tidycal.b-cdn.net/js/embed.js"
+              strategy="lazyOnload"
+            />
           </div>
+
+          {/* Prefer email fallback */}
+          <div className="glass-card glass-card--sm glass-highlight" style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: 0 }}>
+              Prefer email?{' '}
+              <a href="mailto:partners@contractorseobayarea.com" style={{ color: 'var(--accent)', fontWeight: 600 }}>
+                partners@contractorseobayarea.com
+              </a>
+              {' '}— we respond within 1 business day.
+            </p>
+          </div>
+
         </div>
       </Section>
     </>

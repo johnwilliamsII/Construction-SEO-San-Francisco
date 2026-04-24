@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: true,   // /about/ instead of /about — cleaner URLs
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true,   // Hostinger Node.js — no image optimisation server needed
-  },
-  experimental: {
-    // Prevent webpack from bundling nodemailer — use Node.js require() instead
-    serverComponentsExternalPackages: ['nodemailer'],
+    unoptimized: true,
   },
 }
 
