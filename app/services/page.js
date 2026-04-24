@@ -43,6 +43,54 @@ const SERVICES = [
     ],
     ctaLabel: 'Learn more about GBP →',
   },
+  {
+    icon: '🔗',
+    title: 'Authority Link Building for Construction Companies',
+    href: '/services/link-building/',
+    description:
+      'Google treats backlinks as votes of trust. We build relevant, authoritative links from local Bay Area publications, trade directories, and digital PR — so your rankings compound over time.',
+    features: [
+      'Local citation building across 80+ Bay Area directories',
+      'Trade association and contractor directory submissions',
+      'Digital PR outreach to local news and home improvement sites',
+      'Competitor backlink gap analysis',
+      'White-hat link acquisition only — no spammy shortcuts',
+      'Monthly link report with domain authority tracking',
+    ],
+    ctaLabel: 'Learn more about Link Building →',
+  },
+  {
+    icon: '🔍',
+    title: 'Construction Keyword Research for Bay Area Contractors',
+    href: '/services/keyword-research/',
+    description:
+      'Find the exact search terms Bay Area homeowners use before hiring a contractor. Our construction-specific keyword research drives targeted traffic organized by city, trade, and search intent.',
+    features: [
+      'Full keyword map by service type, city, and neighborhood',
+      'Search intent classification (awareness vs. ready-to-hire)',
+      'Competitor keyword gap analysis',
+      'Long-tail opportunity identification for quick wins',
+      'Monthly search volume and trend data',
+      'Delivered in an actionable Google Sheets template',
+    ],
+    ctaLabel: 'Learn more about Keyword Research →',
+  },
+  {
+    icon: '🤖',
+    title: 'AI Receptionist for Construction Companies',
+    href: '/services/ai-receptionist/',
+    description:
+      'Never miss a lead again. Our AI receptionist for contractors answers calls, qualifies prospects, and books estimates 24/7 — trained specifically for construction industry conversations.',
+    features: [
+      '24/7 call answering — no more missed leads after hours',
+      'Automated lead qualification and job type screening',
+      'Direct calendar booking for estimates',
+      'SMS follow-up sequences post-call',
+      'CRM integration with your existing tools',
+      'Monthly call log and conversion reporting',
+    ],
+    ctaLabel: 'Learn more about AI Receptionist →',
+  },
 ]
 
 export default function ServicesPage() {
@@ -51,6 +99,7 @@ export default function ServicesPage() {
       {/* ── Header ── */}
       <Section variant="gradient" size="lg" aria-labelledby="services-heading">
         <SectionHeading
+          as="h1"
           label="Our Services"
           heading={<>Two Services. One Goal: <em>More Bay Area Jobs</em></>}
           body="We don't offer a menu of 20 things. We offer two focused, deeply refined services that move the needle for Bay Area construction companies."

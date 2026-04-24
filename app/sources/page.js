@@ -19,6 +19,7 @@ export default function SourcesPage() {
       {/* ── Header ── */}
       <Section variant="gradient" size="md" aria-labelledby="sources-heading">
         <SectionHeading
+          as="h1"
           label="Transparency"
           heading="Image Sources & Asset Credits"
           body="We believe in proper attribution. This page lists every third-party image, font, icon, and media asset used on this site, along with their license information."

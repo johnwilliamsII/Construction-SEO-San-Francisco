@@ -36,7 +36,9 @@ export const metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'contractorseobayarea.com',
+  '@id': 'https://www.contractorseobayarea.com/#organization',
+  name: 'Construction SEO San Francisco',
+  url: 'https://www.contractorseobayarea.com/',
   description:
     'SEO services exclusively for construction companies and contractors in the San Francisco Bay Area.',
   areaServed: [

@@ -7,11 +7,26 @@ import { CATEGORIES } from '../../lib/blog-categories'
 import { enforceAllPublished } from '../../lib/blog-seo-enforcer'
 
 export const metadata = {
-  title: 'Construction SEO Blog: Bay Area Contractor Marketing Tips & Guides | contractorseosanfrancisco.com',
+  title: 'Construction SEO Blog | Bay Area Contractor Marketing Tips',
   description:
-    'The Construction SEO Blog for Bay Area contractors — local search strategies, Google Business Profile guides, and actionable SEO tips for HVAC, electrical, roofing, and general contractors.',
+    'Bay Area contractor SEO blog: local search strategies, GBP guides, and actionable tips for HVAC, roofing, electrical, and general contractors.',
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://www.contractorseobayarea.com/blog/' },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.contractorseobayarea.com/blog/',
+    title: 'Construction SEO Blog | Bay Area Contractor Marketing Tips',
+    description:
+      'Bay Area contractor SEO blog: local search strategies, GBP guides, and actionable tips for HVAC, roofing, electrical, and general contractors.',
+    images: [
+      {
+        url: 'https://www.contractorseobayarea.com/sf-ranking-case-study.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Bay Area Contractor SEO Results',
+      },
+    ],
+  },
 }
 
 /* Run SEO enforcement on all published posts at render/build time */

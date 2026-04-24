@@ -25,6 +25,7 @@ export default function ContactPage() {
       {/* ── Header ── */}
       <Section variant="gradient" size="lg" aria-labelledby="contact-heading">
         <SectionHeading
+          as="h1"
           label="Free SEO Audit"
           heading={<>Get Your <em>Free</em> Bay Area SEO Audit</>}
           body="No commitment. No spam. Just an honest look at where your construction business stands on Google — and what it takes to reach #1."

@@ -48,6 +48,7 @@ export default function ResourcesPage() {
       {/* ── Header ── */}
       <Section variant="gradient" size="lg" aria-labelledby="resources-heading">
         <SectionHeading
+          as="h1"
           label="Free Resources"
           heading={<>Tools & Guides for Bay Area <em>Contractor Marketing</em></>}
           body="Free, practical resources to help you improve your Google rankings and generate more leads — no fluff, no upsells."
